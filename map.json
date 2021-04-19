@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"export\/export.json"
+        }
+    },
  "height":50,
  "infinite":true,
  "layers":[
@@ -527,15 +535,15 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/terrain_atlas.tsx"
+         "source":"terrain_atlas.tsx"
         }, 
         {
          "firstgid":1025,
-         "source":"..\/32x32_map_tile v3.1.tsx"
+         "source":"32x32_map_tile v3.1.tsx"
         }, 
         {
          "firstgid":1692,
-         "source":"..\/base_out_atlas.tsx"
+         "source":"base_out_atlas.tsx"
         }],
  "tilewidth":32,
  "type":"map",
