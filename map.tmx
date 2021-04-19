@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="136" height="66" tilewidth="32" tileheight="32" infinite="0" nextlayerid="24" nextobjectid="1">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="136" height="66" tilewidth="32" tileheight="32" infinite="0" nextlayerid="25" nextobjectid="1">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -636,7 +636,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="11" name="start" width="136" height="66">
+ <objectgroup id="24" name="floorLayer"/>
+ <layer id="11" name="start" width="136" height="66" visible="0">
   <properties>
    <property name="startLayer" type="bool" value="true"/>
   </properties>
@@ -709,7 +710,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="12" name="exit" width="136" height="66">
+ <layer id="12" name="exit" width="136" height="66" visible="0">
   <properties>
    <property name="exitSceneUrl" value="_/global/alexbrandad.github.io/testmap-gh-pages-first-test/map.json"/>
   </properties>
