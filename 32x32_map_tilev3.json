@@ -1,0 +1,23 @@
+{ "columns":23,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"32x32_map_tilev3..json"
+        }
+    },
+ "image":"32x32_map_tile v3.1 [MARGINLESS].png",
+ "imageheight":928,
+ "imagewidth":736,
+ "margin":0,
+ "name":"32x32_map_tilev31",
+ "spacing":0,
+ "tilecount":667,
+ "tiledversion":"1.5.0",
+ "tileheight":32,
+ "tilewidth":32,
+ "transparentcolor":"#ffef24",
+ "type":"tileset",
+ "version":1.5
+}
