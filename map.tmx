@@ -232,7 +232,7 @@
  </layer>
  <layer id="34" name="event-test" width="136" height="66">
   <properties>
-   <property name="openWebsite" value="http://localhost:8080/workadventuremap/scripts/index.html"/>
+   <property name="openWebsite" value="https://pi4.e6azumuvyiabvs9s.myfritz.net/test.html"/>
    <property name="openWebsiteAllowApi" type="bool" value="true"/>
    <property name="zone" value="eventtest"/>
   </properties>
