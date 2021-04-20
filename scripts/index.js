@@ -25,14 +25,6 @@ WA.onChatMessage((message) => {
 });
 
 WA.onEnterZone('eventtest', () => {
-
-    const scriptToInject = `
-    <script>
-        console.log(this);
-        debugger;
-    </script>
-    `;
-
     /* window.parent.postMessage({
          type: 'openPopup',
          data: {
@@ -62,7 +54,7 @@ WA.onEnterZone('eventtest', () => {
          }
      }, '*');*/
 
-    WA.sendChatMessage('%3Cimportant message>', 'engine script');
+    //WA.sendChatMessage('%3Cimportant message>', 'engine script');
 
     //debugger;
     /*currentPopup = WA.openPopup('eventref', 'PopupText', [
