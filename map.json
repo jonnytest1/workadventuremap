@@ -74,7 +74,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/pi4.e6azumuvyiabvs9s.myfritz.net\/test.html"
+                 "value":"http:\/\/localhost:8080\/workadventuremap\/scripts\/index.html"
                 }, 
                 {
                  "name":"openWebsiteAllowApi",
