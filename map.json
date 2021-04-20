@@ -74,12 +74,12 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"http:\/\/localhost:8080\/workadventuremap\/scripts\/index.html"
+                 "value":"https:\/\/jonnytest1.github.io\/workadventuremap\/scripts\/index.html"
                 }, 
                 {
                  "name":"openWebsiteAllowApi",
                  "type":"bool",
-                 "value":true
+                 "value":false
                 }, 
                 {
                  "name":"zone",
