@@ -107,7 +107,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 575,
-                "y": 1160
+                "y": 1158
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -131,11 +131,11 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 8,
-            "selectedLayer": 5,
+            "scale": 1,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 1809.8125,
-                "y": 907.625
+                "x": 1856.5,
+                "y": 183
             }
         },
         "terrain_atlas.tsx": {
