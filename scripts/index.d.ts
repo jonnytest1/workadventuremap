@@ -16,15 +16,15 @@ declare const WA: {
         callback:(popup:Popup)=>unknown
     }>):Popup
     displayBubble()
-    removeBubble
+    removeBubble()
     openCoWebSite(url:string)
     closeCoWebSite():void
 
     onChatMessage(callback:(message:string)=>void)
-    sendChatMessage
+    sendChatMessage(message:string,username:string)
     
-    disablePlayerControl
-    restorePlayerControl
+    disablePlayerControl()
+    restorePlayerControl()
     goToPage
     openTab
 }

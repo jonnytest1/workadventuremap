@@ -1,0 +1,188 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "map.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "Alle Dateien (*)",
+    "fileStates": {
+        "32x32_map_tile v3.1.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.png": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/base_out_atlas.png": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/base_out_atlas.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/finitemap.tmx": {
+            "scale": 0.19055232558139534,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 2036.1861174675819,
+                "y": 800.3051106025935
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/map.tmx": {
+            "scale": 0.125,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 2712,
+                "y": 1444
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/terrain_atlas.png": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/terrain_atlas.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventuremap/unbenannt.json": {
+            "scale": 0.70205,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 390.28559219428814,
+                "y": 500.6765899864681
+            }
+        },
+        "D:/downloads2/Taoki_tiles05.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "D:/downloads2/asfsdf.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/downloads2/taoki5.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "D:/downloads2/test.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/downloads2/unbenannt.tmx": {
+            "scale": 0.25,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 400,
+                "y": -786
+            }
+        },
+        "X11tiles-32-32-tr.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "X11tiles-32-32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "base_out_atlas.tsx": {
+            "scaleInDock": 0.75
+        },
+        "haus/haus.json": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 842,
+                "y": 1046.6666666666665
+            }
+        },
+        "haus/haus.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 840.5,
+                "y": 1429
+            }
+        },
+        "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3
+        },
+        "haus/tilesetfiles/dldhdmcov.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "haus/tilesetfiles/hrqwqchuqqx.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "haus/tilesetfiles/innenraum.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3
+        },
+        "haus/tilesetfiles/silveira_neto_gpl_pixelart_tileset_version_4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "map.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2419.25,
+                "y": 137
+            }
+        },
+        "terrain_atlas.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus",
+    "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
+    "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
+    "map.fixedSize": true,
+    "map.height": 50,
+    "map.lastUsedExportFilter": "JSON-Kartendateien (*.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 32,
+    "map.tileWidth": 32,
+    "map.width": 50,
+    "openFiles": [
+        "map.tmx",
+        "terrain_atlas.tsx",
+        "32x32_map_tile v3.1.tsx",
+        "X11tiles-32-32.tsx",
+        "X11tiles-32-32.tsx"
+    ],
+    "project": "workadventure.tiled-project",
+    "property.type": "string",
+    "recentFiles": [
+        "haus/tilesetfiles/innenraum.tsx",
+        "haus/tilesetfiles/dldhdmcov.tsx",
+        "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx",
+        "haus/tilesetfiles/hrqwqchuqqx.tsx",
+        "haus/tilesetfiles/silveira_neto_gpl_pixelart_tileset_version_4.tsx",
+        "X11tiles-32-32-tr.tsx",
+        "X11tiles-32-32.tsx",
+        "32x32_map_tile v3.1.tsx",
+        "terrain_atlas.tsx",
+        "map.tmx",
+        "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.tsx",
+        "D:/Jonathan/Projects/bas/workadventuremap/base_out_atlas.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.transparentColor": "#000000",
+    "tileset.type": 0,
+    "tileset.useTransparentColor": true
+}

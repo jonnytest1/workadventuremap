@@ -16,6 +16,8 @@ let chatenabled = false;
 WA.onEnterZone('minato-event', () => {
     WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
     chatenabled = true;
+
+    debugger;
 });
 
 WA.onChatMessage((message) => {
@@ -25,36 +27,6 @@ WA.onChatMessage((message) => {
 });
 
 WA.onEnterZone('eventtest', () => {
-    /* window.parent.postMessage({
-         type: 'openPopup',
-         data: {
-             popupId: `${popupCounter++}-0">${scriptToInject}`,
-             targetObject: 'eventref',
-             message: 'PopupText',
-             buttons: [
-                 {
-                     label: 'peaceful',
-                     className: 'popUpElement',
-                     callback: (popup => {
-                         //nothing to do
-                         debugger;
-                         popup.close();
-                     })
-                 }, {
-                     label: 'hard',
-                     className: 'popUpElement',
-                     callback: (popup => {
-
-                         popup.close();
-                     })
-                 }].map(t => ({
-                     label: t.label,
-                     className: t.className
-                 }))
-         }
-     }, '*');*/
-
-    //WA.sendChatMessage('%3Cimportant message>', 'engine script');
 
     //debugger;
     /*currentPopup = WA.openPopup('eventref', 'PopupText', [
@@ -79,9 +51,5 @@ WA.onEnterZone('eventtest', () => {
 });
 
 window.addEventListener('message', (...args) => {
-    console.log(...args);
-});
-
-window.top.addEventListener('message', (...args) => {
     console.log(...args);
 });
