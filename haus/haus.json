@@ -38,7 +38,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"..\/map.json"
+                 "value":"..\/map.json#starthaus"
                 }],
          "type":"tilelayer",
          "visible":false,
@@ -93,7 +93,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":8,
+ "nextlayerid":9,
  "nextobjectid":1,
  "orientation":"orthogonal",
  "renderorder":"right-down",
