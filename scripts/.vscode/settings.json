@@ -1,0 +1,13 @@
+{
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.suggest.autoImports": false,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true,
+        "source.fixAll.eslint": true
+    },
+    "js/ts.implicitProjectConfig.checkJs": true,
+}

@@ -1,0 +1,8 @@
+{
+    "scripts": {},
+    "dependencies": {
+        "eslint-plugin-jsdoc": "^15.5.2",
+        "tslint": "^5.18.0",
+        "tslint-jsdoc-rules": "^0.2.0"
+    }
+}
