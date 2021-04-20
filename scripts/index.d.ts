@@ -20,7 +20,7 @@ declare const WA: {
     openCoWebSite(url:string)
     closeCoWebSite():void
 
-    onChatMessage
+    onChatMessage(callback:(message:string)=>void)
     sendChatMessage
     
     disablePlayerControl

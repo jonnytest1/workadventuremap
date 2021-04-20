@@ -11,6 +11,19 @@ var isCoWebSiteOpened = false;
 
 console.log('script run');
 let popupCounter = 123;
+
+let chatenabled = false;
+WA.onEnterZone('minato-event', () => {
+    WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
+    chatenabled = true;
+});
+
+WA.onChatMessage((message) => {
+    if(chatenabled && message.endsWith('?')) {
+        WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
+    }
+});
+
 WA.onEnterZone('eventtest', () => {
 
     const scriptToInject = `
