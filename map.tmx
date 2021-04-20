@@ -85,7 +85,7 @@
  </layer>
  <layer id="12" name="exit" width="136" height="66" visible="0">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/map.json"/>
+   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1408,1408,1408,1408,1408,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

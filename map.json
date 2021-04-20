@@ -38,7 +38,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"\/_\/global\/alexbrandad.github.io\/testmap-gh-pages-first-test\/map.json"
+                 "value":"\/_\/global\/alexbrandad.github.io\/testmap-gh-pages-first-test\/openbas.json"
                 }],
          "type":"tilelayer",
          "visible":false,
@@ -178,13 +178,13 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":125.333333333333,
+                 "height":125.333,
                  "id":8,
                  "name":"eventref",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":302.666666666667,
+                 "width":302.667,
                  "x":2352,
                  "y":488
                 }, 
@@ -197,8 +197,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":2497.33333333333,
-                 "y":705.333333333333
+                 "x":2497.33,
+                 "y":705.333
                 }],
          "opacity":1,
          "type":"objectgroup",
