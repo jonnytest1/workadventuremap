@@ -1,0 +1,10 @@
+<iframe id="iframe"
+        width="100%"
+        src="https://teams.microsoft.com"
+        height="100%">
+
+</iframe>
+<script>
+    const iframeUrl = new URL(location.href).searchParams.get("url");
+    document.querySelector("iframe").src = iframeUrl
+</script>

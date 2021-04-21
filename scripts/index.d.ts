@@ -26,7 +26,7 @@ declare const WA: {
     disablePlayerControl()
     restorePlayerControl()
     goToPage(page:string)
-    openTab
+    openTab(url:string)
     getGameState():Promise<any>
 
 }

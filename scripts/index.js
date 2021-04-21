@@ -17,17 +17,19 @@ WA.onEnterZone('minato-event', () => {
     WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
     chatenabled = true;
 
-    debugger;
 });
 
 WA.onChatMessage((message) => {
     if(chatenabled) {
-        if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann')) {
+        message = message.toLowerCase();
+        if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann') || message.includes('was')) {
             WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
         }
     }
 });
-
+WA.onEnterZone('inbox', () => {
+    WA.openTab('https://teams.microsoft.com/l/chat/0/0?users=jonathan.heindl@brandad-systems.de');
+});
 WA.onEnterZone('eventtest', () => {
 
     //debugger;
