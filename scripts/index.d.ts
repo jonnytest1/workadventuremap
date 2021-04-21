@@ -25,6 +25,6 @@ declare const WA: {
     
     disablePlayerControl()
     restorePlayerControl()
-    goToPage
+    goToPage(page:string)
     openTab
 }

@@ -21,8 +21,10 @@ WA.onEnterZone('minato-event', () => {
 });
 
 WA.onChatMessage((message) => {
-    if(chatenabled && message.endsWith('?')) {
-        WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
+    if(chatenabled) {
+        if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann')) {
+            WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
+        }
     }
 });
 
