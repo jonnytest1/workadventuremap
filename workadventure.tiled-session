@@ -92,7 +92,8 @@
             "scaleInEditor": 1
         },
         "base_out_atlas.tsx": {
-            "scaleInDock": 0.75
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
         },
         "haus/haus.json": {
             "scale": 0.75,
@@ -131,11 +132,11 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 1856.5,
-                "y": 183
+                "x": 215.33333333333331,
+                "y": 436
             }
         },
         "terrain_atlas.tsx": {
@@ -145,7 +146,7 @@
     },
     "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 50,
@@ -164,6 +165,7 @@
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "base_out_atlas.tsx",
         "haus/tilesetfiles/innenraum.tsx",
         "haus/tilesetfiles/dldhdmcov.tsx",
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx",
@@ -174,15 +176,14 @@
         "32x32_map_tile v3.1.tsx",
         "terrain_atlas.tsx",
         "map.tmx",
-        "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.tsx",
-        "D:/Jonathan/Projects/bas/workadventuremap/base_out_atlas.tsx"
+        "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 16,
-        "width": 16
+        "height": 32,
+        "width": 32
     },
-    "tileset.transparentColor": "#000000",
+    "tileset.transparentColor": "#ffffff",
     "tileset.type": 0,
     "tileset.useTransparentColor": true
 }
