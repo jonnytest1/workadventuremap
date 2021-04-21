@@ -27,4 +27,6 @@ declare const WA: {
     restorePlayerControl()
     goToPage(page:string)
     openTab
+    getGameState():Promise<any>
+
 }

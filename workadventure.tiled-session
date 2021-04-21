@@ -95,6 +95,14 @@
             "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
+        "fire/fire.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 757,
+                "y": 731.3333333333333
+            }
+        },
         "haus/haus.json": {
             "scale": 0.75,
             "selectedLayer": 1,
@@ -104,11 +112,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 1,
+            "scale": 0.75,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 575,
-                "y": 1158
+                "x": 169.99999999999994,
+                "y": 1244
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -132,11 +140,11 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 0.75,
+            "scale": 4,
             "selectedLayer": 7,
             "viewCenter": {
-                "x": 215.33333333333331,
-                "y": 436
+                "x": 168.625,
+                "y": 680.5
             }
         },
         "terrain_atlas.tsx": {
@@ -144,7 +152,7 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/fire",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",

@@ -1,52 +1,9 @@
+<head>
+    <script src="http://127.0.0.1:8081/iframe_api.js"></script>
+</head>
+
 <body style="background-image: url(./teleporter.png) ;background-repeat: no-repeat;background-size: cover; ">
     <ul id="listcontainer">
     </ul>
-    <script>
-        [
-            {
-                text: "Demo Map",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }, {
-                text: "Demo Map",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }, {
-                text: "Demo Map",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }, {
-                text: "Demo Map",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }, {
-                text: "Demo Map",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }, {
-                text: "testset set sdf ssf ",
-                link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
-            }
-        ].forEach(entry => {
-            const li = document.createElement("li");
-            const link = document.createElement("a");
-            link.textContent = entry.text || entry.link;
-            link.href = entry.link
-            link.style.color = "white"
-            link.onclick = () => {
-                openPage(entry.link);
-            }
-            li.appendChild(link);
-
-            document.querySelector('#listcontainer').appendChild(li)
-        })
-
-
-        function openPage(page) {
-            window.parent.postMessage({
-                "type": 'loadPage',
-                "data": {
-                    url: page
-                }
-            }, '*');
-        }
-
-
-
-    </script>
+    <script src="./page-picker.js"> </script>
 </body>
