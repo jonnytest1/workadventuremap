@@ -6,8 +6,11 @@
             text: 'Demo Map',
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
         }, {
-            text: 'Jonnys Map',
-            link: '/_/global/localhost/workadventuremap/map.json'
+            text: 'Jonnys Map Cave',
+            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-cave'
+        }, {
+            text: 'Jonnys Map City',
+            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-city'
         }, {
             text: 'Hell',
             link: '/_/global/localhost/workadventuremap/fire/fire.json'
@@ -36,9 +39,11 @@
             if(!entry.link.includes('#')) {
                 entry.link += '#start-teleporter';
             }
-            link.onclick = () => {
-
+            link.onclick = e => {
                 openPage(entry.link);
+                WA.closeCoWebSite();
+                e.preventDefault();
+                e.stopPropagation();
             };
             li.appendChild(link);
 
