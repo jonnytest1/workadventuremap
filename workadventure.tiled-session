@@ -164,16 +164,24 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 3,
-            "selectedLayer": 13,
+            "scale": 1,
+            "selectedLayer": 36,
             "viewCenter": {
-                "x": 2160,
-                "y": 1599.8333333333333
+                "x": 2342,
+                "y": 175
             }
         },
         "terrain_atlas.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "test/test.tmx": {
+            "scale": 2,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 151,
+                "y": 179
+            }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
             "scaleInDock": 1.5,
@@ -188,17 +196,17 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
     "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
-    "map.height": 50,
+    "map.height": 10,
     "map.lastUsedExportFilter": "JSON-Kartendateien (*.json)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 50,
+    "map.width": 10,
     "openFiles": [
         "map.tmx",
         "haus/haus.tmx",
