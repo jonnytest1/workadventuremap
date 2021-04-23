@@ -43,7 +43,7 @@
  </tile>
  <tile id="590">
   <properties>
-   <property name="collides" type="bool" value="true"/>
+   <property name="collides" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="605">
@@ -53,7 +53,7 @@
  </tile>
  <tile id="606">
   <properties>
-   <property name="collides" type="bool" value="true"/>
+   <property name="collides" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="610">
