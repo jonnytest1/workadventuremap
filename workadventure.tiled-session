@@ -100,11 +100,11 @@
             "scaleInEditor": 1
         },
         "aussicht/turm.tmx": {
-            "scale": 2,
-            "selectedLayer": 0,
+            "scale": 0.75,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 495.75,
-                "y": 511.75
+                "x": 459.33333333333326,
+                "y": 312
             }
         },
         "base_out_atlas.tsx": {
@@ -132,11 +132,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 4,
+            "scale": 1,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 799.3333333333333,
-                "y": 799.3333333333333
+                "x": 1471.5,
+                "y": 1441
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -176,11 +176,11 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 3,
+            "scale": 0.5,
             "selectedLayer": 36,
             "viewCenter": {
-                "x": 2159.833333333333,
-                "y": 1599.8333333333333
+                "x": 2339,
+                "y": 948
             }
         },
         "terrain_atlas.tsx": {
