@@ -110,8 +110,8 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 511,
-                "y": 513
+                "x": 145,
+                "y": 512
             }
         },
         "base_out_atlas.tsx": {
@@ -126,8 +126,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 799.6666666666666,
-                "y": 799.6666666666666
+                "x": 799,
+                "y": 798
             }
         },
         "haus/haus.json": {
@@ -140,10 +140,10 @@
         },
         "haus/haus.tmx": {
             "scale": 1,
-            "selectedLayer": 5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 799.5,
-                "y": 799.5
+                "x": 315.5,
+                "y": 316
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -248,11 +248,11 @@
             }
         },
         "ocean/ocean.json": {
-            "scale": 0.15248579545454546,
-            "selectedLayer": 0,
+            "scale": 1,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 1282.0866325104794,
-                "y": 1796.8886818816952
+                "x": 4203.5,
+                "y": 5285
             }
         },
         "ocean/ocean.json#32x32_map_tilev31": {
@@ -278,10 +278,10 @@
         },
         "ocean/ocean.tmx": {
             "scale": 0.125,
-            "selectedLayer": 10,
+            "selectedLayer": 12,
             "viewCenter": {
-                "x": 524,
-                "y": 1072
+                "x": 4324,
+                "y": 4184
             }
         },
         "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx": {
@@ -297,7 +297,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 511.75,
-                "y": 1023.75
+                "y": 1023.5
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -345,20 +345,20 @@
         "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx"
     ],
     "project": "workadventure.tiled-project",
-    "property.type": "string",
+    "property.type": "bool",
     "recentFiles": [
+        "ocean/ocean.json",
+        "aussicht/aussicht.tsx",
+        "haus/tilesetfiles/bike1.tsx",
+        "haus/tilesetfiles/bike2.tsx",
+        "haus/tilesetfiles/bike3.tsx",
         "map.json",
         "map.tmx",
         "haus/haus.tmx",
         "fire/fire.tmx",
         "aussicht/turm.tmx",
         "32x32_map_tile v3.1.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "haus/tilesetfiles/Interiors_free_32x32.tsx",
-        "haus/tilesetfiles/customtileset.tsx",
-        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "test/test.tmx"
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
