@@ -2988,7 +2988,7 @@
  </layer>
  <layer id="37" name="event-test" width="136" height="100">
   <properties>
-   <property name="openWebsite" value="./scripts/miro.html"/>
+   <property name="openWebsite" value="./scripts/youtube.html"/>
    <property name="openWebsiteAllowApi" type="bool" value="false"/>
   </properties>
   <data encoding="csv">

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.tmx",
+    "activeFile": "aussicht/turm.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
@@ -84,7 +84,7 @@
             }
         },
         "Male 01-2.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1
         },
         "X11tiles-32-32-tr.tsx": {
@@ -95,8 +95,20 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "aussicht/aussicht.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "aussicht/turm.tmx": {
+            "scale": 2,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 495.75,
+                "y": 511.75
+            }
+        },
         "base_out_atlas.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "customtileset.tsx": {
@@ -107,7 +119,7 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 800,
+                "x": 799.6666666666666,
                 "y": 799.6666666666666
             }
         },
@@ -120,11 +132,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 800,
-                "y": 799.5
+                "x": 799.3333333333333,
+                "y": 799.3333333333333
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -164,11 +176,11 @@
             "scaleInEditor": 1
         },
         "map.tmx": {
-            "scale": 1,
+            "scale": 3,
             "selectedLayer": 36,
             "viewCenter": {
-                "x": 2342,
-                "y": 175
+                "x": 2159.833333333333,
+                "y": 1599.8333333333333
             }
         },
         "terrain_atlas.tsx": {
@@ -179,8 +191,8 @@
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 151,
-                "y": 179
+                "x": 159.75,
+                "y": 159.75
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -192,25 +204,26 @@
             "scaleInEditor": 1
         },
         "tilesets/tilesetfiles/dldhdmcov.tsx": {
-            "scaleInDock": 0.5,
+            "scaleInDock": 1,
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/aussicht",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/aussicht",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
-    "map.height": 10,
+    "map.height": 32,
     "map.lastUsedExportFilter": "JSON-Kartendateien (*.json)",
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 32,
     "map.tileWidth": 32,
-    "map.width": 10,
+    "map.width": 32,
     "openFiles": [
         "map.tmx",
         "haus/haus.tmx",
         "fire/fire.tmx",
+        "aussicht/turm.tmx",
         "32x32_map_tile v3.1.tsx",
         "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
@@ -218,24 +231,24 @@
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
         "base_out_atlas.tsx",
         "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "tilesets/tilesetfiles/dldhdmcov.tsx",
-        "tilesets/tilesetfiles/dldhdmcov.tsx"
+        "test/test.tmx",
+        "aussicht/aussicht.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "tilesets/tilesetfiles/dldhdmcov.tsx",
+        "map.tmx",
+        "haus/haus.tmx",
+        "fire/fire.tmx",
+        "aussicht/aussicht.tsx",
+        "test/test.tmx",
         "tilesets/tilesetfiles/decorations-medieval.tsx",
         "base_out_atlas.tsx",
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
         "haus/tilesetfiles/customtileset.tsx",
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "32x32_map_tile v3.1.tsx",
-        "fire/fire.tmx",
-        "haus/haus.tmx",
-        "map.tmx",
-        "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx"
+        "32x32_map_tile v3.1.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

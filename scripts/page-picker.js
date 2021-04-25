@@ -15,8 +15,8 @@
             text: 'Hell',
             link: '/_/global/localhost/workadventuremap/fire/fire.json'
         }, {
-            text: 'Demo Map',
-            link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
+            text: 'World Map',
+            link: '/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json'
         }, {
             text: 'Demo Map',
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
@@ -59,5 +59,4 @@
             }
         }, '*');
     }
-
 })();
