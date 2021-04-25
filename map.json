@@ -1818,7 +1818,53 @@
          "tilecount":1024,
          "tileheight":32,
          "tilewidth":32,
-         "transparentcolor":"#ff00ff"
+         "transparentcolor":"#ff00ff",
+         "wangsets":[
+                {
+                 "colors":[
+                        {
+                         "color":"#ff0000",
+                         "name":"Path",
+                         "probability":1,
+                         "tile":-1
+                        }],
+                 "name":"Unnamed Set",
+                 "tile":-1,
+                 "type":"mixed",
+                 "wangtiles":[
+                        {
+                         "tileid":82,
+                         "wangid":[0, 0, 0, 0, 0, 0, 0, 1]
+                        }, 
+                        {
+                         "tileid":83,
+                         "wangid":[1, 0, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":84,
+                         "wangid":[0, 1, 0, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":114,
+                         "wangid":[0, 0, 0, 0, 0, 0, 1, 0]
+                        }, 
+                        {
+                         "tileid":116,
+                         "wangid":[0, 0, 1, 0, 0, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":146,
+                         "wangid":[0, 0, 0, 0, 0, 1, 0, 0]
+                        }, 
+                        {
+                         "tileid":147,
+                         "wangid":[0, 0, 0, 0, 1, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":148,
+                         "wangid":[0, 0, 0, 1, 0, 0, 0, 0]
+                        }]
+                }]
         }, 
         {
          "columns":40,
