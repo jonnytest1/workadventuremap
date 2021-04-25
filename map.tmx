@@ -554,7 +554,7 @@
  </layer>
  <layer id="67" name="exit-ocean" width="136" height="100">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json#start-hidden"/>
+   <property name="exitSceneUrl" value="./ocean/ocean.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

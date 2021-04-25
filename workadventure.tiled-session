@@ -3,16 +3,15 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.tmx",
+    "activeFile": "ocean/ocean.tmx",
     "expandedProjectPaths": [
-        "test",
-        "haus",
         "haus/tilesetfiles",
         "tilesets",
-        "tilesets/tilesetfiles",
+        "ocean",
+        "haus",
+        "test",
         ".",
-        "fire",
-        "aussicht"
+        "tilesets/tilesetfiles"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -109,9 +108,9 @@
         },
         "aussicht/turm.tmx": {
             "scale": 0.5,
-            "selectedLayer": 2,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 512,
+                "x": 511,
                 "y": 513
             }
         },
@@ -127,7 +126,7 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 800,
+                "x": 799.6666666666666,
                 "y": 799.6666666666666
             }
         },
@@ -140,11 +139,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 0,
+            "scale": 1,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": 800,
-                "y": 799
+                "x": 799.5,
+                "y": 799.5
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -152,12 +151,28 @@
             "scaleInEditor": 1
         },
         "haus/tilesetfiles/Interiors_free_32x32.tsx": {
-            "scaleInDock": 0.75,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1.5
         },
         "haus/tilesetfiles/Room_Builder_free_32x32.tsx": {
             "scaleInDock": 2,
             "scaleInEditor": 1.5
+        },
+        "haus/tilesetfiles/bike1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 8
+        },
+        "haus/tilesetfiles/bike2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "haus/tilesetfiles/bike3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "haus/tilesetfiles/cars.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3
         },
         "haus/tilesetfiles/customtileset.tsx": {
             "scaleInDock": 1,
@@ -183,13 +198,95 @@
             "scaleInDock": 1.5,
             "scaleInEditor": 1.5
         },
-        "map.tmx": {
-            "scale": 1.5,
-            "selectedLayer": 17,
+        "map.json": {
+            "scale": 0.22168111313868613,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 2852,
-                "y": 997.3333333333333
+                "x": 2163.016926480424,
+                "y": 1601.3993929104286
             }
+        },
+        "map.json#32x32_map_tilev31": {
+            "scaleInDock": 1
+        },
+        "map.json#Interiors_free_32x32": {
+            "scaleInDock": 1
+        },
+        "map.json#Male 01-2": {
+            "scaleInDock": 1
+        },
+        "map.json#Phssthpok_32x32": {
+            "scaleInDock": 1
+        },
+        "map.json#Room_Builder_free_32x32": {
+            "scaleInDock": 1
+        },
+        "map.json#X11tiles-32-32": {
+            "scaleInDock": 1
+        },
+        "map.json#base_out_atlas": {
+            "scaleInDock": 1
+        },
+        "map.json#decorations-medieval": {
+            "scaleInDock": 1
+        },
+        "map.json#dldhdmcov_scaled": {
+            "scaleInDock": 1
+        },
+        "map.json#terrain_atlas": {
+            "scaleInDock": 1
+        },
+        "map.json#tilesets_deviant_milkian_1": {
+            "scaleInDock": 1
+        },
+        "map.tmx": {
+            "scale": 1,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 3420.5,
+                "y": 2613
+            }
+        },
+        "ocean/ocean.json": {
+            "scale": 0.15248579545454546,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1282.0866325104794,
+                "y": 1796.8886818816952
+            }
+        },
+        "ocean/ocean.json#32x32_map_tilev31": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#LPC-objects-plants-fish-submissions-outside": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#base_out_atlas": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#bike3": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#decorations-medieval": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#dldhdmcov_scaled": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.json#terrain_atlas": {
+            "scaleInDock": 1
+        },
+        "ocean/ocean.tmx": {
+            "scale": 0.125,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 524,
+                "y": 1072
+            }
+        },
+        "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 0.75
         },
         "terrain_atlas.tsx": {
             "scaleInDock": 1,
@@ -199,7 +296,7 @@
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 512,
+                "x": 511.75,
                 "y": 1023.75
             }
         },
@@ -212,13 +309,13 @@
             "scaleInEditor": 1.5
         },
         "tilesets/tilesetfiles/dldhdmcov.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.5,
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/ocean",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/aussicht",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 32,
@@ -240,23 +337,28 @@
         "tilesets/tilesetfiles/decorations-medieval.tsx",
         "test/test.tmx",
         "base_out_atlas.tsx",
-        "aussicht/aussicht.tsx"
+        "aussicht/aussicht.tsx",
+        "haus/tilesetfiles/bike1.tsx",
+        "haus/tilesetfiles/bike2.tsx",
+        "haus/tilesetfiles/bike3.tsx",
+        "ocean/ocean.tmx",
+        "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "aussicht/aussicht.tsx",
-        "base_out_atlas.tsx",
-        "test/test.tmx",
-        "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "haus/tilesetfiles/customtileset.tsx",
-        "haus/tilesetfiles/Interiors_free_32x32.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "32x32_map_tile v3.1.tsx",
-        "aussicht/turm.tmx",
+        "map.json",
+        "map.tmx",
+        "haus/haus.tmx",
         "fire/fire.tmx",
-        "haus/haus.tmx"
+        "aussicht/turm.tmx",
+        "32x32_map_tile v3.1.tsx",
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
+        "haus/tilesetfiles/customtileset.tsx",
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "tilesets/tilesetfiles/decorations-medieval.tsx",
+        "test/test.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
@@ -264,7 +366,7 @@
         "height": 32,
         "width": 32
     },
-    "tileset.transparentColor": "#000000",
+    "tileset.transparentColor": "#eeeeee",
     "tileset.type": 0,
     "tileset.useTransparentColor": true
 }
