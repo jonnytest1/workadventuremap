@@ -3,16 +3,16 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "test/test.tmx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "tilesets/tilesetfiles",
         "test",
-        ".",
-        "aussicht",
         "haus",
         "haus/tilesetfiles",
+        "tilesets",
+        "tilesets/tilesetfiles",
+        ".",
         "fire",
-        "tilesets"
+        "aussicht"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -116,7 +116,7 @@
             }
         },
         "base_out_atlas.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1.5
         },
         "customtileset.tsx": {
@@ -185,10 +185,10 @@
         },
         "map.tmx": {
             "scale": 1.5,
-            "selectedLayer": 30,
+            "selectedLayer": 17,
             "viewCenter": {
-                "x": 2160,
-                "y": 1599.6666666666665
+                "x": 2852,
+                "y": 997.3333333333333
             }
         },
         "terrain_atlas.tsx": {
@@ -199,8 +199,8 @@
             "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": -93.5,
-                "y": 528
+                "x": 512,
+                "y": 1023.75
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -237,26 +237,26 @@
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "haus/tilesetfiles/customtileset.tsx",
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "base_out_atlas.tsx",
         "tilesets/tilesetfiles/decorations-medieval.tsx",
         "test/test.tmx",
+        "base_out_atlas.tsx",
         "aussicht/aussicht.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "map.tmx",
-        "haus/haus.tmx",
-        "fire/fire.tmx",
-        "aussicht/turm.tmx",
-        "32x32_map_tile v3.1.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "haus/tilesetfiles/Interiors_free_32x32.tsx",
-        "haus/tilesetfiles/customtileset.tsx",
-        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "aussicht/aussicht.tsx",
         "base_out_atlas.tsx",
+        "test/test.tmx",
         "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "aussicht/aussicht.tsx"
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "haus/tilesetfiles/customtileset.tsx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
+        "32x32_map_tile v3.1.tsx",
+        "aussicht/turm.tmx",
+        "fire/fire.tmx",
+        "haus/haus.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
