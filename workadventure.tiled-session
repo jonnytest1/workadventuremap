@@ -196,11 +196,11 @@
             "scaleInEditor": 1
         },
         "test/test.tmx": {
-            "scale": 1,
+            "scale": 2,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 289,
-                "y": 303
+                "x": -93.5,
+                "y": 528
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -216,7 +216,7 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/aussicht",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
     "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/aussicht",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
