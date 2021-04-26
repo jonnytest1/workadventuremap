@@ -3,23 +3,229 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "ocean/ocean.tmx",
+    "activeFile": "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
     "expandedProjectPaths": [
-        "test",
-        ".",
-        "haus",
-        "aussicht",
-        "haus/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps",
         "ocean",
+        "haus",
+        "haus/tilesetfiles",
+        "test",
+        "tilesets",
+        "ocean/tilesets",
         "tilesets/tilesetfiles",
         "fire",
-        "tilesets"
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
         "32x32_map_tile v3.1.tsx": {
             "scaleInDock": 1.5,
             "scaleInEditor": 1.5
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json": {
+            "scale": 0.5582698170731707,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 624.2501194620794,
+                "y": 641.2669806812753
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json#collision": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json#mapUtilities": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/campus.json#tilesets_deviant_milkian_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json": {
+            "scale": 0.5722265624999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 640.4805788791044,
+                "y": 641.3543586592942
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#[A]Wall-Up2_pipo": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#text": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/map.json#tilesets_deviant_milkian_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json": {
+            "scale": 1.5,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 848.6666666666666,
+                "y": 288.6666666666667
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#01_fire_extinguisher": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#01_mate": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#02_mate_crates_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#05_mate_bottles_full": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#06_wash_your_hands_32x32": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#07_wear_your_mask_32x32": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#AceSet-Hospital": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#Entrance": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#GustavSchickedanz": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#[Base]BaseChip_pipo": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#arrowup": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bike1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bike2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bike3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#borders-yellow": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#brandadtischgross": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bretzel 3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bretzel1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bretzel2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#bretzelgrosse": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collision": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison4": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison5": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison6": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#collison7": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#female": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#ludwigerhard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#male": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#mapUtilities": {
+            "scaleInDock": 2
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#maxgrundig": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#minideko": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#rechner1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#tellergross": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#tellermitbutter": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#text": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#themenboard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#themenwand": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#tilesets_deviant_milkian_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#walls": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#walls2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#whiteboard": {
+            "scaleInDock": 1
         },
         "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.png": {
             "scaleInDock": 1
@@ -242,11 +448,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.33,
+            "scale": 2,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 3246.969696969697,
-                "y": 1572.7272727272725
+                "x": 3843.5,
+                "y": 1476
             }
         },
         "ocean/ocean.json": {
@@ -327,27 +533,15 @@
     "map.tileWidth": 32,
     "map.width": 32,
     "openFiles": [
-        "map.tmx",
-        "haus/haus.tmx",
-        "fire/fire.tmx",
-        "aussicht/turm.tmx",
-        "32x32_map_tile v3.1.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "haus/tilesetfiles/Interiors_free_32x32.tsx",
-        "haus/tilesetfiles/customtileset.tsx",
-        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "test/test.tmx",
-        "base_out_atlas.tsx",
-        "ocean/ocean.tmx",
-        "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx",
-        "map.json"
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
+        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx"
     ],
     "project": "workadventure.tiled-project",
-    "property.type": "string",
+    "property.type": "bool",
     "recentFiles": [
-        "map.json",
         "map.tmx",
+        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
+        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx",
         "haus/haus.tmx",
         "fire/fire.tmx",
         "aussicht/turm.tmx",
@@ -356,8 +550,7 @@
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "haus/tilesetfiles/customtileset.tsx",
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "tilesets/tilesetfiles/decorations-medieval.tsx",
-        "test/test.tmx"
+        "tilesets/tilesetfiles/decorations-medieval.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",

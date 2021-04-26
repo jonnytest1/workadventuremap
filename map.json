@@ -218,7 +218,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"\/_\/global\/brandad-systems.github.io\/workadventure-maps\/openbas.json"
+                 "value":"\/_\/global\/brandad-systems.github.io\/workadventure-maps\/openbas.json#start-hidden"
                 }],
          "type":"tilelayer",
          "visible":true,
