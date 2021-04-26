@@ -40,7 +40,10 @@ WA.onChatMessage((message) => {
         message = message.toLowerCase();
         if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann') || message.includes('was')) {
             WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
+        } else if(message === 'miro') {
+            WA.openCoWebSite('http://localhost/workadventuremap/scripts/miro.html');
         }
+
     }
 });
 
