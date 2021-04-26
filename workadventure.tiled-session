@@ -448,11 +448,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 2,
-            "selectedLayer": 9,
+            "scale": 1,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 3843.5,
-                "y": 1476
+                "x": 3711,
+                "y": 1522
             }
         },
         "ocean/ocean.json": {
