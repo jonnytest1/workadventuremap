@@ -1621,7 +1621,7 @@
  </layer>
  <layer id="34" name="house-advert" width="136" height="100">
   <properties>
-   <property name="openWebsite" value="https://jonnytest1.github.io/workadventuremap/scripts/index.html"/>
+   <property name="openWebsite" value="./scripts/index.html"/>
    <property name="openWebsiteAllowApi" type="bool" value="false"/>
    <property name="zone" value="eventtest"/>
   </properties>

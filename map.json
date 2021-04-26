@@ -284,7 +284,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/jonnytest1.github.io\/workadventuremap\/scripts\/index.html"
+                 "value":".\/scripts\/index.html"
                 }, 
                 {
                  "name":"openWebsiteAllowApi",
