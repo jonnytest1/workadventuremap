@@ -340,7 +340,7 @@
  </layer>
  <layer id="42" name="exit-cave" width="136" height="100">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json#start-hidden"/>
+   <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -768,7 +768,7 @@
  </layer>
  <layer id="55" name="exit-inn" width="136" height="100">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json#start-hidden"/>
+   <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -982,7 +982,7 @@
  </layer>
  <layer id="60" name="exit-tent" width="136" height="100">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json#start-hidden"/>
+   <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1514,7 +1514,7 @@
  </layer>
  <layer id="12" name="exit" width="136" height="100">
   <properties>
-   <property name="exitSceneUrl" value="/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/openbas.json"/>
+   <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1408,1408,1408,1408,1408,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3822,7 +3822,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="72" name="karte" width="136" height="100">
+ <layer id="72" name="exit-karte" width="136" height="100">
   <properties>
    <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
   </properties>

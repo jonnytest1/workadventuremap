@@ -5,18 +5,20 @@
     },
     "activeFile": "ocean/ocean.tmx",
     "expandedProjectPaths": [
-        "haus/tilesetfiles",
-        "tilesets",
-        "ocean",
-        "haus",
         "test",
         ".",
-        "tilesets/tilesetfiles"
+        "haus",
+        "aussicht",
+        "haus/tilesetfiles",
+        "ocean",
+        "tilesets/tilesetfiles",
+        "fire",
+        "tilesets"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
         "32x32_map_tile v3.1.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 1.5,
             "scaleInEditor": 1.5
         },
         "D:/Jonathan/Projects/bas/workadventuremap/32x32_map_tile v3.1.png": {
@@ -110,12 +112,12 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 145,
-                "y": 512
+                "x": 511,
+                "y": 513
             }
         },
         "base_out_atlas.tsx": {
-            "scaleInDock": 2,
+            "scaleInDock": 1,
             "scaleInEditor": 1.5
         },
         "customtileset.tsx": {
@@ -126,8 +128,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 799,
-                "y": 798
+                "x": 799.6666666666666,
+                "y": 799.6666666666666
             }
         },
         "haus/haus.json": {
@@ -202,8 +204,8 @@
             "scale": 0.22168111313868613,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 2163.016926480424,
-                "y": 1601.3993929104286
+                "x": 2158.505942275043,
+                "y": 1594.6329166023565
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -240,11 +242,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 5,
+            "scale": 0.33,
+            "selectedLayer": 9,
             "viewCenter": {
-                "x": 3420.5,
-                "y": 2613
+                "x": 3246.969696969697,
+                "y": 1572.7272727272725
             }
         },
         "ocean/ocean.json": {
@@ -277,15 +279,15 @@
             "scaleInDock": 1
         },
         "ocean/ocean.tmx": {
-            "scale": 0.125,
-            "selectedLayer": 12,
+            "scale": 2,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 4324,
-                "y": 4184
+                "x": 4098.25,
+                "y": 5300
             }
         },
         "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 1,
             "scaleInEditor": 0.75
         },
         "terrain_atlas.tsx": {
@@ -297,7 +299,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 511.75,
-                "y": 1023.5
+                "y": 1023.75
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -337,28 +339,25 @@
         "tilesets/tilesetfiles/decorations-medieval.tsx",
         "test/test.tmx",
         "base_out_atlas.tsx",
-        "aussicht/aussicht.tsx",
-        "haus/tilesetfiles/bike1.tsx",
-        "haus/tilesetfiles/bike2.tsx",
-        "haus/tilesetfiles/bike3.tsx",
         "ocean/ocean.tmx",
-        "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx"
+        "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx",
+        "map.json"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "ocean/ocean.json",
-        "aussicht/aussicht.tsx",
-        "haus/tilesetfiles/bike1.tsx",
-        "haus/tilesetfiles/bike2.tsx",
-        "haus/tilesetfiles/bike3.tsx",
         "map.json",
         "map.tmx",
         "haus/haus.tmx",
         "fire/fire.tmx",
         "aussicht/turm.tmx",
         "32x32_map_tile v3.1.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx"
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
+        "haus/tilesetfiles/customtileset.tsx",
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "tilesets/tilesetfiles/decorations-medieval.tsx",
+        "test/test.tmx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
