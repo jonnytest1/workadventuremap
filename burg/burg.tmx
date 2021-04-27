@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="burg.json" format="json"/>
  </editorsettings>
+ <properties>
+  <property name="script" value="./display-livestream.js"/>
+ </properties>
  <tileset firstgid="1" source="../32x32_map_tile v3.1.tsx"/>
  <tileset firstgid="668" source="../haus/tilesetfiles/Interiors_free_32x32.tsx"/>
  <tileset firstgid="2092" source="tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx"/>
