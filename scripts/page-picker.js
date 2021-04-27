@@ -52,11 +52,12 @@
         });
 
     function openPage(page) {
-        window.parent.postMessage({
+        WA.loadPage(page);
+        /*window.parent.postMessage({
             'type': 'loadPage',
             'data': {
                 url: page
             }
-        }, '*');
+        }, '*');*/
     }
 })();

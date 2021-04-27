@@ -31,6 +31,10 @@ WA.onEnterZone('minato-event', () => {
     chatenabled = true;
 });
 
+WA.registerMenuCommand('miro', () => {
+    WA.openCoWebSite('http://localhost/workadventuremap/scripts/miro.html');
+});
+
 WA.onLeaveZone('minato-event', () => {
     WA.removeBubble();
 });
@@ -74,18 +78,19 @@ function popupInZone(options) {
         lastOpened = Date.now();
         popup = WA.openPopup(options.objectLayerName, options.popupText, options.popupOptions.map(option => {
             const callback = option.callback;
-            option.callback = () => {
-                if(callback) {
-                    callback(popup);
+            const popupOptions = {
+                ...option,
+                className: option.className || 'normal',
+                callback: () => {
+                    if(callback) {
+                        callback(popup);
+                    }
+                    popup.close();
+                    popup = undefined;
                 }
-                popup.close();
-                popup = undefined;
             };
 
-            if(!option.className) {
-                option.className = 'normal';
-            }
-            return option;
+            return popupOptions;
         }));
     });
     WA.onLeaveZone(options.zone, () => {

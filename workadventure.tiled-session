@@ -3,17 +3,13 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "D:/Jonathan/Projects/bas/workadventure-maps",
-        "ocean",
-        "haus",
         "haus/tilesetfiles",
-        "test",
-        "tilesets",
+        ".",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
         "ocean/tilesets",
         "tilesets/tilesetfiles",
-        "fire",
         "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
@@ -451,11 +447,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 14,
+            "scale": 3,
+            "selectedLayer": 18,
             "viewCenter": {
-                "x": 3711,
-                "y": 1522
+                "x": 158.99999999999997,
+                "y": 711
             }
         },
         "ocean/ocean.json": {
@@ -537,14 +533,14 @@
     "map.width": 32,
     "openFiles": [
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx"
+        "map.tmx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "base_out_atlas.tsx",
-        "map.tmx",
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
+        "map.tmx",
+        "base_out_atlas.tsx",
         "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx",
         "haus/haus.tmx",
         "fire/fire.tmx",
