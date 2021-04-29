@@ -15,15 +15,13 @@ let popupCounter = 123;
 let chatenabled = false;
 WA.onEnterZone('minato-event', () => {
     WA.displayBubble();
-    WA.disablePlayerControl();
-    WA.sendChatMessage('brauchst du hilfe ? (continue by writing exit in c)', 'Minato');
+    WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
     WA.openPopup('minato-event', 'continue ?', [
         {
             label: 'yes',
             className: 'success',
             callback: (popup) => {
                 popup.close();
-                WA.restorePlayerControl();
             }
         }
     ]);

@@ -3,18 +3,25 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.tmx",
+    "activeFile": "map.json",
     "expandedProjectPaths": [
-        "haus/tilesetfiles",
         ".",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "aussicht",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
         "ocean/tilesets",
+        "burg/tilesets",
         "tilesets/tilesetfiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
+        "burg",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "haus/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "D:/Jonathan/Projects/bas/workadventure-maps"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
         "": {
+            "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "32x32_map_tile v3.1.tsx": {
@@ -48,6 +55,274 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json": {
+            "scale": 0.5,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 1060,
+                "y": 914
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#01_fire_extinguisher": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#01_mate": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#02_mate_crates_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#05_mate_bottles_full": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#06_wash_your_hands_32x32": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#07_wear_your_mask_32x32": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#AceSet-Hospital": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#Entrance": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#GustavSchickedanz": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#[Base]BaseChip_pipo": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#arrowup": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bike1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bike2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bike3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#borders-yellow": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#brandadtischgross": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bretzel 3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bretzel1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bretzel2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#bretzelgrosse": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collision": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison3": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison4": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison5": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison6": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#collison7": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#female": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#ludwigerhard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#male": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#mapUtilities": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#maxgrundig": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#minideko": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#rechner1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#tellergross": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#tellermitbutter": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#text": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#themenboard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#themenwand": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#tilesets_deviant_milkian_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#walls": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#walls2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json#whiteboard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json": {
+            "scale": 0.25,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 740,
+                "y": 844
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#02_mate_crates_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#AceSet-Hospital": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#[Base]BaseChip_pipo": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#walls2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json#whiteboard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json": {
+            "scale": 0.5343749999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 784.0935672514622,
+                "y": 800.9356725146199
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#02_mate_crates_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#AceSet-Hospital": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#[Base]BaseChip_pipo": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#walls2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json#whiteboard": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json": {
+            "scale": 0.25,
+            "selectedLayer": 9,
+            "viewCenter": {
+                "x": 672,
+                "y": 924
+            }
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#02_mate_crates_1": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#AceSet-Hospital": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#PathAndObjects": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#[Base]BaseChip_pipo": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#cija_32x32_expansion for Pipoya_CC0": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#furniture": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#walls2": {
+            "scaleInDock": 1
+        },
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json#whiteboard": {
+            "scaleInDock": 1
+        },
         "D:/Jonathan/Projects/bas/workadventure-maps/map.json": {
             "scale": 0.5722265624999999,
             "selectedLayer": 0,
@@ -75,11 +350,11 @@
             "scaleInDock": 1
         },
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json": {
-            "scale": 2,
-            "selectedLayer": 15,
+            "scale": 1.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 800,
-                "y": 799.75
+                "x": 1231.3333333333333,
+                "y": 595.3333333333333
             }
         },
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#01_fire_extinguisher": {
@@ -113,7 +388,7 @@
             "scaleInDock": 1
         },
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#[Base]BaseChip_pipo": {
-            "scaleInDock": 1
+            "scaleInDock": 3
         },
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json#arrowup": {
             "scaleInDock": 1
@@ -317,7 +592,7 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
+                "x": 510,
                 "y": 514
             }
         },
@@ -327,10 +602,10 @@
         },
         "burg/burg.tmx": {
             "scale": 0.75,
-            "selectedLayer": 3,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 565.3333333333333,
-                "y": 316
+                "x": 655.9999999999999,
+                "y": 496
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -358,11 +633,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 1,
-            "selectedLayer": 1,
+            "scale": 0.75,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 315.5,
-                "y": 316
+                "x": 949.3333333333333,
+                "y": 1341.3333333333333
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -419,10 +694,10 @@
         },
         "map.json": {
             "scale": 0.22168111313868613,
-            "selectedLayer": 0,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 2158.505942275043,
-                "y": 1594.6329166023565
+                "x": 2643.4367443535525,
+                "y": 1596.8884087050471
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -459,11 +734,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 3,
-            "selectedLayer": 18,
+            "scale": 1.5,
+            "selectedLayer": 42,
             "viewCenter": {
-                "x": 157.99999999999997,
-                "y": 710.6666666666666
+                "x": 2526.6666666666665,
+                "y": 1340
             }
         },
         "ocean/ocean.json": {
@@ -512,11 +787,11 @@
             "scaleInEditor": 1
         },
         "test/test.tmx": {
-            "scale": 2,
+            "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 511.75,
-                "y": 1023.75
+                "x": 1632,
+                "y": 1760
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -534,7 +809,7 @@
     },
     "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/burg",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/burg/tilesets",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-maps/tiles_png/community/cert/imgs/cert_safety",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 32,
@@ -545,23 +820,24 @@
     "map.width": 32,
     "openFiles": [
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
-        "map.tmx"
+        "map.tmx",
+        "map.json"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx",
-        "burg/burg.tmx",
-        "aussicht/turm.tmx",
+        "test/test.tmx",
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
         "map.tmx",
+        "map.json",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage1.json",
+        "aussicht/turm.tmx",
+        "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx",
+        "burg/burg.tmx",
         "base_out_atlas.tsx",
-        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx",
-        "haus/haus.tmx",
-        "fire/fire.tmx",
-        "32x32_map_tile v3.1.tsx",
-        "haus/tilesetfiles/Room_Builder_free_32x32.tsx",
-        "haus/tilesetfiles/Interiors_free_32x32.tsx"
+        "D:/Jonathan/Projects/bas/workadventure-maps/cija_32x32_expansion for Pipoya_CC0.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
