@@ -15,11 +15,11 @@
             text: 'Hell',
             link: '/_/global/localhost/workadventuremap/fire/fire.json'
         }, {
-            text: 'World Map',
-            link: '/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json'
+            text: 'Github Jonnies Map Cave',
+            link: '/_/global/jonnytest1.github.io/workadventuremap/map.json#start-teleporter-cave'
         }, {
-            text: 'Demo Map',
-            link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
+            text: 'Github Jonnies Map City',
+            link: '/_/global/jonnytest1.github.io/workadventuremap/map.json#start-teleporter-city'
         }, {
             text: 'Demo Map',
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
@@ -61,3 +61,7 @@
         }, '*');*/
     }
 })();
+
+window.onbeforeunload = () => {
+    debugger;
+};
