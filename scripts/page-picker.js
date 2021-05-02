@@ -52,7 +52,7 @@
         });
 
     function openPage(page) {
-        WA.loadPage(page);
+        WA.exitSceneTo(page);
         /*window.parent.postMessage({
             'type': 'loadPage',
             'data': {

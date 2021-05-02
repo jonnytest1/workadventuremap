@@ -1,7 +1,7 @@
 interface Popup {
     close()
 }
-
+type msgCpy = import("../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication").messaging
 interface PopupOptions {
     label: string,
     className?: "normal" | "primary" | "success" | "warning" | "error" | "disabled",
@@ -23,13 +23,24 @@ interface WorkAdventureApi {
     removeBubble(): void;
     registerMenuCommand(commandDescriptor: string, callback: (commandDescriptor: string) => void): void
 
-    getGameState
-    loadPage
+    getGameState(): Promise<{
+        startLayerName: string
+        roomId: string,
+        uuid: string,
+        nickName: string
+        player: {
+            [playerNickName: string]: {
+                position: { x: number, y: number },
+                pusherId: number
+            }
+        }
+    }>
+    exitSceneTo: (page: string) => void
 }
-declare global {
+/*declare global {
 
 
     const WA: WorkAdventureApi
-}
+}*/
 
-var WA: WorkAdventureApi
+declare var WA: WorkAdventureApi

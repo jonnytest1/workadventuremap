@@ -14,6 +14,8 @@ let popupCounter = 123;
 
 let chatenabled = false;
 let hasSendMessage = false;
+let hasReplied = false;
+let hasSentNoReplyMessage = false;
 WA.onEnterZone('minato-event', () => {
     WA.displayBubble();
     if(!hasSendMessage) {
@@ -33,22 +35,37 @@ WA.onEnterZone('minato-event', () => {
     chatenabled = true;
 });
 
+WA.onLeaveZone('minato-event', () => {
+    WA.removeBubble();
+    if(!hasReplied && !hasSentNoReplyMessage) {
+        WA.sendChatMessage('dann halt nicht 🤷‍♂️', 'Minato');
+        hasSentNoReplyMessage = true;
+    }
+
+});
 WA.registerMenuCommand('miro', () => {
     WA.openCoWebSite('http://localhost/workadventuremap/scripts/miro.html');
 });
 
-WA.onLeaveZone('minato-event', () => {
-    WA.removeBubble();
-});
-
-WA.onChatMessage((message) => {
+WA.onChatMessage(async (message) => {
     if(chatenabled) {
         message = message.toLowerCase();
         if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann') || message.includes('was')) {
             WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
         }
-
+        if(message === '!friends') {
+            const gamestate = await WA.getGameState();
+            WA.sendChatMessage('your friends are well', 'Minato');
+        }
+        hasReplied = true;
     }
+});
+
+popupInZone({
+    zone: 'minato-event',
+    popupText: 'https://www.google.de ist ein link',
+    objectLayerName: 'minato-event',
+    popupOptions: []
 });
 
 /**
@@ -133,6 +150,20 @@ popupInZone({
         }
     ]
 });
+
+setTimeout(() => {
+    WA.getGameState()
+        .then(async state => {
+            await message({
+                type: 'userUpdate',
+                data: {
+                    uuid: state.uuid,
+                    nickName: state.nickName
+                }
+            });
+
+        });
+}, 2000);
 
 window.addEventListener('message', (...args) => {
     console.log(...args);
