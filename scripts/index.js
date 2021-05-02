@@ -16,6 +16,37 @@ let chatenabled = false;
 let hasSendMessage = false;
 let hasReplied = false;
 let hasSentNoReplyMessage = false;
+
+/**
+ * @template {keyof msgCpy} T
+ * @param {{
+ *      type:T,
+ *      data?:msgCpy[T]["param"]
+ * }} data
+ * @returns {Promise<msgCpy[T]["response"]>}
+ */
+async function message(data) {
+    /**
+     * @type {Promise<msgCpy[T]["response"]>}
+     */
+    const pr = new Promise((resolv, thrower) => {
+        const img = document.createElement('iframe');
+        window.onmessage = (messageEvent) => {
+            /**
+             * @type {{type:"iframeresponse",data:msgCpy[T]["response"]}}
+             */
+            let eventData = messageEvent.data;
+            if(eventData.type === 'iframeresponse') {
+                resolv(eventData.data);
+                img.remove();
+            }
+        };
+        img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify(data))}/message.png`;
+        document.body.appendChild(img);
+    });
+    return pr;
+}
+
 WA.onEnterZone('minato-event', () => {
     WA.displayBubble();
     if(!hasSendMessage) {
@@ -47,13 +78,13 @@ WA.registerMenuCommand('miro', () => {
     WA.openCoWebSite('http://localhost/workadventuremap/scripts/miro.html');
 });
 
-WA.onChatMessage(async (message) => {
+WA.onChatMessage(async (chatmessage) => {
     if(chatenabled) {
-        message = message.toLowerCase();
-        if(message.endsWith('?') || message.includes('wie') || message.includes('wo') || message.includes('wer') || message.includes('wann') || message.includes('was')) {
+        chatmessage = chatmessage.toLowerCase();
+        if(chatmessage.endsWith('?') || chatmessage.includes('wie') || chatmessage.includes('wo') || chatmessage.includes('wer') || chatmessage.includes('wann') || chatmessage.includes('was')) {
             WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
         }
-        if(message === '!friends') {
+        if(chatmessage === '!friends') {
             const gamestate = await WA.getGameState();
             WA.sendChatMessage('your friends are well', 'Minato');
         }
