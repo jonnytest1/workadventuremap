@@ -5,21 +5,22 @@
     },
     "activeFile": "map.tmx",
     "expandedProjectPaths": [
+        "tilesets/tilesetfiles",
+        "church",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "burg",
+        "test",
+        ".",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
         "ocean/tilesets",
+        "haus",
         "burg/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "tilesets",
+        "haus/tilesetfiles",
         "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
         "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "burg",
-        "haus",
-        "church",
-        "tilesets/tilesetfiles",
-        "tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
-        "haus/tilesetfiles",
-        "test"
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -681,7 +682,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 479.8333333333333,
-                "y": 479.66666666666663
+                "y": 479.8333333333333
             }
         },
         "customtileset.tsx": {
@@ -709,7 +710,7 @@
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 799.3333333333333,
-                "y": 800
+                "y": 799.3333333333333
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -806,11 +807,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.25,
-            "selectedLayer": 23,
+            "scale": 0.75,
+            "selectedLayer": 35,
             "viewCenter": {
-                "x": 758,
-                "y": 1092
+                "x": 2175.333333333333,
+                "y": 1599.3333333333333
             }
         },
         "ocean/ocean.json": {
@@ -862,8 +863,8 @@
             "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 514,
-                "y": 1026
+                "x": 510,
+                "y": 1022
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -894,19 +895,20 @@
         "map.tmx",
         "church/church.tmx",
         "test/test.tmx",
-        "tilesets/tilesetfiles/Phssthpok_32x32.tsx"
+        "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
+        "haus/haus.tmx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "burg/burg.tmx",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json",
-        "32x32_map_tile v3.1.tsx",
+        "haus/haus.tmx",
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
         "test/test.tmx",
         "church/church.tmx",
         "map.tmx",
-        "haus/haus.tmx",
+        "burg/burg.tmx",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json",
+        "32x32_map_tile v3.1.tsx",
         "map.json",
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
         "D:/Jonathan/Projects/bas/workadventure-maps/map.json",

@@ -16,6 +16,12 @@
         WA.sendChatMessage('', '');
     });
 
+    ws.addEventListener((event) => {
+        if(event.type === 'receivemessage') {
+            WA.sendChatMessage(event.message, event.author);
+        }
+    });
+
     WA.onChatMessage(async (chatmessage) => {
         if(chatmessage === '!friends') {
             const friendInfo = await message({

@@ -27,27 +27,29 @@ async function message(data) {
     });
     return pr;
 }
+
+const callbacks = [];
 /**
  * @type {{
  * ws:WebSocket,
- * onmessage:((event)=>any)}}
+ * addEventListener:((event)=>any)}}
  */
 const ws = {
-    onmessage: event => { },
+    addEventListener: (callback) => {
+        callbacks.push((callback));
+    },
     ws: null
 };
-const messageCallback = event => {
-    if(event.type === 'receivemessage') {
-        WA.sendChatMessage(event.message, event.author);
-    }
-};
+
 function connectWebsocket() {
     ws.ws = new WebSocket('wss://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message');
     ws.ws.onclose = () => {
         connectWebsocket();
     };
     ws.ws.onmessage = event => {
-        ws.onmessage(JSON.parse(event.data));
+        callbacks.forEach(cb => {
+            cb(JSON.parse(event.data));
+        });
     };
 
 }
