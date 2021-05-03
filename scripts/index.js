@@ -32,6 +32,7 @@ window.importScript = async (scriptLoadUrl) => {
         const existingScript = [...document.scripts].find(scr => scr.src === script.src);
         if(existingScript) {
             resolv(existingScript['exports']);
+            return;
         }
         script.onload = () => {
             resolv(script['exports']);
@@ -47,4 +48,6 @@ window.importScript = async (scriptLoadUrl) => {
 window.require = importScript;
 
 const url = scriptURL.searchParams.get('url');
-require(url);
+for(let requireUrl of url.split(',')) {
+    require(requireUrl);
+}
