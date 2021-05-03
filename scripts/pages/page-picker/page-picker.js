@@ -63,5 +63,5 @@
 })();
 
 window.onbeforeunload = () => {
-    debugger;
+    // debugger;
 };

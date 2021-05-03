@@ -680,8 +680,8 @@
             "scale": 3,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 479.8333333333333,
-                "y": 480
+                "x": 599.5,
+                "y": 558
             }
         },
         "customtileset.tsx": {
@@ -705,11 +705,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 4,
+            "scale": 1.5,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 799.3333333333333,
-                "y": 798.6666666666665
+                "x": 1302,
+                "y": 1464.6666666666665
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -806,11 +806,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 35,
+            "scale": 1.5,
+            "selectedLayer": 24,
             "viewCenter": {
-                "x": 2350,
-                "y": 729.3333333333333
+                "x": 1829.6666666666665,
+                "y": 788
             }
         },
         "ocean/ocean.json": {
@@ -881,7 +881,7 @@
     },
     "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-maps/tiles_png/community/cert/imgs/cert_safety",
+    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 30,

@@ -5,8 +5,9 @@ let chatbotenabled = false;
 let hasReplied = false;
 let hasSentNoReplyMessage = false;
 
+const importsPr = require('./zoned-popup');
 (async () => {
-    const { popupInZone } = await require('./zoned-popup');
+    const { popupInZone } = await importsPr;
     WA.onEnterZone('minato-event', () => {
         WA.displayBubble();
         if(!hasSendMessage) {

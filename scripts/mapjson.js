@@ -1,11 +1,13 @@
-
+const requirePromises = Promise.all([
+    require('./backend-connection'),
+    require('./zoned-popup'),
+    require('./user-update'),
+    require('./minato-event'),
+    require('./game-mode')
+]);
 (async () => {
-    const [{ message, ws }, { popupInZone }] = await Promise.all([
-        require('./backend-connection'),
-        require('./zoned-popup'),
-        require('./user-update'),
-        require('./minato-event')
-    ]);
+
+    const [{ message, ws }, { popupInZone }] = await requirePromises;
 
     console.log('script run');
 
