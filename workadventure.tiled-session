@@ -6,21 +6,20 @@
     "activeFile": "map.tmx",
     "expandedProjectPaths": [
         "tilesets/tilesetfiles",
-        "church",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
-        "burg",
-        "test",
-        ".",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "ocean/tilesets",
-        "haus",
         "burg/tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "tilesets",
+        "ocean/tilesets",
         "haus/tilesetfiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "tilesets",
+        "church",
+        "burg",
         "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater"
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "haus",
+        "test",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -682,7 +681,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 479.8333333333333,
-                "y": 479.8333333333333
+                "y": 480
             }
         },
         "customtileset.tsx": {
@@ -710,7 +709,7 @@
             "selectedLayer": 4,
             "viewCenter": {
                 "x": 799.3333333333333,
-                "y": 799.3333333333333
+                "y": 798.6666666666665
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -810,8 +809,8 @@
             "scale": 0.75,
             "selectedLayer": 35,
             "viewCenter": {
-                "x": 2175.333333333333,
-                "y": 1599.3333333333333
+                "x": 2350,
+                "y": 729.3333333333333
             }
         },
         "ocean/ocean.json": {
@@ -863,8 +862,8 @@
             "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 510,
-                "y": 1022
+                "x": 514,
+                "y": 1024
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {

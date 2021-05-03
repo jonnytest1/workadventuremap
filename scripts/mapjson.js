@@ -43,10 +43,10 @@
                 }
             }
         } else if(chatmessage.startsWith('!message')) {
-            ws.ws.send(JSON.stringify({
+            ws.send({
                 type: 'chatmessage',
                 data: { message: chatmessage.split('!message')[1] }
-            }));
+            });
         } else if(chatmessage.startsWith('!visit')) {
             const friendInfo = await message({
                 type: 'friendstatus'
