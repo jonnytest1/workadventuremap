@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="fire.json" format="json"/>
  </editorsettings>
+ <properties>
+  <property name="script" value="../scripts/fire.js"/>
+ </properties>
  <tileset firstgid="1" source="../base_out_atlas.tsx"/>
  <tileset firstgid="1025" source="../32x32_map_tile v3.1.tsx"/>
  <layer id="9" name="startlayer" width="50" height="50">
@@ -172,6 +175,9 @@
 </data>
  </layer>
  <layer id="2" name="lava" width="50" height="50">
+  <properties>
+   <property name="zone" value="death"/>
+  </properties>
   <data encoding="csv">
 305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,
 305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,305,

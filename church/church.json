@@ -136,15 +136,15 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":130.666666666667,
+                 "height":130.667,
                  "id":3,
                  "name":"freindship popup",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":181.333333333333,
+                 "width":181.333,
                  "x":161,
-                 "y":141.333333333333
+                 "y":141.333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -159,7 +159,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/scripts\/church.js"
+         "value":"..\/scripts\/index.js?url=.\/church.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.5.0",

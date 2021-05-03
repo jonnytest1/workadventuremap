@@ -3,23 +3,23 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater/amphitheater.tmx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "test",
-        "D:/Jonathan/Projects/bas/workadventure-maps",
-        "burg/tilesets",
-        "haus/tilesetfiles",
-        "tilesets/tilesetfiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "burg",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
         "ocean/tilesets",
-        "aussicht",
+        "burg/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
         "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "haus"
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "burg",
+        "haus",
+        "church",
+        "tilesets/tilesetfiles",
+        "tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "haus/tilesetfiles",
+        "test"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -660,7 +660,7 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 656.6666666666667,
+                "x": 658,
                 "y": 496
             }
         },
@@ -680,8 +680,8 @@
             "scale": 3,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 196.33333333333331,
-                "y": 198
+                "x": 479.8333333333333,
+                "y": 479.66666666666663
             }
         },
         "customtileset.tsx": {
@@ -806,11 +806,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 3,
-            "selectedLayer": 14,
+            "scale": 0.25,
+            "selectedLayer": 23,
             "viewCenter": {
-                "x": 3272.6666666666665,
-                "y": 1812.3333333333333
+                "x": 758,
+                "y": 1092
             }
         },
         "ocean/ocean.json": {
@@ -855,7 +855,7 @@
             "scaleInEditor": 0.75
         },
         "terrain_atlas.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
         "test/test.tmx": {
@@ -863,7 +863,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 514,
-                "y": 1024
+                "y": 1026
             }
         },
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx": {
@@ -871,7 +871,7 @@
             "scaleInEditor": 1
         },
         "tilesets/tilesetfiles/decorations-medieval.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 2,
             "scaleInEditor": 1.5
         },
         "tilesets/tilesetfiles/dldhdmcov.tsx": {
@@ -879,7 +879,7 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/church",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
     "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-maps/tiles_png/community/cert/imgs/cert_safety",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
@@ -891,32 +891,28 @@
     "map.tileWidth": 32,
     "map.width": 30,
     "openFiles": [
-        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
         "map.tmx",
-        "map.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json",
-        "haus/haus.tmx",
+        "church/church.tmx",
         "test/test.tmx",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater/amphitheater.tmx",
-        "32x32_map_tile v3.1.tsx",
-        "D:/Jonathan/Projects/bas/workadventure-maps/map.json"
+        "tilesets/tilesetfiles/Phssthpok_32x32.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "haus/haus.tmx",
         "burg/burg.tmx",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json",
-        "map.tmx",
-        "test/test.tmx",
         "32x32_map_tile v3.1.tsx",
+        "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
+        "test/test.tmx",
+        "church/church.tmx",
+        "map.tmx",
+        "haus/haus.tmx",
         "map.json",
         "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
         "D:/Jonathan/Projects/bas/workadventure-maps/map.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater/amphitheater.tmx",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3/etage3.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1/etage1.json"
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater/amphitheater.tmx"
     ],
+    "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
