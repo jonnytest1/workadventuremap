@@ -6,19 +6,13 @@
             text: 'Demo Map',
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
         }, {
-            text: 'Jonnys Map Cave',
-            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-cave'
-        }, {
-            text: 'Jonnys Map City',
-            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-city'
-        }, {
             text: 'Hell',
-            link: '/_/global/localhost/workadventuremap/fire/fire.json'
+            link: '/_/global/jonnytest1.github.io/workadventuremap/fire/fire.json'
         }, {
-            text: 'Github Jonnies Map Cave',
+            text: 'Jonnies Map Cave',
             link: '/_/global/jonnytest1.github.io/workadventuremap/map.json#start-teleporter-cave'
         }, {
-            text: 'Github Jonnies Map City',
+            text: 'Jonnies Map City',
             link: '/_/global/jonnytest1.github.io/workadventuremap/map.json#start-teleporter-city'
         }, {
             text: 'Demo Map',
@@ -26,6 +20,12 @@
         }, {
             text: 'testset set sdf ssf ',
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
+        }, {
+            text: 'localhost Jonnys Map Cave',
+            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-cave'
+        }, {
+            text: 'localhost Jonnys Map City',
+            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-city'
         }
     ];
     links.

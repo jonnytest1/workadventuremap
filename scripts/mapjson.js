@@ -10,7 +10,7 @@
     console.log('script run');
 
     WA.registerMenuCommand('miro', () => {
-        WA.openCoWebSite('http://localhost/workadventuremap/scripts/pages/miro.html');
+        WA.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
     });
     WA.registerMenuCommand('open chat', () => {
         WA.sendChatMessage('', '');
