@@ -1,4 +1,4 @@
-/// <reference path="./index.d.ts" />
+/// <reference path="../../index.d.ts" />
 (async () => {
     const state = await WA.getGameState();
     const links = [

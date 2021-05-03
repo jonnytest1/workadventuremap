@@ -117,7 +117,7 @@ WA.onEnterZone('friendship', async () => {
         });
         newFriends.filter(newFriend => !friends.includes(newFriend))
             .forEach(friend => {
-                WA.sendChatMessage(`you have become friends with ${friend}`, 'armor');
+                WA.sendChatMessage(`you have become friends with ${friend}`, 'amor');
             });
         friends = newFriends;
     }, 1000);
