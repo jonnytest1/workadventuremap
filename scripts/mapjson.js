@@ -96,8 +96,4 @@ const requirePromises = Promise.all([
             }
         ]
     });
-
-    window.addEventListener('message', (...args) => {
-        console.log(...args);
-    });
 })();

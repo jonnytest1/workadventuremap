@@ -8,7 +8,9 @@ const importPromise = Promise.all([
 
     const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode }] = await importPromise;
 
+    console.log('got imports');
     const data = await getUserData();
+    console.log('got userdata');
     if(data.gameModeEnabled) {
         enableGameMode();
     }
