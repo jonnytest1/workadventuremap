@@ -4,7 +4,8 @@ const requirePromises = Promise.all([
     require('./game/user-data'),
     require('./user-update'),
     require('./minato-event'),
-    require('./game-mode')
+    require('./game-mode'),
+    require('./communication')
 ]);
 (async () => {
 
@@ -20,51 +21,6 @@ const requirePromises = Promise.all([
             WA.sendChatMessage('', '');
         });
     }
-    ws.addEventListener((event) => {
-        if(event.type === 'receivemessage') {
-            WA.sendChatMessage(event.message, event.author);
-        }
-    });
-
-    WA.onChatMessage(async (chatmessage) => {
-        if(chatmessage === '!friends') {
-            const friendInfo = await message({
-                type: 'friendstatus'
-            });
-            for(let friend in friendInfo) {
-                const friendStatus = friendInfo[friend];
-                if(friendStatus.status === 'offline') {
-                    WA.sendChatMessage(`${friend}(${friendStatus.index}) is offline`, '');
-                } else {
-                    const roomParts = friendStatus.room.split('/');
-                    const currentMap = roomParts.pop();
-                    const domain = roomParts[2];
-                    let statusMessage = `${friend}(${friendStatus.index}) is currently in ${domain}-${currentMap} `;
-                    if(friendStatus.jitsiRoom !== 'invalidmapref') {
-                        statusMessage += ` in ${friendStatus.jitsiRoom}`;
-                    }
-                    WA.sendChatMessage(statusMessage, '');
-                }
-            }
-        } else if(chatmessage.startsWith('!message')) {
-            ws.send({
-                type: 'chatmessage',
-                data: { message: chatmessage.split('!message')[1] }
-            });
-        } else if(chatmessage.startsWith('!visit')) {
-            const friendInfo = await message({
-                type: 'friendstatus'
-            });
-            for(let friend in friendInfo) {
-                if(friendInfo[friend].index === +chatmessage.replace('!visit', '')
-                    .trim()) {
-                    WA.exitSceneTo(`/${friendInfo[friend].room}`);
-                    return;
-                }
-            }
-
-        }
-    });
 
     popupInZone({
         zone: 'inbox',
@@ -81,21 +37,21 @@ const requirePromises = Promise.all([
             }
         ]
     });
-    popupInZone({
-        zone: 'eventtest',
-        objectLayerName: 'sig',
-        popupText: 'PopupText',
-        popupOptions: [
-            {
-                label: 'hard',
-                callback: () => {
-                    //enable health ui ?
-                    //enable npc engine
-                }
-            },
-            {
-                label: 'peaceful',
-            }
-        ]
-    });
+    /* popupInZone({
+         zone: 'eventtest',
+         objectLayerName: 'sig',
+         popupText: 'PopupText',
+         popupOptions: [
+             {
+                 label: 'hard',
+                 callback: () => {
+                     //enable health ui ?
+                     //enable npc engine
+                 }
+             },
+             {
+                 label: 'peaceful',
+             }
+         ]
+     });*/
 })();

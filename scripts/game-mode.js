@@ -2,7 +2,8 @@ const importPromise = Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./game/user-data'),
-    require('./game/main')
+    require('./game/main'),
+    require('./communication')
 ]);
 (async () => {
 

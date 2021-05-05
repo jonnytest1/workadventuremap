@@ -649,7 +649,7 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 510,
+                "x": 509,
                 "y": 514
             }
         },
@@ -810,8 +810,8 @@
             "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 2786,
-                "y": 1060
+                "x": 2479,
+                "y": 1058
             }
         },
         "ocean/ocean.json": {
