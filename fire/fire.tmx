@@ -4,7 +4,7 @@
   <export target="fire.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="script" value="../scripts/fire.js"/>
+  <property name="script" value="../scripts/index.js?url=./user-update.js,./game-mode.js,./fire.js"/>
  </properties>
  <tileset firstgid="1" source="../base_out_atlas.tsx"/>
  <tileset firstgid="1025" source="../32x32_map_tile v3.1.tsx"/>

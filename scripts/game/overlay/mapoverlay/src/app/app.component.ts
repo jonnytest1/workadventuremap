@@ -12,9 +12,33 @@ export class AppComponent {
 
   userData: Promise<UnPromise<FeMessage['getUserData']['response']>>;
 
+
+  _autoOpenOverlay: boolean = false
+
+  get autoOpenOverlay() {
+    return this._autoOpenOverlay
+  }
+
+  set autoOpenOverlay(value: boolean) {
+    this._autoOpenOverlay = value;
+    this.apiService.passThrough({
+      type: "userUpdate",
+      data: {
+        autoOpenGameOverlay: value
+      }
+    })
+  }
+
   constructor(private apiService: ApiService) {
-    this.userData = apiService.passThrough({
-      type: 'getUserData'
-    });
+
+    window.addEventListener("keydown", e => {
+      console.log(e)
+    })
+
+
+  }
+
+  openMiro() {
+    this.apiService.WAApi('openCoWebSite', './pages/miro.html')
   }
 }

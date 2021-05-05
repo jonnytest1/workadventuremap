@@ -159,7 +159,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/scripts\/index.js?url=.\/church.js,.\/user-update.js"
+         "value":"..\/scripts\/index.js?url=.\/church.js,.\/user-update.js,.\/game-mode.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

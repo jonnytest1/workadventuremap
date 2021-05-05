@@ -1,31 +1,46 @@
-you died {{ userData.deathCount }} times so far
+<ng-container *ngIf="userDataPr|async let userData">
+
+  you died {{ userData.deathCount }} times so far
 
 
-<button *ngIf="userData.isAdmin"
-        (click)="messageGlobal()">message global</button>
+  <button *ngIf="userData.isAdmin"
+          mat-button
+          (click)="messageGlobal()">message global</button>
 
-<button (click)="openMiro()">open miro</button>
-<table>
-  <tr>
-    <th>
-      Index
-    </th>
-    <th>
-      Name
-    </th>
-    <th>
-      Status
-    </th>
-    <th>
-      Room
-    </th>
-  </tr>
+  <button *ngIf="userData.isAdmin"
+          mat-button
+          (click)="loadUserData()">refresh</button>
+  <table>
+    <tr>
+      <th>
+        Index
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+        Room
+      </th>
+    </tr>
 
-  <tr *ngFor="let friend of userData.friends |keyvalue">
-    <td>{{friend.key}}</td>
-    <td>{{friend.value.status}}</td>
-    <td>
-      <button (click)="messageFriend(friend.value)">message</button>
-    </td>
-  </tr>
-</table>
+    <tr *ngFor="let friend of userData.friends | keyvalue: sortFriends">
+      <td>{{friend.value.index}}</td>
+      <td>{{friend.key}}</td>
+      <td>{{friend.value.status}}</td>
+
+      <ng-container *ngIf="friend.value.status=='online'">
+        <td>{{getRoom(friend.value)}}</td>
+        <td>
+          <button mat-button
+                  (click)="messageFriend(friend.value)">message</button>
+          <button mat-button
+                  (click)="visitFriend(friend.value)">visit</button>
+        </td>
+      </ng-container>
+
+    </tr>
+  </table>
+</ng-container>

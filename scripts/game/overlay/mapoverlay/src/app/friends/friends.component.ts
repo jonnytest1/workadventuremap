@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { KeyValue } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api-service';
 import { FeMessage, UnPromise } from '../backend';
+
+type Friend = UnPromise<FeMessage['getUserData']['response']>['friends']['key'];
 
 @Component({
   selector: 'app-friends',
@@ -9,20 +12,44 @@ import { FeMessage, UnPromise } from '../backend';
 })
 export class FriendsComponent implements OnInit {
 
-  @Input()
-  userData: UnPromise<FeMessage['getUserData']['response']>;
+  userDataPr: FeMessage['getUserData']['response'];
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {
+    this.loadUserData();
+  }
+
+  loadUserData() {
+    this.userDataPr = this.apiService.passThrough({
+      type: 'getUserData'
+    });
+  }
 
   ngOnInit() {
+
+  }
+
+  debug<T>(obj: T): T {
+    return obj
+  }
+
+  getRoom(friend: Friend) {
+    const roomParts = friend.room.split('/');
+    const currentMap = roomParts.pop();
+    const domain = roomParts[2];
+    let roomStr = `${domain}-${currentMap} `
+    if (friend.jitsiRoom && friend.jitsiRoom !== 'invalidmapref') {
+      roomStr += ` in ${friend.jitsiRoom}`;
+    }
+
+    return roomStr
+  }
+
+  sortFriends(friend: KeyValue<string, Friend>, friend2: KeyValue<string, Friend>) {
+    return friend.value.index - friend2.value.index
   }
 
 
-  openMiro() {
-    this.apiService.WAApi('openCoWebSite', './pages/miro.html');
-    // 'https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html'
-  }
-  messageFriend(friend: UnPromise<FeMessage['getUserData']['response']>['friends']['key']) {
+  messageFriend(friend: Friend) {
     const message = prompt('message');
     this.apiService.passThrough({
       type: 'chatmessage',
@@ -30,6 +57,18 @@ export class FriendsComponent implements OnInit {
         message: `${friend.index} ${message}`
       }
     });
+  }
+  async visitFriend(friend: Friend) {
+
+    const friendInfo = await this.apiService.passThrough({
+      type: 'friendstatus'
+    });
+    for (let friendName in friendInfo) {
+      if (friendInfo[friendName].index === friend.index) {
+        this.apiService.WAApi("exitSceneTo", `/${friendInfo[friendName].room}`)
+        return;
+      }
+    }
   }
 
   messageGlobal() {

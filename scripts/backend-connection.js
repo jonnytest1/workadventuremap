@@ -30,22 +30,11 @@ async function message(data) {
             uuid: uuid
         });
         promiseMap[uuid] = resolv;
-        /*const img = document.createElement('iframe');
-        window.onmessage = (messageEvent) => {
-            /**
-             * @type {{type:"iframeresponse",data:msgCpy[T]["response"]}}
-             *
-            let eventData = messageEvent.data;
-            if(eventData.type === 'iframeresponse') {
-                resolv(eventData.data);
-                img.remove();
-            }
-        };
-        img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify(data))}/message.png`;
-        document.body.appendChild(img);*/
+
     });
     return pr;
 }
+
 /**
  * @type {WebSocket}
  */
@@ -56,14 +45,28 @@ const callbacks = [];
  */
 let eventQueue = [];
 
+let cookieCheckPromise = new Promise((res, thr) => {
+    const img = document.createElement('iframe');
+    window.onmessage = (messageEvent) => {
+        let eventData = messageEvent.data;
+        if(eventData.type === 'iframeresponse') {
+            res();
+            img.remove();
+        }
+    };
+    img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.png`;
+    document.body.appendChild(img);
+});
+
 /**
- * @type {{addEventListener,send}}
- */
+* @type {{addEventListener,send}}
+*/
 const ws = {
     addEventListener: (callback) => {
         callbacks.push((callback));
     },
-    send: (msg) => {
+    send: async (msg) => {
+        await cookieCheckPromise;
         if(websocket.readyState !== websocket.OPEN) {
             console.log('caching', msg);
             eventQueue.push(JSON.stringify(msg));
@@ -101,8 +104,9 @@ function connectWebsocket() {
                     console.log('sending from queue', event);
                     websocket.send(event);
                 }
-                eventQueue = undefined;
+                eventQueue = [];
             } catch(e) {
+                debugger;
                 console.error(e);
             }
         }, 100);

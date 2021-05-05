@@ -342,9 +342,9 @@
   </layer>
   <layer id="34" name="house-advert" width="136" height="100">
    <properties>
-    <property name="openWebsite" value="./scripts/page/index.html"/>
-    <property name="openWebsiteAllowApi" type="bool" value="false"/>
-    <property name="zone" value="eventtest"/>
+    <property name="openWebsite" value="./scripts/pages/index.html"/>
+    <property name="openWebsiteAllowApi" type="bool" value="true"/>
+    <property name="zone2" value="eventtest"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

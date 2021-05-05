@@ -4,7 +4,7 @@
   <export target="church.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="script" value="../scripts/index.js?url=./church.js,./user-update.js"/>
+  <property name="script" value="../scripts/index.js?url=./church.js,./user-update.js,./game-mode.js"/>
  </properties>
  <tileset firstgid="1" source="../terrain_atlas.tsx"/>
  <tileset firstgid="1025" source="../tilesets/tilesetfiles/Phssthpok_32x32.tsx"/>

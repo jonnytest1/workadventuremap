@@ -661,7 +661,7 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 658,
+                "x": 656.6666666666666,
                 "y": 496
             }
         },
@@ -682,7 +682,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 480,
-                "y": 479.8333333333333
+                "y": 480
             }
         },
         "customtileset.tsx": {
@@ -693,7 +693,7 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 799.3333333333333,
+                "x": 697.6666666666666,
                 "y": 799.3333333333333
             }
         },
@@ -709,8 +709,8 @@
             "scale": 0.33,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 800,
-                "y": 798.4848484848485
+                "x": 1260.6060606060605,
+                "y": 530.3030303030304
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -807,11 +807,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.25,
-            "selectedLayer": 25,
+            "scale": 0.5,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 1740,
-                "y": 1728
+                "x": 2786,
+                "y": 1060
             }
         },
         "ocean/ocean.json": {
@@ -859,6 +859,26 @@
             "scaleInDock": 0.75,
             "scaleInEditor": 1
         },
+        "test/5050.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 770,
+                "y": 426
+            }
+        },
+        "test/6eck.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 572,
+                "y": 530.6666666666665
+            }
+        },
+        "test/floortileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "test/test.tmx": {
             "scale": 0.25,
             "selectedLayer": 0,
@@ -884,14 +904,15 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps/test",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/tilesets",
+    "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 30,
     "map.lastUsedExportFilter": "JSON-Kartendateien (*.json)",
     "map.lastUsedFormat": "tmx",
+    "map.orientation": null,
     "map.tileHeight": 32,
     "map.tileWidth": 32,
     "map.width": 30,
@@ -906,6 +927,8 @@
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "test/floortileset.tsx",
+        "test/5050.tmx",
         "tilesets/tilesetfiles/Male 07-3.tsx",
         "haus/haus.tmx",
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
@@ -915,16 +938,14 @@
         "burg/burg.tmx",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2/etage2.json",
         "32x32_map_tile v3.1.tsx",
-        "map.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/openbas.json",
-        "D:/Jonathan/Projects/bas/workadventure-maps/map.json"
+        "map.json"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 32,
-        "width": 32
+        "height": 50,
+        "width": 50
     },
     "tileset.transparentColor": "#eeeeee",
     "tileset.type": 0,

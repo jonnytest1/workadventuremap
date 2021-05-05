@@ -77,15 +77,15 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/scripts\/page\/index.html"
+                         "value":".\/scripts\/pages\/index.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }, 
                         {
-                         "name":"zone",
+                         "name":"zone2",
                          "type":"string",
                          "value":"eventtest"
                         }],

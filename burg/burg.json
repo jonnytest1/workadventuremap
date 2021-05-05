@@ -76,10 +76,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":".\/display-livestream.js"
+         "value":"..\/scripts\/index.js?url=.\/user-update.js,.\/game-mode.js,..\/burg\/display-livestream.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.6.0",
  "tileheight":32,
  "tilesets":[
         {
@@ -104,12 +104,32 @@
                         }]
                 }, 
                 {
+                 "id":37,
+                 "probability":0.05
+                }, 
+                {
                  "id":47,
                  "probability":60
                 }, 
                 {
+                 "id":83,
+                 "probability":0.05
+                }, 
+                {
+                 "id":126,
+                 "probability":0.001
+                }, 
+                {
+                 "id":127,
+                 "probability":0.001
+                }, 
+                {
                  "id":142,
                  "probability":6000
+                }, 
+                {
+                 "id":266,
+                 "probability":0.001
                 }, 
                 {
                  "id":486,
@@ -127,7 +147,7 @@
                         {
                          "color":"#ff0000",
                          "name":"gras",
-                         "probability":1,
+                         "probability":0.01,
                          "tile":47
                         }, 
                         {
@@ -147,14 +167,38 @@
                          "name":"deep water",
                          "probability":1,
                          "tile":488
+                        }, 
+                        {
+                         "color":"#00e9ff",
+                         "name":"stairs",
+                         "probability":1,
+                         "tile":-1
+                        }, 
+                        {
+                         "color":"#ff00d8",
+                         "name":"void",
+                         "probability":1,
+                         "tile":-1
                         }],
                  "name":"32x32",
                  "tile":-1,
                  "type":"mixed",
                  "wangtiles":[
                         {
+                         "tileid":37,
+                         "wangid":[0, 0, 5, 5, 5, 5, 5, 0]
+                        }, 
+                        {
                          "tileid":47,
                          "wangid":[1, 1, 1, 1, 1, 1, 1, 1]
+                        }, 
+                        {
+                         "tileid":60,
+                         "wangid":[5, 5, 5, 5, 5, 5, 5, 5]
+                        }, 
+                        {
+                         "tileid":83,
+                         "wangid":[5, 5, 5, 0, 0, 0, 5, 5]
                         }, 
                         {
                          "tileid":118,
@@ -167,6 +211,14 @@
                         {
                          "tileid":120,
                          "wangid":[1, 1, 1, 1, 2, 2, 2, 1]
+                        }, 
+                        {
+                         "tileid":126,
+                         "wangid":[1, 0, 5, 5, 5, 0, 1, 0]
+                        }, 
+                        {
+                         "tileid":127,
+                         "wangid":[1, 0, 1, 0, 5, 5, 5, 0]
                         }, 
                         {
                          "tileid":141,
@@ -191,6 +243,14 @@
                         {
                          "tileid":166,
                          "wangid":[2, 1, 1, 1, 1, 1, 2, 2]
+                        }, 
+                        {
+                         "tileid":172,
+                         "wangid":[5, 5, 5, 5, 5, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":173,
+                         "wangid":[5, 0, 0, 0, 5, 5, 5, 5]
                         }, 
                         {
                          "tileid":190,
@@ -223,6 +283,14 @@
                         {
                          "tileid":238,
                          "wangid":[2, 2, 2, 2, 2, 2, 2, 1]
+                        }, 
+                        {
+                         "tileid":264,
+                         "wangid":[5, 5, 5, 1, 1, 0, 0, 0]
+                        }, 
+                        {
+                         "tileid":265,
+                         "wangid":[5, 0, 0, 1, 1, 1, 5, 5]
                         }, 
                         {
                          "tileid":374,
@@ -1265,6 +1333,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":1.5,
+ "version":"1.6",
  "width":32
 }
