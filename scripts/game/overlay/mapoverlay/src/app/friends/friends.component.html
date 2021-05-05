@@ -1,3 +1,31 @@
-<p>
-  friends works!
-</p>
+you died {{ userData.deathCount }} times so far
+
+
+<button *ngIf="userData.isAdmin"
+        (click)="messageGlobal()">message global</button>
+
+<button (click)="openMiro()">open miro</button>
+<table>
+  <tr>
+    <th>
+      Index
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Room
+    </th>
+  </tr>
+
+  <tr *ngFor="let friend of userData.friends |keyvalue">
+    <td>{{friend.key}}</td>
+    <td>{{friend.value.status}}</td>
+    <td>
+      <button (click)="messageFriend(friend.value)">message</button>
+    </td>
+  </tr>
+</table>

@@ -50,7 +50,10 @@ async function message(data) {
  */
 let websocket;
 const callbacks = [];
-const eventQueue = [];
+/**
+ * @type {Array<string>}
+ */
+let eventQueue = [];
 
 /**
  * @type {{addEventListener,send}}
@@ -61,6 +64,7 @@ const ws = {
     },
     send: (msg) => {
         if(websocket.readyState !== websocket.OPEN) {
+            console.log('caching', msg);
             eventQueue.push(JSON.stringify(msg));
         } else {
             websocket.send(JSON.stringify(msg));
@@ -74,18 +78,34 @@ function connectWebsocket() {
         connectWebsocket();
     };
     websocket.onmessage = event => {
+        console.log('onmessage data', event);
         const eventJSon = JSON.parse(event.data);
         if(eventJSon.uuid && promiseMap[eventJSon.uuid]) {
+            console.log('resolving', eventJSon.data);
             promiseMap[eventJSon.uuid](eventJSon.data);
+            delete promiseMap[eventJSon.uuid];
+            return;
         }
+        console.log('no uuid for', eventJSon);
+
         callbacks.forEach(cb => {
             cb(eventJSon);
         });
     };
     websocket.onopen = () => {
-        for(let event of eventQueue) {
-            websocket.send(event);
-        }
+        setTimeout(async () => {
+            try {
+                for(let event of eventQueue) {
+                    await new Promise(res => setTimeout(res, 100));
+                    console.log('sending from queue', event);
+                    websocket.send(event);
+                }
+                eventQueue = undefined;
+            } catch(e) {
+                console.error(e);
+            }
+        }, 100);
+
     };
 
 }

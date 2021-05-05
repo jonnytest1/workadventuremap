@@ -19,6 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "sourceMap": true,
+            "optimization": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -57,7 +59,8 @@
               ]
             },
             "local": {
-              "baseHref": "/scripts/game/overlay/mapoverlay/dist/mapoverlay/"
+              "baseHref": "/scripts/game/overlay/mapoverlay/dist/mapoverlay/",
+              "sourceMap": true
             }
           }
         },

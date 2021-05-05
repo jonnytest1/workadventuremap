@@ -1,23 +1,25 @@
 const requirePromises = Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
+    require('./game/user-data'),
     require('./user-update'),
     require('./minato-event'),
     require('./game-mode')
 ]);
 (async () => {
 
-    const [{ message, ws }, { popupInZone }] = await requirePromises;
+    const [{ message, ws }, { popupInZone }, { getUserData }] = await requirePromises;
 
     console.log('script run');
-
-    WA.registerMenuCommand('miro', () => {
-        WA.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
-    });
-    WA.registerMenuCommand('open chat', () => {
-        WA.sendChatMessage('', '');
-    });
-
+    const data = await getUserData();
+    if(!data.gameModeEnabled) {
+        WA.registerMenuCommand('miro', () => {
+            WA.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
+        });
+        WA.registerMenuCommand('open chat', () => {
+            WA.sendChatMessage('', '');
+        });
+    }
     ws.addEventListener((event) => {
         if(event.type === 'receivemessage') {
             WA.sendChatMessage(event.message, event.author);

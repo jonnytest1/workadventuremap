@@ -41,6 +41,14 @@ window.addEventListener('message', messageEvent => {
                     }, '*');
                 };
                 roomTd.appendChild(roomLink);
+
+                const messageFriend = document.createElement('button');
+                messageFriend.textContent = 'send message';
+                messageFriend.onclick = () => {
+                    const msg = prompt('message');
+                };
+                tr.appendChild(messageFriend);
+
                 tr.appendChild(roomTd);
             }
 

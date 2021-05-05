@@ -5,22 +5,22 @@
     },
     "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "tilesets/tilesetfiles",
-        "burg/tilesets",
-        "ocean/tilesets",
-        "haus/tilesetfiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
         "tilesets",
-        "church",
-        "burg",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
         "haus",
-        "test",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "burg",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
         ".",
+        "ocean/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "burg/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "haus/tilesetfiles",
+        "tilesets/tilesetfiles",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
+        "church",
+        "test"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -681,8 +681,8 @@
             "scale": 3,
             "selectedLayer": 5,
             "viewCenter": {
-                "x": 599.5,
-                "y": 558
+                "x": 480,
+                "y": 479.8333333333333
             }
         },
         "customtileset.tsx": {
@@ -706,11 +706,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 1.5,
+            "scale": 0.33,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1302,
-                "y": 1464.6666666666665
+                "x": 800,
+                "y": 798.4848484848485
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -718,11 +718,11 @@
             "scaleInEditor": 1
         },
         "haus/tilesetfiles/Interiors_free_32x32.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 1,
             "scaleInEditor": 1.5
         },
         "haus/tilesetfiles/Room_Builder_free_32x32.tsx": {
-            "scaleInDock": 1.5,
+            "scaleInDock": 2,
             "scaleInEditor": 1.5
         },
         "haus/tilesetfiles/bike1.tsx": {
@@ -807,11 +807,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 0,
+            "scale": 0.25,
+            "selectedLayer": 25,
             "viewCenter": {
-                "x": 2673,
-                "y": 386
+                "x": 1740,
+                "y": 1728
             }
         },
         "ocean/ocean.json": {
@@ -863,8 +863,8 @@
             "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 514,
-                "y": 1024
+                "x": 512,
+                "y": 1026
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {
@@ -876,7 +876,7 @@
             "scaleInEditor": 1
         },
         "tilesets/tilesetfiles/decorations-medieval.tsx": {
-            "scaleInDock": 2,
+            "scaleInDock": 0.75,
             "scaleInEditor": 1.5
         },
         "tilesets/tilesetfiles/dldhdmcov.tsx": {

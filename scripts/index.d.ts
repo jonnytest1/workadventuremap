@@ -1,4 +1,4 @@
-import { messaging } from "../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication"
+import { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication"
 
 
 
@@ -10,7 +10,7 @@ interface WorkAdventureApi {
     openPopup(targetObject: string, message: string, buttons: any[]): Popup;
     openTab(url: string): void;
     goToPage(url: string): void;
-    openCoWebSite(url: string, opts): void;
+    openCoWebSite(url: string, opts?): void;
     closeCoWebSite(): void;
     disablePlayerControl(): void;
     restorePlayerControl(): void;

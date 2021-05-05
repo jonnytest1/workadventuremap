@@ -1,1 +1,6 @@
-<a routerLink="freinds">freinds</a>
+<!-- <a routerLink="friends">freinds</a> -->
+
+<app-friends *ngIf="userData|async"
+             [userData]="userData|async"></app-friends>
+
+<router-outlet></router-outlet>

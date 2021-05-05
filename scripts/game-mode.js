@@ -8,7 +8,7 @@ const importPromise = Promise.all([
 
     const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode }] = await importPromise;
 
-    console.log('got imports');
+    console.log('got imports', getUserData);
     const data = await getUserData();
     console.log('got userdata');
     if(data.gameModeEnabled) {
@@ -27,10 +27,9 @@ const importPromise = Promise.all([
                     type: 'enableGameMode'
                 });
                 enableGameMode();
-                WA.openCoWebSite('./game/overlay/overlay.html', { asOverlay: true });
+                WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
             }
         }]
     });
 
 })();
-

@@ -12,28 +12,28 @@ module.exports = {
      * @returns { msgCpy["getUserData"]["response"]}
      */
     getUserData: async () => {
-        if(userData) {
-            return userData;
+        if(!userData) {
+            userData = new Promise(async (res, thrower) => {
+                try {
+                    const { message, ws } = await backendConnectionPRomise;
+
+                    ws.addEventListener(event => {
+                        if(event.type === 'userDataUpdate') {
+                            userData = event.data;
+                        }
+                    });
+                    console.log('getUserData msg');
+                    res(await message({
+                        type: 'getUserData'
+                    }));
+                } catch(e) {
+                    debugger;
+                    console.error(e);
+                    thrower(e);
+                }
+            });
+
         }
-        /**
-         * @type { msgCpy["getUserData"]["response"]}
-         */
-        return new Promise(async (res, thrower) => {
-            try {
-                const { message, ws } = await backendConnectionPRomise;
-                ws.addEventListener(event => {
-                    if(event.type === 'userDataUpdate') {
-                        userData = event.data;
-                    }
-                });
-                res(await message({
-                    type: 'getUserData'
-                }));
-            } catch(e) {
-                debugger;
-                console.error(e);
-                thrower(e);
-            }
-        });
+        return userData;
     }
 };

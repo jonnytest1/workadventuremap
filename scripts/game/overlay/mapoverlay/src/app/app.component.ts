@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api-service';
+import { FeMessage, UnPromise } from './backend';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mapoverlay';
+
+  userData: Promise<UnPromise<FeMessage['getUserData']['response']>>;
+
+  constructor(private apiService: ApiService) {
+    this.userData = apiService.passThrough({
+      type: 'getUserData'
+    });
+  }
 }
