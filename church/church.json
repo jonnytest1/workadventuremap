@@ -159,10 +159,10 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/scripts\/index.js?url=.\/church.js"
+         "value":"..\/scripts\/index.js?url=.\/church.js,.\/user-update.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.5.0",
+ "tiledversion":"1.6.0",
  "tileheight":32,
  "tilesets":[
         {
@@ -1560,6 +1560,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":1.5,
+ "version":"1.6",
  "width":30
 }

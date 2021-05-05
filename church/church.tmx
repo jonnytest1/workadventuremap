@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="4">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="11" nextobjectid="4">
  <editorsettings>
   <export target="church.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="script" value="../scripts/index.js?url=./church.js"/>
+  <property name="script" value="../scripts/index.js?url=./church.js,./user-update.js"/>
  </properties>
  <tileset firstgid="1" source="../terrain_atlas.tsx"/>
  <tileset firstgid="1025" source="../tilesets/tilesetfiles/Phssthpok_32x32.tsx"/>
