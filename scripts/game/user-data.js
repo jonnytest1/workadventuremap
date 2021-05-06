@@ -17,15 +17,17 @@ module.exports = {
                 try {
                     const { message, ws } = await backendConnectionPRomise;
 
-                    ws.addEventListener(event => {
+                    /*ws.addEventListener(event => {
                         if(event.type === 'userDataUpdate') {
                             userData = event.data;
                         }
-                    });
+                    });*/
                     console.log('getUserData msg');
-                    res(await message({
+                    const userDataResult = await message({
                         type: 'getUserData'
-                    }));
+                    });
+                    console.log('get userdata returned');
+                    res(userDataResult);
                 } catch(e) {
                     debugger;
                     console.error(e);

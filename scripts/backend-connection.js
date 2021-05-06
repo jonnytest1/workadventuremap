@@ -54,7 +54,7 @@ let cookieCheckPromise = new Promise((res, thr) => {
             img.remove();
         }
     };
-    img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.png`;
+    img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
     document.body.appendChild(img);
 });
 
