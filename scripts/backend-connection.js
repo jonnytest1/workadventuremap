@@ -50,6 +50,7 @@ let cookieCheckPromise = new Promise((res, thr) => {
     window.onmessage = (messageEvent) => {
         let eventData = messageEvent.data;
         if(eventData.type === 'iframeresponse') {
+            console.log('resolve cookie promise');
             res();
             img.remove();
         }
@@ -100,7 +101,7 @@ function connectWebsocket() {
         setTimeout(async () => {
             try {
                 for(let event of eventQueue) {
-                    await new Promise(res => setTimeout(res, 100));
+                    await new Promise(res => setTimeout(res, 150));
                     console.log('sending from queue', event);
                     websocket.send(event);
                 }

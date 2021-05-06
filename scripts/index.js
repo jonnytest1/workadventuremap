@@ -41,7 +41,7 @@ window.importScript = async (scriptLoadUrl) => {
                 return;
             }*/
             let timeout = setTimeout(() => {
-                debugger;
+                //debugger;
                 console.error(script.src + ' didnt load in 1 sec');
             }, 2000);
             script.onload = () => {
