@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { Vector } from '../vector';
 import { ApiService } from './api-service';
 import { UnPromise, UserData, WorkAdventureApi } from './backend';
@@ -14,8 +14,6 @@ export class AppComponent {
   title = 'mapoverlay';
 
   userData$: Observable<UserData>;
-
-  directionSignMap: { [pusherUuid: string]: HTMLDivElement } = {}
 
   _autoOpenOverlay: boolean = false
 
@@ -41,45 +39,57 @@ export class AppComponent {
     this.userData$ = sharedService.userData
 
     this.userData$.subscribe(data => {
-      this._autoOpenOverlay = data.autoOpenGameOverlay
-      this.cdr.detectChanges()
+      if (data) {
+        this._autoOpenOverlay = data.autoOpenGameOverlay
+        this.cdr.detectChanges()
+      }
     })
 
 
-    setInterval(async () => {
-      const gameState = await this.apiService.WAApi("getGameState")
-      const playerVector = this.getVectorForPlayer(gameState, gameState.nickName)
-      const playerInScreen = new Vector(window.innerWidth, window.innerHeight)
-        .multipliedBy(devicePixelRatio)
-        .subtract(
-          new Vector(window.outerWidth, window.outerHeight)
-            .dividedBy(2))
-        .dividedBy(devicePixelRatio)
-        .floored()
+    combineLatest([this.apiService.userPositions, this.userData$])
+      .subscribe(async ([positions, userData]) => {
+        const gameState = await this.apiService.WAApi("getGameState")
+        const playerInScreen = new Vector(window.innerWidth, window.innerHeight)
+          .multipliedBy(devicePixelRatio)
+          .subtract(
+            new Vector(window.outerWidth, window.outerHeight)
+              .dividedBy(2))
+          .dividedBy(devicePixelRatio)
+          .floored()
+        const playerVector = this.getVectorForPlayer(gameState, gameState.nickName)
 
-      for (let i in gameState.players) {
-        if (i !== gameState.nickName) {
-          const player = gameState.players[i]
-          const otherPlayerVector = this.getVectorForPlayer(gameState, i)
-          if (!this.directionSignMap[player.pusherId]) {
-            this.directionSignMap[player.pusherId] = document.createElement("div")
-            this.directionSignMap[player.pusherId].style.position = "fixed"
-            this.directionSignMap[player.pusherId].style.backgroundColor = "red"
-            this.directionSignMap[player.pusherId].style.width = "10px";
-            this.directionSignMap[player.pusherId].style.height = "10px";
-            document.getElementById("direction-sign-container").appendChild(this.directionSignMap[player.pusherId])
+        document.getElementById("direction-sign-container").innerHTML = ''
+        for (let user of positions) {
+          const userRefId = user.userRefereneUuid
+          if (userRefId !== userData.referenceUuid) {
+            if (user.userRefereneUuid == userData.trackedUser) {
+
+              const otherPlayerVector = new Vector(user.position.x, user.position.y)
+              //if (!this.directionSignMap[pusherId]) {
+              const compassIcon = document.createElement("div")
+              compassIcon.style.position = "fixed"
+              compassIcon.style.backgroundColor = "red"
+              compassIcon.style.width = "10px";
+              compassIcon.style.height = "10px";
+              document.getElementById("direction-sign-container").appendChild(compassIcon)
+              // }
+              const userToPlayer = otherPlayerVector.subtract(playerVector);
+              if (userToPlayer.length() < 300) {
+                compassIcon.remove()
+                //  delete this.directionSignMap[pusherId]
+              }
+              const directionPos = playerInScreen.added(
+                userToPlayer.scaleTo(400).added(0, 60)
+              )
+
+              compassIcon.style.left = directionPos.x + "px"
+              compassIcon.style.top = directionPos.y + "px"
+            }
+
+
           }
-          const directionPos = playerInScreen.added(
-            otherPlayerVector.subtract(playerVector).scaleTo(400)
-          )
-
-          this.directionSignMap[player.pusherId].style.left = directionPos.x + "px"
-          this.directionSignMap[player.pusherId].style.top = directionPos.y + "px"
-
         }
-      }
-
-    }, 500)
+      })
   }
 
   getVectorForPlayer(gameState: UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>, playerName: string) {

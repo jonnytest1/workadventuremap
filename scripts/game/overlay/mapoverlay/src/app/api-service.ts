@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { RoomMap } from '../../../../../../../workadventure-mapserver/public/users';
 import { FeMessage, UnPromise, WorkAdventureApi } from './backend';
 
 
@@ -18,6 +20,9 @@ export class ApiService {
     private apiResponseMethod: { [uuid: string]: (arg: any) => void } = {};
     private messageMap: { [uuid: string]: (arg: any) => void } = {};
 
+    private _userPositions = new Subject<RoomMap[string]["users"]>()
+
+    public userPositions = this._userPositions.asObservable()
 
     constructor() {
         window.addEventListener('message', messageEvent => {
@@ -27,6 +32,8 @@ export class ApiService {
             } else if (messageEvent.data.type === 'apicallresponse') {
                 this.apiResponseMethod[messageEvent.data.uuid](messageEvent.data.data);
                 delete this.apiResponseMethod[messageEvent.data.uuid];
+            } else if (messageEvent.data.type == "positionUpdate") {
+                this._userPositions.next(messageEvent.data.data)
             }
         });
     }

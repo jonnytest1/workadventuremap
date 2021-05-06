@@ -9,7 +9,6 @@ import { UserData } from './backend';
 export class SharedService {
 
 
-
     private _userData = new BehaviorSubject<UserData>(undefined)
 
     public userData = this._userData.asObservable()
@@ -35,5 +34,19 @@ export class SharedService {
 
         this._userData.next({ ...this._userData.value, friends: newFriends })
     }
+
+    update(arg0: { [att in keyof UserData]?: UserData[att] }) {
+        let userData = { ...this._userData.value };
+        for (let i in arg0) {
+            userData[i] = arg0[i]
+        }
+        this._userData.next(userData)
+        this.apiService.passThrough({
+            type: "userUpdate",
+            data: userData
+        })
+    }
+
+
 
 }

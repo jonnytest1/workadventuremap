@@ -61,18 +61,24 @@ export class FriendsComponent implements OnInit {
       }
     });
   }
-
+  async untrack() {
+    this.sharedService.update({ trackedUser: null })
+  }
   async visitFriend(friend: Friend) {
-
-    const friendInfo = await this.apiService.passThrough({
-      type: 'friendstatus'
-    });
-    for (let friendName in friendInfo) {
-      if (friendInfo[friendName].index === friend.index) {
-        this.apiService.WAApi("exitSceneTo", `/${friendInfo[friendName].room}`)
-        return;
+    this.sharedService.update({ trackedUser: friend.referenceUuid })
+    const gameState = await this.apiService.WAApi("getGameState")
+    if (friend.room !== gameState.roomId) {
+      const friendInfo = await this.apiService.passThrough({
+        type: 'friendstatus'
+      });
+      for (let friendName in friendInfo) {
+        if (friendInfo[friendName].index === friend.index) {
+          this.apiService.WAApi("exitSceneTo", `/${friendInfo[friendName].room}`)
+          return;
+        }
       }
     }
+
   }
 
   messageGlobal() {

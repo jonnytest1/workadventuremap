@@ -13,7 +13,7 @@
           (click)="refreshFriends()">refresh</button>
   <table>
     <tr>
-      <th>
+      <th class="friendIndex">
         Friend Index
       </th>
       <th>
@@ -28,7 +28,7 @@
     </tr>
 
     <tr *ngFor="let friend of userData.friends | keyvalue: sortFriends">
-      <td>{{friend.value.index}}</td>
+      <td class="friendIndex">{{friend.value.index}}</td>
       <td>{{friend.key}}</td>
       <td>{{friend.value.status}}</td>
 
@@ -38,7 +38,11 @@
           <button mat-button
                   (click)="messageFriend(friend.value)">message</button>
           <button mat-button
+                  *ngIf="!userData.trackedUser"
                   (click)="visitFriend(friend.value)">visit</button>
+          <button mat-button
+                  *ngIf="userData.trackedUser"
+                  (click)="untrack()">untrack</button>
         </td>
       </ng-container>
 

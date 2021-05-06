@@ -2,7 +2,7 @@
 const userDataPr = Promise.all([require('./user-data'), require('../backend-connection')]);
 
 async function enableGameMode() {
-    const [{ getUserData }, { message }] = await userDataPr;
+    const [{ getUserData }, { message, ws }] = await userDataPr;
     const userData = await getUserData();
 
     WA.registerMenuCommand('open game overlay', () => {
@@ -11,6 +11,16 @@ async function enableGameMode() {
     if(userData.autoOpenGameOverlay) {
         WA.openCoWebSite('http://localhost:4200/scripts/game/overlay/mapoverlay/dist/mapoverlay/', { asOverlay: true });
     }
+
+    ws.addEventListener(
+        /**
+         * @param { { type: 'positionUpdate', data: any }} data
+         * */
+        (data) => {
+            if(data.type === 'positionUpdate') {
+                window.parent.postMessage(data, '*');
+            }
+        });
 
     window.addEventListener('message', async messageEvent => {
 

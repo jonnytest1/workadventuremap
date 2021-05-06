@@ -91,9 +91,9 @@ function connectWebsocket() {
             delete promiseMap[eventJSon.uuid];
             return;
         }
-        console.log('no uuid for', eventJSon);
+        //console.log('no uuid for', eventJSon);
 
-        callbacks.forEach(cb => {
+        callbacks.forEach(async cb => {
             cb(eventJSon);
         });
     };

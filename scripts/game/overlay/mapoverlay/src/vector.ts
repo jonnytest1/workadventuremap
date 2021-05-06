@@ -83,10 +83,22 @@ export class Vector {
         return newVector;
     }
 
-    atLeast(min: number): Vector {
+    atLeast(min: number | Vector): Vector {
         const newVector: this = this.clone();
-        newVector.x = Math.max(this.x, min);
-        newVector.y = Math.max(this.y, min);
+
+        let minX: number;
+        let minY: number
+
+        if (min instanceof Vector) {
+            minY = min.y
+            minX = min.x
+        } else {
+            minX = min
+            minY = min
+        }
+
+        newVector.x = Math.max(this.x, minX);
+        newVector.y = Math.max(this.y, minY);
         return newVector;
     }
 
