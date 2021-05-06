@@ -1,6 +1,7 @@
 <!-- <a routerLink="friends">freinds</a> -->
 
-<mat-checkbox [(ngModel)]="autoOpenOverlay">Automatically Open the overlay on visist</mat-checkbox> <br>
+<mat-checkbox [(ngModel)]="autoOpenOverlay"
+              *ngIf="userData$|async">Automatically Open the overlay on visist</mat-checkbox> <br>
 
 <button mat-button
         routerLink="friends">Friends</button>
@@ -10,5 +11,7 @@
 
 <br>
 <router-outlet></router-outlet>
+
+<div id="direction-sign-container"></div>
 
 <app-health></app-health>

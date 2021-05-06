@@ -16,6 +16,7 @@ export class ApiService {
 
     private passThroughResponseMap: { [uuid: string]: (arg: any) => void } = {};
     private apiResponseMethod: { [uuid: string]: (arg: any) => void } = {};
+    private messageMap: { [uuid: string]: (arg: any) => void } = {};
 
 
     constructor() {
@@ -42,6 +43,22 @@ export class ApiService {
             }, '*');
         });
     }
+
+
+    /* async screenSize(): Promise<Vector> {
+         return new Promise<Vector>((res, thr) => {
+             const uuid = uuidv4();
+             this.passThroughResponseMap[uuid] = this.messageMap[uuid] = (arg) => {
+                 res(new Vector(arg.x, arg.y))
+             };;
+ 
+             window.parent.postMessage({
+                 type: 'windowOffset',
+                 uuid,
+                 data: event
+             }, '*');
+         });
+     }*/
 
 
     async WAApi<T extends keyof WorkAdventureApi>(

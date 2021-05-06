@@ -1,19 +1,20 @@
-<ng-container *ngIf="userDataPr|async let userData">
+<ng-container *ngIf="userData$|async let userData">
 
-  you died {{ userData.deathCount }} times so far
+  you died {{ userData.deathCount }} times so far <br>
 
-
+  <mat-checkbox [(ngModel)]="showAllUsers"
+                *ngIf="userData.isAdmin"
+                (ngModelChange)="refreshFriends()">show all</mat-checkbox> <br>
   <button *ngIf="userData.isAdmin"
           mat-button
           (click)="messageGlobal()">message global</button>
 
-  <button *ngIf="userData.isAdmin"
-          mat-button
-          (click)="loadUserData()">refresh</button>
+  <button mat-button
+          (click)="refreshFriends()">refresh</button>
   <table>
     <tr>
       <th>
-        Index
+        Friend Index
       </th>
       <th>
         Name

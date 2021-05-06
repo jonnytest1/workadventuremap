@@ -7,7 +7,7 @@
                 await message({
                     type: 'userUpdate',
                     data: {
-                        uuid: state.uuid,
+                        pusherUuid: state.uuid,
                         nickName: state.nickName
                     }
                 });

@@ -1,7 +1,9 @@
 import { KeyValue } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ApiService } from '../api-service';
-import { FeMessage, UnPromise } from '../backend';
+import { FeMessage, UnPromise, UserData } from '../backend';
+import { SharedService } from '../shared-service';
 
 type Friend = UnPromise<FeMessage['getUserData']['response']>['friends']['key'];
 
@@ -12,16 +14,14 @@ type Friend = UnPromise<FeMessage['getUserData']['response']>['friends']['key'];
 })
 export class FriendsComponent implements OnInit {
 
-  userDataPr: FeMessage['getUserData']['response'];
-
-  constructor(private apiService: ApiService) {
-    this.loadUserData();
+  userData$: Observable<UserData>;
+  showAllUsers: boolean
+  constructor(private apiService: ApiService, private sharedService: SharedService) {
+    this.userData$ = sharedService.userData
   }
 
   loadUserData() {
-    this.userDataPr = this.apiService.passThrough({
-      type: 'getUserData'
-    });
+    this.sharedService.loadUserData();
   }
 
   ngOnInit() {
@@ -48,6 +48,9 @@ export class FriendsComponent implements OnInit {
     return friend.value.index - friend2.value.index
   }
 
+  refreshFriends() {
+    this.sharedService.refreshFriends(this.showAllUsers);
+  }
 
   messageFriend(friend: Friend) {
     const message = prompt('message');
@@ -58,6 +61,7 @@ export class FriendsComponent implements OnInit {
       }
     });
   }
+
   async visitFriend(friend: Friend) {
 
     const friendInfo = await this.apiService.passThrough({

@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { FriendsComponent } from './friends/friends.component';
 import { HealthComponent } from './health/health.component';
+import { SharedService } from './shared-service';
 @NgModule({
   imports: [
     BrowserModule, RouterModule.forRoot(routes), NgCircleProgressModule.forRoot(), MatDialogModule, MatButtonModule, MatCheckboxModule, FormsModule
@@ -19,7 +20,7 @@ import { HealthComponent } from './health/health.component';
     AppComponent, FriendsComponent,
     HealthComponent
   ],
-  providers: [ApiService],
+  providers: [ApiService, SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

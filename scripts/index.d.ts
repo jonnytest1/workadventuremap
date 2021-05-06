@@ -23,7 +23,7 @@ interface WorkAdventureApi {
         roomId: string,
         uuid: string,
         nickName: string
-        player: {
+        players: {
             [playerNickName: string]: {
                 position: { x: number, y: number },
                 pusherId: number
