@@ -645,8 +645,8 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 509,
-                "y": 514
+                "x": 512,
+                "y": 511
             }
         },
         "base_out_atlas.tsx": {
@@ -657,8 +657,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 656.6666666666666,
-                "y": 496
+                "x": 512,
+                "y": 511.33333333333337
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -678,7 +678,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 480,
-                "y": 480
+                "y": 479.8333333333333
             }
         },
         "customtileset.tsx": {
@@ -689,8 +689,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 697,
-                "y": 798.6666666666665
+                "x": 800,
+                "y": 799.6666666666666
             }
         },
         "haus/haus.json": {
@@ -705,8 +705,8 @@
             "scale": 0.33,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 795.4545454545455,
-                "y": 527.2727272727274
+                "x": 796.969696969697,
+                "y": 530.3030303030304
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -806,8 +806,8 @@
             "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 2479,
-                "y": 1058
+                "x": 1760,
+                "y": 1367
             }
         },
         "ocean/ocean.json": {
@@ -867,8 +867,8 @@
             "scale": 0.75,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 572,
-                "y": 530.6666666666665
+                "x": 488,
+                "y": 364.66666666666663
             }
         },
         "test/floortileset.tsx": {

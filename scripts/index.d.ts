@@ -1,7 +1,11 @@
-import { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication"
+import { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication";
+import "../../workadventure/front/src/iframe_api";
 
 
+type baseWorkadventureApi = typeof WA
+export type WorkAdventureApi = baseWorkadventureApi
 
+/*
 interface WorkAdventureApi {
     sendChatMessage(message: string, author: string): void;
     onChatMessage(callback: (message: string) => void): void;
@@ -10,38 +14,28 @@ interface WorkAdventureApi {
     openPopup(targetObject: string, message: string, buttons: any[]): Popup;
     openTab(url: string): void;
     goToPage(url: string): void;
-
+ 
     /**
      * 
      * relative to initally loaded sript
      * @param opts 
-     */
-    openCoWebSite(url: string, opts?): void;
-    closeCoWebSite(): void;
-    disablePlayerControl(): void;
-    restorePlayerControl(): void;
-    displayBubble(): void;
-    removeBubble(): void;
-    registerMenuCommand(commandDescriptor: string, callback: (commandDescriptor: string) => void): void
-
-    getGameState(): Promise<{
-        startLayerName: string
-        roomId: string,
-        uuid: string,
-        nickName: string
-        players: {
-            [playerNickName: string]: {
-                position: { x: number, y: number },
-                pusherId: number
-            }
-        }
-    }>
+     *
+openCoWebSite(url: string, opts ?): void;
+closeCoWebSite(): void;
+disablePlayerControl(): void;
+restorePlayerControl(): void;
+displayBubble(): void;
+removeBubble(): void;
+registerMenuCommand(commandDescriptor: string, callback: (commandDescriptor: string) => void): void
+ 
+    
     exitSceneTo: (page: string) => void
-}
-/*declare global {
+}*/
+/*
+declare global {
 
 
-    const WA: WorkAdventureApi
+    const WA: baseWorkadventureApi
 }*/
 
 
@@ -60,6 +54,6 @@ declare global {
         importScript: () => any
     }
 
-    var WA: WorkAdventureApi
+    //var WA: WorkAdventureApi
     var importScript: (url: string) => any
 }

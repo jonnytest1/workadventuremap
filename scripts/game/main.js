@@ -1,16 +1,19 @@
 
 const userDataPr = Promise.all([require('./user-data'), require('../backend-connection')]);
 
+async function openOverlay() {
+    WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true, passInputEvents: true });
+}
+
 async function enableGameMode() {
     const [{ getUserData }, { message, ws }] = await userDataPr;
     const userData = await getUserData();
 
     WA.registerMenuCommand('open game overlay', () => {
-        WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
+        openOverlay();
     });
     if(userData.autoOpenGameOverlay) {
-        WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
-        //http://localhost:4200/scripts/game/overlay/mapoverlay/dist/mapoverlay/
+        openOverlay();
     }
 
     ws.addEventListener(
@@ -47,4 +50,4 @@ async function enableGameMode() {
 
 }
 
-module.exports = { enableGameMode };
+module.exports = { enableGameMode, openOverlay };

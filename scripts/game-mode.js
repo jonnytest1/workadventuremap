@@ -7,7 +7,7 @@ const importPromise = Promise.all([
 ]);
 (async () => {
 
-    const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode }] = await importPromise;
+    const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode, openOverlay }] = await importPromise;
 
     const data = await getUserData();
     console.log('got userdata');
@@ -27,7 +27,7 @@ const importPromise = Promise.all([
                     type: 'enableGameMode'
                 });
                 enableGameMode();
-                WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
+                openOverlay();
             }
         }]
     });
