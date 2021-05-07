@@ -6,10 +6,11 @@ async function enableGameMode() {
     const userData = await getUserData();
 
     WA.registerMenuCommand('open game overlay', () => {
-        WA.openCoWebSite('http://localhost:4200/scripts/game/overlay/mapoverlay/dist/mapoverlay/', { asOverlay: true });
+        WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
     });
     if(userData.autoOpenGameOverlay) {
-        WA.openCoWebSite('http://localhost:4200/scripts/game/overlay/mapoverlay/dist/mapoverlay/', { asOverlay: true });
+        WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true });
+        //http://localhost:4200/scripts/game/overlay/mapoverlay/dist/mapoverlay/
     }
 
     ws.addEventListener(

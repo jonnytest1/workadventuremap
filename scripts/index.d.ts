@@ -10,6 +10,12 @@ interface WorkAdventureApi {
     openPopup(targetObject: string, message: string, buttons: any[]): Popup;
     openTab(url: string): void;
     goToPage(url: string): void;
+
+    /**
+     * 
+     * relative to initally loaded sript
+     * @param opts 
+     */
     openCoWebSite(url: string, opts?): void;
     closeCoWebSite(): void;
     disablePlayerControl(): void;

@@ -66,6 +66,14 @@ window.importScript = async (scriptLoadUrl) => {
 window.require = importScript;
 
 const url = scriptURL.searchParams.get('url');
-for(let requireUrl of url.split(',')) {
-    require(requireUrl);
+if(!document.body) {
+    window.addEventListener('load', () => {
+        for(let requireUrl of url.split(',')) {
+            require(requireUrl);
+        }
+    });
+} else {
+    for(let requireUrl of url.split(',')) {
+        require(requireUrl);
+    }
 }
