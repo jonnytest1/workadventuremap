@@ -1,6 +1,7 @@
 /// <reference path="index.d.ts" />
 
 const ws = require('./backend-connection');
+const zonedpp = require("./zoned-popup")
 const statePr = WA.getGameState()
 WA.onEnterZone('death', async () => {
     try {
@@ -32,4 +33,13 @@ WA.onEnterZone("item-pickup", async () => {
     } else {
         WA.sendChatMessage("you received some item idk no items yet give me some tips or try later", "engine")
     }
-})
+});
+
+(async () => {
+    const { popupInZone } = await zonedpp
+    popupInZone({
+        zone: "jitsi-guide",
+        popupText: "this jitsi call is connected to openbas etage1 oben rechts in der ecke in case u need a distraction but still want to be in call :)",
+        popupOptions: []
+    })
+})()
