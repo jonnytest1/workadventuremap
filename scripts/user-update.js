@@ -1,6 +1,7 @@
 
+const backendcon = require('./backend-connection');
 (async () => {
-    const { message } = await require('./backend-connection');
+    const { message } = await backendcon;
     setTimeout(() => {
         WA.getGameState()
             .then(async state => {

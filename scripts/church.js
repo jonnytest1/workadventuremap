@@ -1,11 +1,12 @@
 /// <reference path="index.d.ts" />
+const imports = Promise.all([
+    require('./backend-connection'),
+    require('./zoned-popup'),
+    require('./user-update')
+]);
 
 (async () => {
-    const [{ message, ws }, { popupInZone }] = await Promise.all([
-        require('./backend-connection'),
-        require('./zoned-popup'),
-        require('./user-update')
-    ]);
+    const [{ message, ws }, { popupInZone }] = await imports;
     popupInZone({
         zone: 'friendship-explanation-zone',
         popupText: 'stand in there together to become friends 😊',
@@ -33,7 +34,7 @@
             WA.sendChatMessage(`you have become friends with ${id}`, 'amor');
 
         });
-        if(readyFriends.new.length == readyFriends.friends.length && readyFriends.friends.length > 0) {
+        if(readyFriends.new.length === readyFriends.friends.length && readyFriends.friends.length > 0) {
             WA.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
             WA.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
             WA.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
@@ -51,7 +52,7 @@
                 .forEach(friend => {
                     WA.sendChatMessage(`you have become friends with ${friend}`, 'amor');
                 });
-            if(friends.length == 0 && newFriends.length) {
+            if(friends.length === 0 && newFriends.length) {
                 WA.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
                 WA.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
                 WA.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
