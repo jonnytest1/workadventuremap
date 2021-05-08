@@ -24,6 +24,10 @@ export class ApiService {
 
     public userPositions = this._userPositions.asObservable()
 
+    private _passedEvents = new Subject<KeyboardEvent>()
+
+    public passedEvents = this._passedEvents.asObservable()
+
     constructor() {
         window.addEventListener('message', messageEvent => {
             if (messageEvent.data.type === 'passthroughresponse') {
@@ -34,6 +38,8 @@ export class ApiService {
                 delete this.apiResponseMethod[messageEvent.data.uuid];
             } else if (messageEvent.data.type == "positionUpdate") {
                 this._userPositions.next(messageEvent.data.data)
+            } else if (messageEvent.data.type == "event-pass") {
+                this._passedEvents.next(messageEvent.data.data)
             }
         });
     }

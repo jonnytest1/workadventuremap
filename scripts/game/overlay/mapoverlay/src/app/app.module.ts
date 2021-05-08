@@ -12,14 +12,18 @@ import { routes } from './app.routes';
 import { FriendsComponent } from './friends/friends.component';
 import { HealthComponent } from './health/health.component';
 import { SharedService } from './shared-service';
+import { MiroComponent } from './miro/miro.component';
+import { InventarComponent } from './inventar/inventar.component';
 @NgModule({
   imports: [
     BrowserModule, RouterModule.forRoot(routes), NgCircleProgressModule.forRoot(), MatDialogModule, MatButtonModule, MatCheckboxModule, FormsModule
   ],
-  declarations: [
+  declarations: [		
     AppComponent, FriendsComponent,
-    HealthComponent
-  ],
+    HealthComponent,
+      MiroComponent,
+      InventarComponent
+   ],
   providers: [ApiService, SharedService],
   bootstrap: [AppComponent]
 })

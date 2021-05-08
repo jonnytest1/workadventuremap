@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { combineLatest, Observable } from 'rxjs';
+import { distinctUntilChanged, filter, groupBy, map, mergeAll } from 'rxjs/internal/operators';
 import { Vector } from '../vector';
 import { ApiService } from './api-service';
 import { UnPromise, UserData, WorkAdventureApi } from './backend';
@@ -16,6 +18,7 @@ export class AppComponent {
   userData$: Observable<UserData>;
 
   _autoOpenOverlay: boolean = false
+  fPressed: Observable<boolean>;
 
   get autoOpenOverlay() {
     return this._autoOpenOverlay
@@ -31,11 +34,28 @@ export class AppComponent {
     })
   }
 
-  constructor(private apiService: ApiService, private sharedService: SharedService, private cdr: ChangeDetectorRef) {
+  constructor(private apiService: ApiService, private sharedService: SharedService,
+    private cdr: ChangeDetectorRef,
+    private router: Router) {
 
-    window.addEventListener("keydown", e => {
-      console.log(e)
+    this.fPressed = apiService.passedEvents.pipe(
+      groupBy(e => e.code),
+      map(group => group.pipe(distinctUntilChanged(null, e => e.type))),
+      mergeAll(),
+      filter(ev => ev.type == "keydown" || ev.type == "keyup"),
+      filter(ev => ev.code == "KeyF"),
+      map(ev => ev.type == "keydown")
+    )
+    this.fPressed.subscribe(e => {
+      if (e) {
+        this.router.navigate(["friends"])
+      } else {
+        if (this.router.url == "/friends") {
+          this.router.navigateByUrl("/")
+        }
+      }
     })
+
     this.userData$ = sharedService.userData
 
     this.userData$.subscribe(data => {
@@ -90,6 +110,11 @@ export class AppComponent {
           }
         }
       })
+
+
+    window.addEventListener("click", e => {
+      window.parent.focus();
+    })
   }
 
   getVectorForPlayer(gameState: UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>, playerName: string) {
@@ -97,6 +122,10 @@ export class AppComponent {
     return new Vector(playerPos.x, playerPos.y)
   }
 
+
+  blur() {
+    window.parent.focus()
+  }
   openMiro() {
     this.apiService.WAApi('openCoWebSite', './pages/miro.html')
   }

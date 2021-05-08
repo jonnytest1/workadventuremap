@@ -1,13 +1,14 @@
-<!-- <a routerLink="friends">freinds</a> -->
+<!-- <a routerLink="friends">freinds</a>    (click)="openMiro()" -->
 
 <mat-checkbox [(ngModel)]="autoOpenOverlay"
               *ngIf="userData$|async">Automatically Open the overlay on visist</mat-checkbox> <br>
 
 <button mat-button
-        routerLink="friends">Friends</button>
+        routerLink="friends"
+        (click)="blur()">Friends</button>
 
 <button mat-button
-        (click)="openMiro()">open miro</button>
+        routerLink="miro">open miro</button>
 
 <br>
 <router-outlet></router-outlet>
@@ -15,3 +16,4 @@
 <div id="direction-sign-container"></div>
 
 <app-health></app-health>
+<app-inventar></app-inventar>
