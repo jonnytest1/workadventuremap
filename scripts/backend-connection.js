@@ -24,7 +24,7 @@ async function message(data) {
      */
     const pr = new Promise((resolv, thrower) => {
         const uuid = uuidv4();
-        ws.send({
+        backendCExport.send({
             type: data.type,
             data: data.data,
             uuid: uuid
@@ -47,14 +47,14 @@ let eventQueue = [];
 
 let cookieCheckPromise = new Promise((res, thr) => {
     const img = document.createElement('iframe');
-    window.onmessage = (messageEvent) => {
+    window.addEventListener("message", messageEvent => {
         let eventData = messageEvent.data;
         if(eventData.type === 'iframeresponse') {
             console.debug('resolve cookie promise');
             res();
             img.remove();
         }
-    };
+    });
     img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
     document.body.appendChild(img);
 });
@@ -62,7 +62,7 @@ let cookieCheckPromise = new Promise((res, thr) => {
 /**
 * @type {{addEventListener,send}}
 */
-const ws = {
+var backendCExport = {
     addEventListener: (callback) => {
         callbacks.push((callback));
     },
@@ -119,5 +119,5 @@ connectWebsocket();
 
 module.exports = {
     message,
-    ws
+    ws: backendCExport
 };
