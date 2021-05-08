@@ -50,7 +50,7 @@ let cookieCheckPromise = new Promise((res, thr) => {
     window.onmessage = (messageEvent) => {
         let eventData = messageEvent.data;
         if(eventData.type === 'iframeresponse') {
-            console.log('resolve cookie promise');
+            console.debug('resolve cookie promise');
             res();
             img.remove();
         }
@@ -83,10 +83,10 @@ function connectWebsocket() {
         connectWebsocket();
     };
     websocket.onmessage = event => {
-        console.log('onmessage data', event);
+        console.debug('onmessage data', event);
         const eventJSon = JSON.parse(event.data);
         if(eventJSon.uuid && promiseMap[eventJSon.uuid]) {
-            console.log('resolving', eventJSon.data);
+            console.debug('resolving', eventJSon.data);
             promiseMap[eventJSon.uuid](eventJSon.data);
             delete promiseMap[eventJSon.uuid];
             return;
