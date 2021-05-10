@@ -16,4 +16,4 @@
 <div id="direction-sign-container"></div>
 
 <app-health></app-health>
-<app-inventar></app-inventar>
+<app-inventar [inventory]="(userData$ |async).inventory"></app-inventar>

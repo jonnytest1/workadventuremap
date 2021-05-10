@@ -1,4 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/models/inventory-item-type';
+import { UserData } from '../backend';
 import { Vector2 } from './vector';
 
 interface Pixel {
@@ -18,29 +20,51 @@ interface Pixel {
 })
 export class InventarComponent implements OnInit {
 
+  @Input()
+  inventory: Array<UserData["inventory"][number]>
+
+
   @ViewChild("canvas")
   canvas: ElementRef<HTMLCanvasElement>
   context: CanvasRenderingContext2D;
 
+  activeIndex = 0;
+  imageMap = inventoryTypeMap
+
+  
   constructor() { }
+
+
+  setActiveIndex(index: number) {
+    this.activeIndex = index
+    this.draw()
+  }
+  getImageSource(item: UserData["inventory"][number]) {
+    return `assets/img/${inventoryTypeMap[item.itemType].image}.svg`
+  }
   ngAfterViewInit(): void {
     this.context = this.canvas.nativeElement.getContext("2d")
+    this.draw();
 
-
-
+  }
+  private draw() {
     this.map((pixel, height, width) => {
-      const gridPos = pixel.x % 50 == 0 || pixel.y % 50 == 0
-      const borderPos = pixel.x == width - 1 || pixel.y == height - 1
+      const gridPos = pixel.x % 50 == 0 || pixel.y % 50 == 0;
+      const borderPos = pixel.x == width - 1 || pixel.y == height - 1;
+
+      const x = Math.floor(pixel.x / 50);
+      const y = Math.floor(pixel.y / 50);
+      const activeIndex = y * 16 + x === this.activeIndex;
       return {
         ...pixel,
-        alpha: (gridPos || borderPos) ? 256 : 20,
+        alpha: (gridPos || borderPos || activeIndex) ? 256 : 20,
         blue: 256,
         red: 256,
         green: 256
-      }
-    })
-
+      };
+    });
   }
+
   getPixel(image: ImageData, pos: Vector2) {
     const index = pos.y * (image.width * 4) + pos.x * 4;
     return {

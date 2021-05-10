@@ -34,7 +34,8 @@ export class SpeechRecognitionService {
             }
         };
         this.recognition.onerror = function (event) {
-            debugger;
+            console.error(event.error)
+            // debugger;
         };
         this.recognition.onnomatch = function (event) {
             debugger;

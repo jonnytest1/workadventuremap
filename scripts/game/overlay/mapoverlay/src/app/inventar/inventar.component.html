@@ -2,3 +2,14 @@
         width="800px"
         height="200px">
 </canvas>
+
+
+<div id="inventoryGridContainer">
+
+        <img *ngFor="let item of inventory;let index=index"
+             width="40px"
+             height="40px"
+             (click)="setActiveIndex(index)"
+             [title]="imageMap[item.itemType].title"
+             [src]="getImageSource(item)" />
+</div>
