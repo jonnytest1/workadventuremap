@@ -11,20 +11,21 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { FriendsComponent } from './friends/friends.component';
 import { HealthComponent } from './health/health.component';
-import { SharedService } from './shared-service';
-import { MiroComponent } from './miro/miro.component';
 import { InventarComponent } from './inventar/inventar.component';
+import { MiroComponent } from './miro/miro.component';
+import { SharedService } from './shared-service';
+import { SpeechRecognitionService } from './speech-recognition.service';
 @NgModule({
   imports: [
     BrowserModule, RouterModule.forRoot(routes), NgCircleProgressModule.forRoot(), MatDialogModule, MatButtonModule, MatCheckboxModule, FormsModule
   ],
-  declarations: [		
+  declarations: [
     AppComponent, FriendsComponent,
     HealthComponent,
-      MiroComponent,
-      InventarComponent
-   ],
-  providers: [ApiService, SharedService],
+    MiroComponent,
+    InventarComponent
+  ],
+  providers: [ApiService, SharedService, SpeechRecognitionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,7 @@ import { Vector } from '../vector';
 import { ApiService } from './api-service';
 import { UnPromise, UserData, WorkAdventureApi } from './backend';
 import { SharedService } from './shared-service';
+import { SpeechRecognitionService } from './speech-recognition.service';
 
 @Component({
   selector: 'app-root',
@@ -36,6 +37,7 @@ export class AppComponent {
 
   constructor(private apiService: ApiService, private sharedService: SharedService,
     private cdr: ChangeDetectorRef,
+    private speechRecognition: SpeechRecognitionService,
     private router: Router) {
 
     this.fPressed = apiService.passedEvents.pipe(
@@ -64,7 +66,7 @@ export class AppComponent {
         this.cdr.detectChanges()
       }
     })
-
+    speechRecognition.start();
 
     combineLatest([this.apiService.userPositions, this.userData$])
       .subscribe(async ([positions, userData]) => {
