@@ -59,7 +59,7 @@
               ]
             },
             "local": {
-              "baseHref": "/scripts/game/overlay/mapoverlay/dist/mapoverlay/",
+              "baseHref": "/workadventuremap/scripts/game/overlay/mapoverlay/dist/mapoverlay/",
               "sourceMap": true
             }
           }

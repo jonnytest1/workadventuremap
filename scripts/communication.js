@@ -1,4 +1,4 @@
-const requirePromises = Promise.all([
+var requirePromises = Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./game/user-data'),
