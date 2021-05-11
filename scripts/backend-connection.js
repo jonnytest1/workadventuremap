@@ -47,7 +47,7 @@ let eventQueue = [];
 
 let cookieCheckPromise = new Promise((res, thr) => {
     const img = document.createElement('iframe');
-    window.addEventListener("message", messageEvent => {
+    window.addEventListener('message', messageEvent => {
         let eventData = messageEvent.data;
         if(eventData.type === 'iframeresponse') {
             console.debug('resolve cookie promise');
@@ -59,7 +59,9 @@ let cookieCheckPromise = new Promise((res, thr) => {
     document.body.appendChild(img);
 });
 
+let isReady = false;
 /**
+ *
 * @type {{addEventListener,send}}
 */
 var backendCExport = {
@@ -68,16 +70,18 @@ var backendCExport = {
     },
     send: async (msg) => {
         await cookieCheckPromise;
-        if(websocket.readyState !== websocket.OPEN) {
+        if(websocket.readyState !== websocket.OPEN || !isReady) {
             console.log('caching', msg);
             eventQueue.push(JSON.stringify(msg));
         } else {
+            console.log('sending directly', msg);
             websocket.send(JSON.stringify(msg));
         }
 
     }
 };
 function connectWebsocket() {
+    isReady = false;
     websocket = new WebSocket('wss://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message');
     websocket.onclose = () => {
         connectWebsocket();
@@ -99,9 +103,10 @@ function connectWebsocket() {
     };
     websocket.onopen = () => {
         setTimeout(async () => {
+            isReady = true;
             try {
                 for(let event of eventQueue) {
-                    await new Promise(res => setTimeout(res, 150));
+                    await new Promise(res => setTimeout(res, 160));
                     console.log('sending from queue', event);
                     websocket.send(event);
                 }
@@ -110,7 +115,7 @@ function connectWebsocket() {
                 debugger;
                 console.error(e);
             }
-        }, 100);
+        }, 500);
 
     };
 

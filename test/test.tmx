@@ -4,7 +4,7 @@
   <export target="test.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="script" value="./test.js"/>
+  <property name="script" value="../scripts/index.js?url=../test/test.js,./game-mode"/>
  </properties>
  <tileset firstgid="1" source="../Male 01-2.tsx"/>
  <tileset firstgid="13" source="../base_out_atlas.tsx"/>

@@ -695,10 +695,10 @@
         },
         "fire/fire.tmx": {
             "scale": 1.5,
-            "selectedLayer": 12,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 152.33333333333331,
-                "y": 500
+                "x": 157.66666666666666,
+                "y": 448
             }
         },
         "haus/haus.json": {
@@ -884,11 +884,11 @@
             "scaleInEditor": 1
         },
         "test/test.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 3,
+            "scale": 3,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 1231,
-                "y": 992
+                "x": 944.6666666666666,
+                "y": 595
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {

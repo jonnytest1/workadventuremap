@@ -93,7 +93,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":".\/test.js"
+         "value":"..\/scripts\/index.js?url=..\/test\/test.js,.\/game-mode"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.6.0",
