@@ -4,9 +4,9 @@ let entercount = 0;
 
 const beCon = require('../scripts/backend-connection');
 
-WA.onMoveEvent(event => {
+/*WA.onMoveEvent(event => {
     console.log(event)
-})
+})*/
 /*
 WA.onEnterZone('event', async () => {
     console.log('zoneenter');

@@ -1,10 +1,11 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { combineLatest, Observable } from 'rxjs';
-import { distinctUntilChanged, filter, groupBy, map, mergeAll } from 'rxjs/internal/operators';
+import { distinctUntilChanged, filter, groupBy, map, mergeAll, take } from 'rxjs/internal/operators';
+import { environment } from '../environments/environment';
 import { Vector } from '../vector';
 import { ApiService } from './api-service';
-import { UnPromise, UserData, WorkAdventureApi } from './backend';
+import { GameState, UnPromise, UserData, WorkAdventureApi } from './backend';
 import { SharedService } from './shared-service';
 import { SpeechRecognitionService } from './speech-recognition.service';
 
@@ -21,6 +22,11 @@ export class AppComponent {
   _autoOpenOverlay: boolean = false
   fPressed: Observable<boolean>;
 
+  gameState$: Observable<GameState>
+
+
+  isPrivateMap$: Observable<"other" | "private">
+
   get autoOpenOverlay() {
     return this._autoOpenOverlay
   }
@@ -33,6 +39,12 @@ export class AppComponent {
         autoOpenGameOverlay: value
       }
     })
+  }
+
+  debug(val) {
+    debugger;
+    console.log(val)
+    return val
   }
 
   constructor(private apiService: ApiService, private sharedService: SharedService,
@@ -60,6 +72,8 @@ export class AppComponent {
 
     this.userData$ = sharedService.userData
 
+    this.gameState$ = sharedService.gameState$
+
     this.userData$.subscribe(data => {
       if (data) {
         this._autoOpenOverlay = data.autoOpenGameOverlay
@@ -67,6 +81,13 @@ export class AppComponent {
       }
     })
     speechRecognition.start();
+
+    this.isPrivateMap$ = combineLatest([this.userData$, this.gameState$]).pipe(
+      filter(([userData, gameState]) => !!userData && !!gameState),
+      map(([userData, gameState]) => {
+        return gameState.roomId.includes(userData.referenceUuid) ? "private" : "other"
+      })
+    )
 
     combineLatest([this.apiService.userPositions, this.userData$])
       .subscribe(async ([positions, userData]) => {
@@ -119,6 +140,29 @@ export class AppComponent {
     })
   }
 
+  async goBackToPreviousMap() {
+    const userData = await this.userData$.pipe(take(1)).toPromise()
+    this.apiService.WAApi("exitSceneTo", `/${userData.attributes.previousMap}`)
+  }
+
+  async gotoPrivateMap() {
+    try {
+      const [gameState, { referenceUuid }] = await Promise.all([
+        this.gameState$.pipe(take(1)).toPromise(),
+        this.userData$.pipe(take(1)).toPromise(),
+      ])
+      await this.apiService.passThrough({
+        type: "setAttribute",
+        data: {
+          key: "previousMap",
+          value: gameState.roomId
+        }
+      })
+      this.apiService.WAApi("exitSceneTo", `/_/global/${environment.mapServerOrigin}/mapserver/rest/mapserver/usermap/${referenceUuid}.json`)
+    } catch (e) {
+      console.error(e)
+    }
+  }
   getVectorForPlayer(gameState: UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>, playerName: string) {
     const playerPos = gameState.players[playerName].position;
     return new Vector(playerPos.x, playerPos.y)

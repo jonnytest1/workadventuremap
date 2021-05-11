@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mapServerOrigin: "pi4.e6azumuvyiabvs9s.myfritz.net"
 };
 
 /*

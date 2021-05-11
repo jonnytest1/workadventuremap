@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ApiService } from './api-service';
-import { UserData } from './backend';
+import { GameState, UserData } from './backend';
 
 @Injectable({
     providedIn: 'root',
@@ -12,9 +12,13 @@ export class SharedService {
     private _userData = new BehaviorSubject<UserData>(undefined)
 
     public userData = this._userData.asObservable()
+    gameState$ = new BehaviorSubject<GameState>(undefined);
 
     constructor(private apiService: ApiService) {
         this.loadUserData()
+        this.apiService.WAApi("getGameState").then(state => {
+            this.gameState$.next(state)
+        })
     }
 
     public async loadUserData() {

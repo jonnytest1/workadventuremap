@@ -10,6 +10,18 @@
         <button mat-button
                 routerLink="miro">open miro</button>
 
+        <ng-container *ngIf="(isPrivateMap$|async);let isPrivateMap">
+                <button mat-button
+                        *ngIf="isPrivateMap=='other';else back"
+                        (click)="gotoPrivateMap()">private map</button>
+                <ng-template #back>
+                        <button mat-button
+                                (click)="goBackToPreviousMap()">back</button>
+                </ng-template>
+        </ng-container>
+
+
+
         <br>
         <router-outlet></router-outlet>
 
