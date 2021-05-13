@@ -47,7 +47,12 @@ async function enableGameMode() {
             }, '*');
         }
     });
-
+    WA.onMoveEvent(e => {
+        window.parent.postMessage({
+            type: 'movementpassthrough',
+            data: e
+        }, '*');
+    });
 }
 
 module.exports = { enableGameMode, openOverlay };
