@@ -19,7 +19,7 @@ export class ApiService {
 
     private passThroughResponseMap: { [uuid: string]: (arg: any) => void } = {};
     private apiResponseMethod: { [uuid: string]: (arg: any) => void } = {};
-    private messageMap: { [uuid: string]: (arg: any) => void } = {};
+    // private messageMap: { [uuid: string]: (arg: any) => void } = {};
 
     private _userPositions = new Subject<RoomMap[string]["users"]>()
 
