@@ -5,11 +5,34 @@
 
 
 <div id="inventoryGridContainer">
+        <ng-container *ngFor="let item of inventory;let index=index">
+                <img *ngIf="(!!item.src)||getImageSource(item)"
+                     width="40px"
+                     height="40px"
+                     (click)="setActiveIndex(index)"
+                     [title]="inventoryMap[item.itemType].title"
+                     (contextmenu)="openContextMenu($event,item)"
+                     [src]="item.src" />
+        </ng-container>
 
-        <img *ngFor="let item of inventory;let index=index"
-             width="40px"
-             height="40px"
-             (click)="setActiveIndex(index)"
-             [title]="imageMap[item.itemType].title"
-             [src]="getImageSource(item)" />
 </div>
+<dialog id="inventoryItemDialog">
+        <mat-list role="list"
+                  *ngIf="menuItem">
+                <mat-list-item role="listitem">
+                        <button mat-button
+                                (click)="activationClick(menuItem)">
+                                {{ getInventoryItem(menuItem.itemType).activationText }}</button>
+                </mat-list-item>
+        </mat-list>
+</dialog>
+
+
+<img id="tileImageRendererSource"
+     crossorigin="anonymous"
+     style="position: absolute;display: none;">
+
+<canvas id="tileImageRenderer"
+        style="position: absolute;display: none;">
+
+</canvas>

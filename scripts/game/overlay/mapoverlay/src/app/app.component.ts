@@ -7,7 +7,7 @@ import { Vector } from '../vector';
 import { ApiService } from './api-service';
 import { GameState, UnPromise, UserData, WorkAdventureApi } from './backend';
 import { SharedService } from './shared-service';
-import { SpeechRecognitionService } from './speech-recognition.service';
+import { SpeechRecognitionService } from './speech-recognition-service';
 
 @Component({
   selector: 'app-root',
@@ -41,7 +41,7 @@ export class AppComponent {
     })
   }
 
-  debug(val) {
+  debug(val: unknown) {
     debugger;
     console.log(val)
     return val

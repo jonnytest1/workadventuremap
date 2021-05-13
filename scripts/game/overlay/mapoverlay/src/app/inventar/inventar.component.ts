@@ -1,6 +1,8 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/models/inventory-item-type';
-import { UserData } from '../backend';
+import { ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { InventoryItemType, inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/models/inventory-item-type';
+import { environment } from '../../environments/environment';
+import { ApiService } from '../api-service';
+import { FeInventoryItem } from '../backend';
 import { Vector2 } from './vector';
 
 interface Pixel {
@@ -21,31 +23,132 @@ interface Pixel {
 export class InventarComponent implements OnInit {
 
   @Input()
-  inventory: Array<UserData["inventory"][number]>
-
+  inventory: Array<FeInventoryItem> = []
 
   @ViewChild("canvas")
-  canvas: ElementRef<HTMLCanvasElement>
-  context: CanvasRenderingContext2D;
+  canvas: ElementRef<HTMLCanvasElement> | null = null
+  context: CanvasRenderingContext2D | null = null;
 
+  menuItem: FeInventoryItem = null
   activeIndex = 0;
-  imageMap = inventoryTypeMap
+  inventoryMap = inventoryTypeMap
 
-  
-  constructor() { }
+  menuRef: HTMLDialogElement
 
+  menuTopLeftPosition = { x: '0', y: '0' }
+
+  tileImage: { [index: string]: { imageEl: HTMLImageElement, loaded?: boolean } } = {}
+
+  onClick = (event) => {
+    if (!event.composedPath().some(ev => (ev as HTMLElement).id == "inventoryItemDialog")) {
+      this.removeMenu()
+    }
+  }
+
+
+  constructor(private cdr: ChangeDetectorRef, private apiService: ApiService) { }
 
   setActiveIndex(index: number) {
     this.activeIndex = index
     this.draw()
   }
-  getImageSource(item: UserData["inventory"][number]) {
-    return `assets/img/${inventoryTypeMap[item.itemType].image}.svg`
+
+  getInventoryItem(type: InventoryItemType) {
+    return this.inventoryMap[type]
+  }
+
+  getImageSource(item: FeInventoryItem): string {
+    if (item.itemType == InventoryItemType.Random) {
+      return item.src = `assets/img/${inventoryTypeMap[item.itemType].image}.svg`
+    } else if (item.itemType == InventoryItemType.Tile) {
+      const imageSource = `https://${environment.mapServerOrigin}/mapserver/rest/mapserver/usermap/assets/control.png`
+      if (!this.tileImage[imageSource]) {
+        this.tileImage[imageSource] = {
+          loaded: false,
+          imageEl: document.getElementById("tileImageRendererSource") as HTMLImageElement
+        }
+        this.tileImage[imageSource].imageEl.src = imageSource
+        this.tileImage[imageSource].imageEl.onload = () => {
+          this.tileImage[imageSource].loaded = true
+          this.cdr.detectChanges()
+        }
+        this.tileImage[imageSource].imageEl.onerror = () => {
+          debugger;
+        }
+      }
+      if (this.tileImage[imageSource].loaded) {
+        try {
+          const renderCanvas = document.getElementById("tileImageRenderer") as HTMLCanvasElement;
+          renderCanvas.height = 32
+          renderCanvas.width = 32
+          const context = renderCanvas.getContext("2d");
+
+          const zeroBasedIndex = item.index - 1
+          const imageTilePerRow = this.tileImage[imageSource].imageEl.width / 32;
+          const x = zeroBasedIndex % (imageTilePerRow)
+          const y = Math.floor(zeroBasedIndex / imageTilePerRow)
+          context.clearRect(0, 0, 32, 32)
+          context.drawImage(this.tileImage[imageSource].imageEl, -x * 32, -y * 32)
+          item.src = renderCanvas.toDataURL()
+          this.cdr.detectChanges()
+        } catch (e) {
+          debugger;
+        }
+      }
+    }
+
   }
   ngAfterViewInit(): void {
-    this.context = this.canvas.nativeElement.getContext("2d")
+    this.context = this.canvas?.nativeElement.getContext("2d") || null
     this.draw();
 
+  }
+
+  openContextMenu(event: MouseEvent, item: FeInventoryItem) {
+    event.preventDefault()
+    this.menuItem = item
+
+    if (!this.menuRef) {
+      this.menuRef = document.getElementById('inventoryItemDialog') as HTMLDialogElement
+    }
+    this.menuRef.style.display = 'initial';
+    this.menuRef.style.position = 'fixed';
+    this.menuRef.style.margin = "0px"
+    this.menuRef.style.padding = "0px"
+    this.menuRef.style.border = "0px"
+    this.menuRef.style.left = event.pageX + 'px';
+
+    this.menuRef.style.top = event.pageY + 'px';
+    this.menuRef.style.transform = "translateY(-100%)";
+    this.menuRef.style.display = "initial"
+    this.menuRef.show()
+
+
+
+    window.addEventListener("click", this.onClick)
+
+    // this.menuTopLeftPosition.x = event.clientX + 'px';
+    // this.menuTopLeftPosition.y = event.clientY + 'px';
+
+
+  }
+
+  removeMenu() {
+    this.menuRef.close("false")
+    this.menuRef.style.display = "none"
+    this.cdr.detectChanges();
+    window.removeEventListener("click", this.onClick)
+  }
+
+  async activationClick(item: FeInventoryItem) {
+    const newItem = await this.apiService.passThrough({
+      type: "activateItem",
+      data: {
+        item: item.id
+      }
+    })
+    this.inventory.splice(this.inventory.findIndex(iitem => iitem.id == item.id), 1, newItem)
+    this.removeMenu()
   }
   private draw() {
     this.map((pixel, height, width) => {
@@ -78,25 +181,31 @@ export class InventarComponent implements OnInit {
   }
   get rect() {
     const rect = this.getRect();
+    if (!rect) {
+      return null
+    }
     return new Vector2(rect.width, rect.height);
   }
 
   getRect() {
-    return this.canvas.nativeElement.getBoundingClientRect();
+    return this.canvas?.nativeElement.getBoundingClientRect();
   }
 
   getImageData(from?: Vector2, to?: Vector2) {
     if (!from) {
       from = Vector2.ZERO;
     }
-    if (!to) {
-      to = this.rect;
+    let toVector: Vector2
+    if (!to && this.rect) {
+      toVector = this.rect;
+    } else {
+      toVector = to as Vector2
     }
-    const newLocal = to.sub(from);
+    const newLocal = toVector.sub(from);
     return this.context.getImageData(from.x, from.y, newLocal.x, newLocal.y);
   }
 
-  map(fnc: (pixel: Pixel, height, width) => Pixel, options: { from?: Vector2, to?: Vector2 } = {}) {
+  map(fnc: (pixel: Pixel, height: number, width: number) => Pixel, options: { from?: Vector2, to?: Vector2 } = {}) {
     const imageData = this.getImageData();
 
     let start = Vector2.ZERO;

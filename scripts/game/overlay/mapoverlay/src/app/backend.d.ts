@@ -1,6 +1,7 @@
 import type { messaging } from '../../../../../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication';
 import { WorkAdventureApi } from '../../../../../index';
 
+
 export type { WorkAdventureApi } from "../../../../../index";
 
 export type FeMessage = messaging;
@@ -13,7 +14,9 @@ export type GameState = UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>
 export type UserData = UnPromise<FeMessage['getUserData']['response']>
 
 
-
+export type FeInventoryItem = UserData["inventory"][number] & {
+    src?: string
+}
 
 
 declare let t: {
