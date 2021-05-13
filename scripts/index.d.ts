@@ -1,4 +1,4 @@
-import { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication";
+import type { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication";
 import "../../workadventure/front/src/iframe_api";
 
 

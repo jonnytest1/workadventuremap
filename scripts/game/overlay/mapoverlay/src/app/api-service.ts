@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { RoomMap } from '../../../../../../../workadventure-mapserver/public/users';
-import { HasMovedEvent } from '../../../../../../../workadventure/front/src/Api/Events/HasMovedEvent';
-import { FeMessage, UnPromise, WorkAdventureApi } from './backend';
+import type { FeMessage, RoomMap, UnPromise, WorkAdventureApi } from './backend';
+import type { HasMovedEvent } from './waapi';
+
 
 
 function uuidv4(): string {
