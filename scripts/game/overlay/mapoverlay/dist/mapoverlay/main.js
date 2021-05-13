@@ -26,7 +26,7 @@ class ApiService {
     constructor() {
         this.passThroughResponseMap = {};
         this.apiResponseMethod = {};
-        this.messageMap = {};
+        // private messageMap: { [uuid: string]: (arg: any) => void } = {};
         this._userPositions = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.userPositions = this._userPositions.asObservable();
         this._passedEvents = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
@@ -66,20 +66,6 @@ class ApiService {
             });
         });
     }
-    /* async screenSize(): Promise<Vector> {
-         return new Promise<Vector>((res, thr) => {
-             const uuid = uuidv4();
-             this.passThroughResponseMap[uuid] = this.messageMap[uuid] = (arg) => {
-                 res(new Vector(arg.x, arg.y))
-             };;
- 
-             window.parent.postMessage({
-                 type: 'windowOffset',
-                 uuid,
-                 data: event
-             }, '*');
-         });
-     }*/
     WAApi(eventMethod, ...args) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             return new Promise((res, thr) => {

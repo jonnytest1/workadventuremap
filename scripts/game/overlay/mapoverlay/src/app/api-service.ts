@@ -55,7 +55,6 @@ export class ApiService {
         return new Promise<UnPromise<FeMessage[T]['response']>>((res, thr) => {
             const uuid = uuidv4();
             this.passThroughResponseMap[uuid] = res;
-
             window.parent.postMessage({
                 type: 'passthrough',
                 uuid,
@@ -63,24 +62,6 @@ export class ApiService {
             }, '*');
         });
     }
-
-
-    /* async screenSize(): Promise<Vector> {
-         return new Promise<Vector>((res, thr) => {
-             const uuid = uuidv4();
-             this.passThroughResponseMap[uuid] = this.messageMap[uuid] = (arg) => {
-                 res(new Vector(arg.x, arg.y))
-             };;
- 
-             window.parent.postMessage({
-                 type: 'windowOffset',
-                 uuid,
-                 data: event
-             }, '*');
-         });
-     }*/
-
-
     async WAApi<T extends keyof WorkAdventureApi>(
         eventMethod: T, ...args: Parameters<WorkAdventureApi[T]>): Promise<UnPromise<ReturnType<WorkAdventureApi[T]>>> {
         return new Promise<UnPromise<ReturnType<WorkAdventureApi[T]>>>((res, thr) => {
