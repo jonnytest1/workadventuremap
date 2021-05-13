@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { InventoryItemType, inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/models/inventory-item-type';
+import { take } from 'rxjs/internal/operators';
+import { InventoryItemType, inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/user/inventory/inventory-item-type';
 import { environment } from '../../environments/environment';
 import { ApiService } from '../api-service';
 import { FeInventoryItem } from '../backend';
@@ -124,11 +125,8 @@ export class InventarComponent implements OnInit {
     this.menuRef.show()
 
 
-
+    window.parent.focus()
     window.addEventListener("click", this.onClick)
-
-    // this.menuTopLeftPosition.x = event.clientX + 'px';
-    // this.menuTopLeftPosition.y = event.clientY + 'px';
 
 
   }
@@ -140,14 +138,51 @@ export class InventarComponent implements OnInit {
     window.removeEventListener("click", this.onClick)
   }
 
+  async preview(item: FeInventoryItem) {
+    const position = await this.apiService.playerPostion.pipe(take(1)).toPromise()
+    if (position == undefined) {
+      return;
+    }
+    let tiledPosition = {
+      x: Math.floor(position.x / 32),
+      y: Math.floor(position.y / 32)
+    };
+    this.apiService.WAApi("updateTile", [{
+      ...tiledPosition,
+      tile: item.index,
+      layer: "background-image"
+    }])
+  }
+
   async activationClick(item: FeInventoryItem) {
+    let tiledPosition = null
+    if (item.itemType == InventoryItemType.Tile) {
+      const position = await this.apiService.playerPostion.pipe(take(1)).toPromise()
+      if (position == undefined) {
+        return;
+      }
+      tiledPosition = {
+        x: Math.floor(position.x / 32),
+        y: Math.floor(position.y / 32)
+      };
+    }
+
+
     const newItem = await this.apiService.passThrough({
       type: "activateItem",
       data: {
-        item: item.id
+        item: item.id,
+        position: tiledPosition
       }
     })
-    this.inventory.splice(this.inventory.findIndex(iitem => iitem.id == item.id), 1, newItem)
+    this.inventory.splice(this.inventory.findIndex(iitem => iitem.id == item.id), 1, ...newItem)
+    if (item.itemType == InventoryItemType.Tile) {
+      this.apiService.WAApi("updateTile", [{
+        ...tiledPosition,
+        tile: item.index,
+        layer: "background-image"
+      }])
+    }
     this.removeMenu()
   }
   private draw() {

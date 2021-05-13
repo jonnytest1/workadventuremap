@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { RoomMap } from '../../../../../../../workadventure-mapserver/public/users';
+import { HasMovedEvent } from '../../../../../../../workadventure/front/src/Api/Events/HasMovedEvent';
 import { FeMessage, UnPromise, WorkAdventureApi } from './backend';
 
 
@@ -28,6 +29,10 @@ export class ApiService {
 
     public passedEvents = this._passedEvents.asObservable()
 
+    private _playerPosition = new BehaviorSubject<HasMovedEvent>(undefined);
+
+    public playerPostion = this._playerPosition.asObservable()
+
     constructor() {
         window.addEventListener('message', messageEvent => {
             if (messageEvent.data.type === 'passthroughresponse') {
@@ -40,6 +45,8 @@ export class ApiService {
                 this._userPositions.next(messageEvent.data.data)
             } else if (messageEvent.data.type == "event-pass") {
                 this._passedEvents.next(messageEvent.data.data)
+            } else if (messageEvent.data.type == "movementpassthrough") {
+                this._playerPosition.next(messageEvent.data.data)
             }
         });
     }

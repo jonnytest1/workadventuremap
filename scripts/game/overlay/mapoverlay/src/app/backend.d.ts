@@ -1,5 +1,5 @@
 import type { messaging } from '../../../../../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication';
-import { WorkAdventureApi } from '../../../../../index';
+import type { WorkAdventureApi } from '../../../../../index';
 
 
 export type { WorkAdventureApi } from "../../../../../index";

@@ -17,14 +17,20 @@
 
 </div>
 <dialog id="inventoryItemDialog">
-        <mat-list role="list"
-                  *ngIf="menuItem">
-                <mat-list-item role="listitem">
-                        <button mat-button
-                                (click)="activationClick(menuItem)">
-                                {{ getInventoryItem(menuItem.itemType).activationText }}</button>
-                </mat-list-item>
-        </mat-list>
+        <ng-container *ngIf="menuItem">
+
+                <button mat-button
+                        (click)="activationClick(menuItem)">
+                        {{ getInventoryItem(menuItem.itemType).activationText }}
+                </button>
+                <br>
+                <button mat-button
+                        *ngIf="menuItem.itemType==1"
+                        (click)="preview(menuItem)">
+                        preview placement
+                </button>
+        </ng-container>
+
 </dialog>
 
 

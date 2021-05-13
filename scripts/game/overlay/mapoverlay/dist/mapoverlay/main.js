@@ -31,6 +31,8 @@ class ApiService {
         this.userPositions = this._userPositions.asObservable();
         this._passedEvents = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
         this.passedEvents = this._passedEvents.asObservable();
+        this._playerPosition = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](undefined);
+        this.playerPostion = this._playerPosition.asObservable();
         window.addEventListener('message', messageEvent => {
             if (messageEvent.data.type === 'passthroughresponse') {
                 this.passThroughResponseMap[messageEvent.data.uuid](messageEvent.data.data);
@@ -45,6 +47,9 @@ class ApiService {
             }
             else if (messageEvent.data.type == "event-pass") {
                 this._passedEvents.next(messageEvent.data.data);
+            }
+            else if (messageEvent.data.type == "movementpassthrough") {
+                this._playerPosition.next(messageEvent.data.data);
             }
         });
     }
@@ -340,41 +345,6 @@ FriendsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineC
 
 /***/ }),
 
-/***/ "7xpF":
-/*!**********************************************************************************************************!*\
-  !*** D:/Jonathan/Projects/bas/workadventure-mapserver/resources/mapserver/models/inventory-item-type.ts ***!
-  \**********************************************************************************************************/
-/*! exports provided: inventoryTypeMap */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "inventoryTypeMap", function() { return inventoryTypeMap; });
-const inventoryTypeMap = {
-    [0 /* Random */]: {
-        image: 'help',
-        title: 'a random item that will do something at some point',
-        activationText: 'roll for item',
-        activate: (item, user) => {
-            item.itemType = 1 /* Tile */;
-            item.inventoryAttributes = JSON.stringify({
-                index: Math.floor(Math.random() * user.attributes.getValue('maxTileSetIndex', 668))
-            });
-        }
-    },
-    [1 /* Tile */]: {
-        image: '{}',
-        title: 'a tile',
-        activationText: 'place',
-        activate: () => {
-            //TODO
-        }
-    }
-};
-
-
-/***/ }),
-
 /***/ "9URT":
 /*!***********************************************!*\
   !*** ./src/app/speech-recognition-service.ts ***!
@@ -475,13 +445,14 @@ const environment = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InventarComponent", function() { return InventarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _workadventure_mapserver_resources_mapserver_models_inventory_item_type__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../../../workadventure-mapserver/resources/mapserver/models/inventory-item-type */ "7xpF");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../environments/environment */ "AytR");
-/* harmony import */ var _vector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./vector */ "sqkX");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api-service */ "+xTt");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var _angular_material_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/list */ "MutI");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/internal/operators */ "yrbL");
+/* harmony import */ var rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _workadventure_mapserver_resources_mapserver_user_inventory_inventory_item_type__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../../workadventure-mapserver/resources/mapserver/user/inventory/inventory-item-type */ "vsSO");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../environments/environment */ "AytR");
+/* harmony import */ var _vector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./vector */ "sqkX");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _api_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api-service */ "+xTt");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
 
 
@@ -494,39 +465,48 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = ["canvas"];
 function InventarComponent_ng_container_3_img_1_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "img", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function InventarComponent_ng_container_3_img_1_Template_img_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r8); const index_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().index; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](); return ctx_r6.setActiveIndex(index_r4); })("contextmenu", function InventarComponent_ng_container_3_img_1_Template_img_contextmenu_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r8); const item_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit; const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](); return ctx_r9.openContextMenu($event, item_r3); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+    const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "img", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵlistener"]("click", function InventarComponent_ng_container_3_img_1_Template_img_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵrestoreView"](_r8); const index_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]().index; const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"](); return ctx_r6.setActiveIndex(index_r4); })("contextmenu", function InventarComponent_ng_container_3_img_1_Template_img_contextmenu_0_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵrestoreView"](_r8); const item_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]().$implicit; const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"](); return ctx_r9.openContextMenu($event, item_r3); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const item_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]().$implicit;
-    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("title", ctx_r5.inventoryMap[item_r3.itemType].title)("src", item_r3.src, _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsanitizeUrl"]);
+    const item_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]().$implicit;
+    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("title", ctx_r5.inventoryMap[item_r3.itemType].title)("src", item_r3.src, _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsanitizeUrl"]);
 } }
 function InventarComponent_ng_container_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](1, InventarComponent_ng_container_3_img_1_Template, 1, 2, "img", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementContainerEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](1, InventarComponent_ng_container_3_img_1_Template, 1, 2, "img", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
     const item_r3 = ctx.$implicit;
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", !!item_r3.src || ctx_r1.getImageSource(item_r3));
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("ngIf", !!item_r3.src || ctx_r1.getImageSource(item_r3));
 } }
-function InventarComponent_mat_list_5_Template(rf, ctx) { if (rf & 1) {
-    const _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "mat-list", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "mat-list-item", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "button", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("click", function InventarComponent_mat_list_5_Template_button_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵrestoreView"](_r13); const ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"](); return ctx_r12.activationClick(ctx_r12.menuItem); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+function InventarComponent_ng_container_5_button_4_Template(rf, ctx) { if (rf & 1) {
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](0, "button", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵlistener"]("click", function InventarComponent_ng_container_5_button_4_Template_button_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵrestoreView"](_r14); const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"](2); return ctx_r13.preview(ctx_r13.menuItem); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](1, " preview placement ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+} }
+function InventarComponent_ng_container_5_Template(rf, ctx) { if (rf & 1) {
+    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](1, "button", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵlistener"]("click", function InventarComponent_ng_container_5_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵrestoreView"](_r16); const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"](); return ctx_r15.activationClick(ctx_r15.menuItem); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](3, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](4, InventarComponent_ng_container_5_button_4_Template, 2, 0, "button", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
-    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"](" ", ctx_r2.getInventoryItem(ctx_r2.menuItem.itemType).activationText, "");
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtextInterpolate1"](" ", ctx_r2.getInventoryItem(ctx_r2.menuItem.itemType).activationText, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("ngIf", ctx_r2.menuItem.itemType == 1);
 } }
 class InventarComponent {
     constructor(cdr, apiService) {
@@ -537,7 +517,7 @@ class InventarComponent {
         this.context = null;
         this.menuItem = null;
         this.activeIndex = 0;
-        this.inventoryMap = _workadventure_mapserver_resources_mapserver_models_inventory_item_type__WEBPACK_IMPORTED_MODULE_1__["inventoryTypeMap"];
+        this.inventoryMap = _workadventure_mapserver_resources_mapserver_user_inventory_inventory_item_type__WEBPACK_IMPORTED_MODULE_2__["inventoryTypeMap"];
         this.menuTopLeftPosition = { x: '0', y: '0' };
         this.tileImage = {};
         this.onClick = (event) => {
@@ -555,10 +535,10 @@ class InventarComponent {
     }
     getImageSource(item) {
         if (item.itemType == 0 /* Random */) {
-            return item.src = `assets/img/${_workadventure_mapserver_resources_mapserver_models_inventory_item_type__WEBPACK_IMPORTED_MODULE_1__["inventoryTypeMap"][item.itemType].image}.svg`;
+            return item.src = `assets/img/${_workadventure_mapserver_resources_mapserver_user_inventory_inventory_item_type__WEBPACK_IMPORTED_MODULE_2__["inventoryTypeMap"][item.itemType].image}.svg`;
         }
         else if (item.itemType == 1 /* Tile */) {
-            const imageSource = `https://${_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].mapServerOrigin}/mapserver/rest/mapserver/usermap/assets/control.png`;
+            const imageSource = `https://${_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].mapServerOrigin}/mapserver/rest/mapserver/usermap/assets/control.png`;
             if (!this.tileImage[imageSource]) {
                 this.tileImage[imageSource] = {
                     loaded: false,
@@ -615,9 +595,8 @@ class InventarComponent {
         this.menuRef.style.transform = "translateY(-100%)";
         this.menuRef.style.display = "initial";
         this.menuRef.show();
+        window.parent.focus();
         window.addEventListener("click", this.onClick);
-        // this.menuTopLeftPosition.x = event.clientX + 'px';
-        // this.menuTopLeftPosition.y = event.clientY + 'px';
     }
     removeMenu() {
         this.menuRef.close("false");
@@ -625,15 +604,43 @@ class InventarComponent {
         this.cdr.detectChanges();
         window.removeEventListener("click", this.onClick);
     }
+    preview(item) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const position = yield this.apiService.playerPostion.pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["take"])(1)).toPromise();
+            if (position == undefined) {
+                return;
+            }
+            let tiledPosition = {
+                x: Math.floor(position.x / 32),
+                y: Math.floor(position.y / 32)
+            };
+            this.apiService.WAApi("updateTile", [Object.assign(Object.assign({}, tiledPosition), { tile: item.index, layer: "background-image" })]);
+        });
+    }
     activationClick(item) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            let tiledPosition = null;
+            if (item.itemType == 1 /* Tile */) {
+                const position = yield this.apiService.playerPostion.pipe(Object(rxjs_internal_operators__WEBPACK_IMPORTED_MODULE_1__["take"])(1)).toPromise();
+                if (position == undefined) {
+                    return;
+                }
+                tiledPosition = {
+                    x: Math.floor(position.x / 32),
+                    y: Math.floor(position.y / 32)
+                };
+            }
             const newItem = yield this.apiService.passThrough({
                 type: "activateItem",
                 data: {
-                    item: item.id
+                    item: item.id,
+                    position: tiledPosition
                 }
             });
-            this.inventory.splice(this.inventory.findIndex(iitem => iitem.id == item.id), 1, newItem);
+            this.inventory.splice(this.inventory.findIndex(iitem => iitem.id == item.id), 1, ...newItem);
+            if (item.itemType == 1 /* Tile */) {
+                this.apiService.WAApi("updateTile", [Object.assign(Object.assign({}, tiledPosition), { tile: item.index, layer: "background-image" })]);
+            }
             this.removeMenu();
         });
     }
@@ -663,7 +670,7 @@ class InventarComponent {
         if (!rect) {
             return null;
         }
-        return new _vector__WEBPACK_IMPORTED_MODULE_3__["Vector2"](rect.width, rect.height);
+        return new _vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"](rect.width, rect.height);
     }
     getRect() {
         var _a;
@@ -671,7 +678,7 @@ class InventarComponent {
     }
     getImageData(from, to) {
         if (!from) {
-            from = _vector__WEBPACK_IMPORTED_MODULE_3__["Vector2"].ZERO;
+            from = _vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"].ZERO;
         }
         let toVector;
         if (!to && this.rect) {
@@ -685,7 +692,7 @@ class InventarComponent {
     }
     map(fnc, options = {}) {
         const imageData = this.getImageData();
-        let start = _vector__WEBPACK_IMPORTED_MODULE_3__["Vector2"].ZERO;
+        let start = _vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"].ZERO;
         if (options.from) {
             start = options.from.round();
         }
@@ -721,35 +728,35 @@ class InventarComponent {
     }
     putImageData(imageData, pos) {
         if (!pos) {
-            pos = _vector__WEBPACK_IMPORTED_MODULE_3__["Vector2"].ZERO;
+            pos = _vector__WEBPACK_IMPORTED_MODULE_4__["Vector2"].ZERO;
         }
         this.context.putImageData(imageData, pos.x, pos.y);
     }
     ngOnInit() {
     }
 }
-InventarComponent.ɵfac = function InventarComponent_Factory(t) { return new (t || InventarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_api_service__WEBPACK_IMPORTED_MODULE_5__["ApiService"])); };
-InventarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: InventarComponent, selectors: [["app-inventar"]], viewQuery: function InventarComponent_Query(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵviewQuery"](_c0, 1);
+InventarComponent.ɵfac = function InventarComponent_Factory(t) { return new (t || InventarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_5__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdirectiveInject"](_api_service__WEBPACK_IMPORTED_MODULE_6__["ApiService"])); };
+InventarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineComponent"]({ type: InventarComponent, selectors: [["app-inventar"]], viewQuery: function InventarComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵviewQuery"](_c0, 1);
     } if (rf & 2) {
         let _t;
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx.canvas = _t.first);
-    } }, inputs: { inventory: "inventory" }, decls: 8, vars: 2, consts: [["width", "800px", "height", "200px"], ["canvas", ""], ["id", "inventoryGridContainer"], [4, "ngFor", "ngForOf"], ["id", "inventoryItemDialog"], ["role", "list", 4, "ngIf"], ["id", "tileImageRendererSource", "crossorigin", "anonymous", 2, "position", "absolute", "display", "none"], ["id", "tileImageRenderer", 2, "position", "absolute", "display", "none"], ["width", "40px", "height", "40px", 3, "title", "src", "click", "contextmenu", 4, "ngIf"], ["width", "40px", "height", "40px", 3, "title", "src", "click", "contextmenu"], ["role", "list"], ["role", "listitem"], ["mat-button", "", 3, "click"]], template: function InventarComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](0, "canvas", 0, 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](3, InventarComponent_ng_container_3_Template, 2, 1, "ng-container", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](4, "dialog", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](5, InventarComponent_mat_list_5_Template, 4, 1, "mat-list", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](6, "img", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](7, "canvas", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵloadQuery"]()) && (ctx.canvas = _t.first);
+    } }, inputs: { inventory: "inventory" }, decls: 8, vars: 2, consts: [["width", "800px", "height", "200px"], ["canvas", ""], ["id", "inventoryGridContainer"], [4, "ngFor", "ngForOf"], ["id", "inventoryItemDialog"], [4, "ngIf"], ["id", "tileImageRendererSource", "crossorigin", "anonymous", 2, "position", "absolute", "display", "none"], ["id", "tileImageRenderer", 2, "position", "absolute", "display", "none"], ["width", "40px", "height", "40px", 3, "title", "src", "click", "contextmenu", 4, "ngIf"], ["width", "40px", "height", "40px", 3, "title", "src", "click", "contextmenu"], ["mat-button", "", 3, "click"], ["mat-button", "", 3, "click", 4, "ngIf"]], template: function InventarComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](0, "canvas", 0, 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](3, InventarComponent_ng_container_3_Template, 2, 1, "ng-container", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementStart"](4, "dialog", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵtemplate"](5, InventarComponent_ng_container_5_Template, 5, 2, "ng-container", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](6, "img", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵelement"](7, "canvas", 7);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngForOf", ctx.inventory);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵproperty"]("ngIf", ctx.menuItem);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_list__WEBPACK_IMPORTED_MODULE_7__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_7__["MatListItem"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"]], styles: ["#inventoryGridContainer[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0px;\n  display: grid;\n  grid-template-columns: repeat(16, 50px);\n  grid-template-rows: repeat(4, 50px);\n  align-items: center;\n  justify-items: center;\n}\nbutton[_ngcontent-%COMP%] {\n  font-size: large;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImludmVudGFyLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBRUEsYUFBQTtFQUNBLHVDQUFBO0VBQ0EsbUNBQUE7RUFFQSxtQkFBQTtFQUNBLHFCQUFBO0FBREo7QUFJQTtFQUNJLGdCQUFBO0FBRkoiLCJmaWxlIjoiaW52ZW50YXIuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjaW52ZW50b3J5R3JpZENvbnRhaW5lcntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwcHg7XG5cbiAgICBkaXNwbGF5OiBncmlkO1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDE2LDUwcHgpO1xuICAgIGdyaWQtdGVtcGxhdGUtcm93czogcmVwZWF0KDQsNTBweCk7XG5cbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbn1cblxuYnV0dG9ue1xuICAgIGZvbnQtc2l6ZTogbGFyZ2U7XG59Il19 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("ngForOf", ctx.inventory);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵproperty"]("ngIf", ctx.menuItem);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButton"]], styles: ["#inventoryGridContainer[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0px;\n  display: grid;\n  grid-template-columns: repeat(16, 50px);\n  grid-template-rows: repeat(4, 50px);\n  align-items: center;\n  justify-items: center;\n}\nbutton[_ngcontent-%COMP%] {\n  font-size: large;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImludmVudGFyLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBRUEsYUFBQTtFQUNBLHVDQUFBO0VBQ0EsbUNBQUE7RUFFQSxtQkFBQTtFQUNBLHFCQUFBO0FBREo7QUFJQTtFQUNJLGdCQUFBO0FBRkoiLCJmaWxlIjoiaW52ZW50YXIuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjaW52ZW50b3J5R3JpZENvbnRhaW5lcntcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwcHg7XG5cbiAgICBkaXNwbGF5OiBncmlkO1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDE2LDUwcHgpO1xuICAgIGdyaWQtdGVtcGxhdGUtcm93czogcmVwZWF0KDQsNTBweCk7XG5cbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbn1cblxuYnV0dG9ue1xuICAgIGZvbnQtc2l6ZTogbGFyZ2U7XG59Il19 */"] });
 
 
 /***/ }),
@@ -1415,6 +1422,32 @@ HealthComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("percent", ctx.percent * 100)("radius", 80)("outerStrokeWidth", 16)("showSubtitle", false)("showUnits", true)("showInnerStroke", true)("innerStrokeWidth", 4)("outerStrokeColor", ctx.healthColor)("showBackground", false)("innerStrokeColor", "#C7E596")("animation", true)("animationDuration", 300);
     } }, directives: [ng_circle_progress__WEBPACK_IMPORTED_MODULE_1__["CircleProgressComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZWFsdGguY29tcG9uZW50Lmxlc3MifQ== */"] });
+
+
+/***/ }),
+
+/***/ "vsSO":
+/*!******************************************************************************************************************!*\
+  !*** D:/Jonathan/Projects/bas/workadventure-mapserver/resources/mapserver/user/inventory/inventory-item-type.ts ***!
+  \******************************************************************************************************************/
+/*! exports provided: inventoryTypeMap */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "inventoryTypeMap", function() { return inventoryTypeMap; });
+const inventoryTypeMap = {
+    [0 /* Random */]: {
+        image: 'help',
+        title: 'a random item that will do something at some point',
+        activationText: 'roll for item',
+    },
+    [1 /* Tile */]: {
+        image: '{}',
+        title: 'a tile',
+        activationText: 'place at player',
+    }
+};
 
 
 /***/ }),
