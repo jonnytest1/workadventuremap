@@ -697,11 +697,11 @@
             "scaleInEditor": 1
         },
         "fire/fire.tmx": {
-            "scale": 1.5,
-            "selectedLayer": 7,
+            "scale": 1,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 1110.6666666666665,
-                "y": 476
+                "x": 153,
+                "y": 556
             }
         },
         "haus/haus.json": {
@@ -814,11 +814,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.5,
-            "selectedLayer": 3,
+            "scale": 3,
+            "selectedLayer": 15,
             "viewCenter": {
-                "x": 2176,
-                "y": 1599
+                "x": 351,
+                "y": 434.33333333333326
             }
         },
         "ocean/ocean.json": {
@@ -890,8 +890,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 875,
-                "y": 625.5
+                "x": 1328,
+                "y": 943.75
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {

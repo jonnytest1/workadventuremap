@@ -1415,7 +1415,7 @@
  <group id="79" name="exit-layers">
   <layer id="42" name="exit-cave" width="136" height="100">
    <properties>
-    <property name="exitSceneUrl" value="/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/site.json"/>
+    <property name="exitSceneUrl" value="./fire/fire.json"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

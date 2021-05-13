@@ -281,7 +281,7 @@
                         {
                          "name":"exitSceneUrl",
                          "type":"string",
-                         "value":"\/_\/global\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/site.json"
+                         "value":".\/fire\/fire.json"
                         }],
                  "type":"tilelayer",
                  "visible":true,
@@ -1958,6 +1958,10 @@
                 {
                  "id":47,
                  "probability":60
+                }, 
+                {
+                 "id":72,
+                 "type":"WallBlock"
                 }, 
                 {
                  "id":83,

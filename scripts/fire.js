@@ -30,7 +30,7 @@ WA.onEnterZone('item-pickup', async () => {
             }
         }]);
     } else {
-        WA.sendChatMessage('you received some item idk no items yet give me some tips or try later ill save it for now', 'engine');
+        WA.sendChatMessage('you just got 3 items 🤩', 'engine');
         message({
             type: 'addItem',
             data: {

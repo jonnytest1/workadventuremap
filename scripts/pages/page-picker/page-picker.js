@@ -22,10 +22,10 @@
             link: '/_/global/alexbrandad.github.io/testmap-gh-pages-first-test/Tuto/tutoV3.json'
         }, {
             text: 'localhost Jonnys Map Cave',
-            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-cave'
+            link: '/_/global/localhost/map.json#start-teleporter-cave'
         }, {
             text: 'localhost Jonnys Map City',
-            link: '/_/global/localhost/workadventuremap/map.json#start-teleporter-city'
+            link: '/_/global/localhost/map.json#start-teleporter-city'
         }
     ];
     links.
