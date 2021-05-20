@@ -4,6 +4,12 @@ let entercount = 0;
 
 const beCon = require('../scripts/backend-connection');
 
+setTimeout(() => {
+
+    WA.sendChatMessage("test", "abd")
+}, 2000)
+
+
 /*WA.onMoveEvent(event => {
     console.log(event)
 })*/

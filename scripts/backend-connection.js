@@ -35,6 +35,9 @@ async function message(data) {
     return pr;
 }
 
+const backendHost = "pi4.e6azumuvyiabvs9s.myfritz.net"
+const backendDomain = `https://${backendHost}`
+
 /**
  * @type {WebSocket}
  */
@@ -55,7 +58,7 @@ let cookieCheckPromise = new Promise((res, thr) => {
             img.remove();
         }
     });
-    img.src = `https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
+    img.src = `${backendDomain}/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
     document.body.appendChild(img);
 });
 
@@ -82,12 +85,21 @@ var backendCExport = {
 };
 function connectWebsocket() {
     isReady = false;
-    websocket = new WebSocket('wss://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/message');
+    websocket = new WebSocket(`wss://${backendHost}/mapserver/rest/message`);
+    let connectionReadyResolver;
+    let connectionCheckId
+
     websocket.onclose = () => {
         connectWebsocket();
     };
     websocket.onmessage = event => {
         console.debug('onmessage data', event);
+        if(event.data == "connection") {
+            clearInterval(connectionCheckId)
+            connectionCheckId = undefined
+            connectionReadyResolver();
+            return
+        }
         const eventJSon = JSON.parse(event.data);
         if(eventJSon.uuid && promiseMap[eventJSon.uuid]) {
             console.debug('resolving', eventJSon.data);
@@ -101,28 +113,32 @@ function connectWebsocket() {
             cb(eventJSon);
         });
     };
-    websocket.onopen = () => {
-        setTimeout(async () => {
-            isReady = true;
-            try {
-                for(let event of eventQueue) {
-                    await new Promise(res => setTimeout(res, 160));
-                    console.log('sending from queue', event);
-                    websocket.send(event);
-                }
-                eventQueue = [];
-            } catch(e) {
-                debugger;
-                console.error(e);
+    websocket.onopen = async () => {
+        await new Promise((res) => {
+            connectionReadyResolver = res;
+            connectionCheckId = setInterval(() => {
+                websocket.send("connectioncheck")
+            }, 200)
+        })
+        isReady = true;
+        try {
+            for(let event of eventQueue) {
+                await new Promise(res => setTimeout(res, 160));
+                console.log('sending from queue', event);
+                websocket.send(event);
             }
-        }, 500);
+            eventQueue = [];
+        } catch(e) {
+            debugger;
+            console.error(e);
+        }
 
     };
-
 }
 connectWebsocket();
 
 module.exports = {
+    backendDomain,
     message,
     ws: backendCExport
 };

@@ -1,6 +1,7 @@
 
 const userDataPr = Promise.all([require('./user-data'), require('../backend-connection')]);
 
+
 async function openOverlay() {
     WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true, passInputEvents: true, allow: 'microphone' });
 }

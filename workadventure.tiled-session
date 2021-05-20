@@ -3,23 +3,21 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "fire/fire.tmx",
+    "activeFile": "haus/haus.tmx",
     "expandedProjectPaths": [
-        "haus",
-        "church",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "ocean/tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        ".",
-        "test",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
         "fire",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "haus",
         "tilesets/tilesetfiles",
-        "haus/tilesetfiles"
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "haus/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        ".",
+        "church",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "ocean/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -689,7 +687,7 @@
             "selectedLayer": 5,
             "viewCenter": {
                 "x": 480,
-                "y": 479.8333333333333
+                "y": 479.66666666666663
             }
         },
         "customtileset.tsx": {
@@ -713,11 +711,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.33,
+            "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 798.4848484848485,
-                "y": 530.3030303030304
+                "x": 872,
+                "y": 1303
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -814,11 +812,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 3,
+            "scale": 0.0625,
             "selectedLayer": 15,
             "viewCenter": {
-                "x": 351,
-                "y": 434.33333333333326
+                "x": 3120,
+                "y": -272
             }
         },
         "ocean/ocean.json": {
@@ -924,21 +922,19 @@
     "map.tileWidth": 32,
     "map.width": 30,
     "openFiles": [
-        "map.tmx",
-        "church/church.tmx",
-        "fire/fire.tmx",
         "test/test.tmx",
-        "32x32_map_tile v3.1.tsx"
+        "32x32_map_tile v3.1.tsx",
+        "haus/haus.tmx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "map.tmx",
-        "church/church.tmx",
-        "32x32_map_tile v3.1.tsx",
         "test/test.tmx",
-        "fire/fire.tmx",
+        "32x32_map_tile v3.1.tsx",
         "haus/haus.tmx",
+        "fire/fire.tmx",
+        "church/church.tmx",
+        "map.tmx",
         "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
         "tilesets/tilesetfiles/Male 07-3.tsx",
         "test/6eck.tmx",
