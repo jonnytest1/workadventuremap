@@ -371,7 +371,7 @@
                         {
                          "name":"exitSceneUrl",
                          "type":"string",
-                         "value":"\/_\/global\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/site.json"
+                         "value":"\/_\/global\/pi4.e6azumuvyiabvs9s.myfritz.net\/mapserver\/rest\/mapserver\/site.json"
                         }],
                  "type":"tilelayer",
                  "visible":true,
