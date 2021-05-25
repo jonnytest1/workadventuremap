@@ -76,7 +76,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/scripts\/index.js?url=.\/user-update.js,.\/game-mode.js,..\/burg\/display-livestream.js"
+         "value":"..\/scripts\/index.js?url=.\/user-update.js,.\/game-mode.js,..\/aussicht\/display-livestream.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.6.0",

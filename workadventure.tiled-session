@@ -652,7 +652,7 @@
         },
         "aussicht/turm.tmx": {
             "scale": 0.5,
-            "selectedLayer": 2,
+            "selectedLayer": 1,
             "viewCenter": {
                 "x": 512,
                 "y": 512
@@ -914,8 +914,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 1186.5,
-                "y": 885.75
+                "x": 1328,
+                "y": 943.5
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {

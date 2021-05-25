@@ -4,7 +4,7 @@
   <export target="fernsehturm.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="script" value="../scripts/index.js?url=./user-update.js,./game-mode.js,../burg/display-livestream.js"/>
+  <property name="script" value="../scripts/index.js?url=./user-update.js,./game-mode.js,../aussicht/display-livestream.js"/>
  </properties>
  <tileset firstgid="1" source="../32x32_map_tile v3.1.tsx"/>
  <tileset firstgid="668" source="aussicht.tsx"/>
