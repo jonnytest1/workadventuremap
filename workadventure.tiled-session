@@ -920,14 +920,14 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps/test",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps/space",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
     "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps/space/tiles",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 30,
     "map.lastUsedExportFilter": "JSON-Kartendateien (*.json)",
-    "map.lastUsedFormat": "json",
+    "map.lastUsedFormat": "tmx",
     "map.orientation": null,
     "map.tileHeight": 32,
     "map.tileWidth": 32,

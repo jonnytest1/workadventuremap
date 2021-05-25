@@ -13,7 +13,7 @@ async function enableGameMode() {
     WA.registerMenuCommand('open game overlay', () => {
         openOverlay();
     });
-    if(userData.autoOpenGameOverlay) {
+    if(userData.autoOpenGameOverlay && !window.blockAutoOpenOverlay) {
         openOverlay();
     }
 

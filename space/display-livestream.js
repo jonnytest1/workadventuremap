@@ -1,10 +1,21 @@
 /// <reference path="../scripts/index.d.ts" />
 
-setTimeout(() => {
-    WA.openCoWebSite("./iss.html")
-}, 1000);
+window.blockAutoOpenOverlay = true
 
 
-WA.triggerMessage("press 'space' to jump", () => {
-    WA.exitSceneTo("/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/mapserver/site.json")
-})
+onload = () => {
+    setTimeout(() => {
+        WA.openCoWebSite("../space/iss.html")
+        setTimeout(() => {
+            WA.triggerMessage("press 'space' to jump down", () => {
+                WA.exitSceneTo("/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/mapserver/site.json")
+            })
+        }, 2000)
+
+
+    }, 1000);
+
+}
+
+
+

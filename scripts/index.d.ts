@@ -52,6 +52,8 @@ declare global {
     }
     interface Window {
         importScript: () => any
+
+        blockAutoOpenOverlay?: boolean
     }
 
     //var WA: WorkAdventureApi
