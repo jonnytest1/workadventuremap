@@ -652,10 +652,10 @@
         },
         "aussicht/turm.tmx": {
             "scale": 0.5,
-            "selectedLayer": 1,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
-                "y": 512
+                "x": 520,
+                "y": 726
             }
         },
         "base_out_atlas.tsx": {
