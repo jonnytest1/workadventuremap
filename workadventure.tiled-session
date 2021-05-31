@@ -3,21 +3,23 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "space/space.tmx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
         "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "haus/tilesetfiles",
-        "tilesets/tilesetfiles",
-        "space/tiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
         "space",
-        "burg",
+        "space/tiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "test",
+        "aussicht",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
         "ocean/tilesets",
+        "haus/tilesetfiles",
+        "burg",
         ".",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2"
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "tilesets/tilesetfiles"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -651,11 +653,11 @@
             "scaleInEditor": 1.5
         },
         "aussicht/turm.tmx": {
-            "scale": 0.5,
+            "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 520,
-                "y": 726
+                "x": 1948,
+                "y": 976
             }
         },
         "base_out_atlas.tsx": {
@@ -663,11 +665,11 @@
             "scaleInEditor": 1
         },
         "burg/burg.tmx": {
-            "scale": 0.75,
-            "selectedLayer": 0,
+            "scale": 0.5,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 520,
-                "y": 386.66666666666663
+                "x": 1230,
+                "y": 742
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -696,10 +698,10 @@
         },
         "fire/fire.tmx": {
             "scale": 1,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": -69,
-                "y": 464
+                "x": 1159,
+                "y": 915
             }
         },
         "haus/haus.json": {
@@ -812,11 +814,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.0625,
+            "scale": 1.5,
             "selectedLayer": 17,
             "viewCenter": {
-                "x": 2176,
-                "y": 1608
+                "x": 2792.6666666666665,
+                "y": 1723.3333333333333
             }
         },
         "ocean/ocean.json": {
@@ -878,13 +880,13 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 137.33333333333334,
-                "y": 344
+                "x": 240,
+                "y": 240.66666666666666
             }
         },
         "space/tiles/paledot.tsx": {
             "scaleInDock": 0.5,
-            "scaleInEditor": 0.5
+            "scaleInEditor": 1
         },
         "terrain_atlas.tsx": {
             "scaleInDock": 0.75,
@@ -915,7 +917,7 @@
             "selectedLayer": 2,
             "viewCenter": {
                 "x": 1328,
-                "y": 943.5
+                "y": 943.75
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {
@@ -953,7 +955,10 @@
         "haus/haus.tmx",
         "burg/burg.tmx",
         "map.tmx",
-        "space/space.tmx"
+        "space/space.tmx",
+        "space/tiles/paledot.tsx",
+        "aussicht/turm.tmx",
+        "fire/fire.tmx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
@@ -962,14 +967,14 @@
         "32x32_map_tile v3.1.tsx",
         "haus/haus.tmx",
         "burg/burg.tmx",
-        "map.tmx",
-        "space/space.tmx",
-        "space/space.json",
-        "space/tiles/paledot.tsx",
-        "church/church.tmx",
         "fire/fire.tmx",
-        "tilesets/tilesetfiles/Phssthpok_32x32.tsx",
-        "tilesets/tilesetfiles/Male 07-3.tsx"
+        "aussicht/turm.tmx",
+        "space/tiles/paledot.tsx",
+        "space/space.tmx",
+        "map.tmx",
+        "space/space.json",
+        "church/church.tmx",
+        "tilesets/tilesetfiles/Phssthpok_32x32.tsx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",

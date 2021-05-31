@@ -1,11 +1,10 @@
 var requirePromises = Promise.all([
     require('./backend-connection'),
-    require('./zoned-popup'),
     require('./game/user-data'),
 ]);
 
 (async () => {
-    const [{ message, ws }, { popupInZone }, { getUserData }] = await requirePromises;
+    const [{ message, ws }, { getUserData }] = await requirePromises;
 
     ws.addEventListener((event) => {
         if(event.type === 'receivemessage') {

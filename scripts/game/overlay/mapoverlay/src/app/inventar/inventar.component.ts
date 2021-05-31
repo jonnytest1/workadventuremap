@@ -1,10 +1,11 @@
 import { ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { take } from 'rxjs/internal/operators';
-import { InventoryItemType, inventoryTypeMap } from '../../../../../../../../workadventure-mapserver/resources/mapserver/user/inventory/inventory-item-type';
 import { environment } from '../../environments/environment';
 import { ApiService } from '../api-service';
 import { FeInventoryItem } from '../backend';
+import { InventoryItemType, inventoryTypeMap } from './inentory-items';
 import { Vector2 } from './vector';
+
 
 interface Pixel {
   red: number;
