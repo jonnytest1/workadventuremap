@@ -172,6 +172,9 @@ async function multiStrandedPopupConversation(options) {
                         } else {
                             if(newIndex.length > 1) {
                                 if(!currentIndexData.resumeMainIndex) {
+                                    if(options.onfinish) {
+                                        options.onfinish(options)
+                                    }
                                     return
                                 }
                                 newIndex.length = 1

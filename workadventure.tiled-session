@@ -667,9 +667,9 @@
         },
         "burg/burg.tmx": {
             "scale": 0.5,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 513,
+                "x": 512,
                 "y": 512
             }
         },
@@ -815,11 +815,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 0.25,
-            "selectedLayer": 17,
+            "scale": 1,
+            "selectedLayer": 38,
             "viewCenter": {
-                "x": 1734,
-                "y": 1592
+                "x": 1173,
+                "y": 232
             }
         },
         "ocean/ocean.json": {
@@ -879,9 +879,9 @@
         },
         "space/space.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 2,
             "viewCenter": {
-                "x": 240.66666666666669,
+                "x": 241.33333333333331,
                 "y": 240
             }
         },
@@ -915,9 +915,9 @@
         },
         "test/test.tmx": {
             "scale": 2,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 1327.75,
+                "x": 1327.5,
                 "y": 943.5
             }
         },

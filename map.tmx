@@ -3744,6 +3744,7 @@
  <group id="82" name="visible-zones">
   <layer id="83" name="convtest" width="136" height="100">
    <properties>
+    <property name="openWebsite" value="./scripts/popup-example-code.png"/>
     <property name="zone" value="convtest"/>
    </properties>
    <data encoding="csv">

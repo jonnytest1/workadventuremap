@@ -62,28 +62,27 @@ const requirePromises = Promise.all([
             opts._conversationIndex = [0]
         },
         data: [{
-            message: "test2.2",
-            buttons: ["abc", "bef"]
+            message: "this popup leads to the same message no matter where you press ",
+            buttons: ["first option", "other option"]
         }, {
-            message: "test2.5",
+            message: "the first option o this popup opens up a new conversation line",
             buttons: [{
                 buttonText: "b1",
                 continuation: {
-                    message: "b1message",
-                    resumeMainIndex: true,
+                    message: "if you leave and enter again you will be at the same position in the conversation",
                     buttons: [{
-                        buttonText: "b1response",
+                        buttonText: "exhasut popup",
                         continuation: {
-                            message: "b1respmess",
+                            message: "this popup will resurface until all options have been clicked at least once",
                             exhaustOptionsBeforeContinue: true,
-                            resumeMainIndex: true,
+                            resumeMainIndex: true, //back to next item on the main index line
                             buttons: ["exhaust1", "exhaust2"]
                         }
-                    }, "b1responsee2"]
+                    }, "finish in the middle"]
                 }
             }, "b2a"]
         }, {
-            message: "test3",
+            message: "this popup is the last one before reset",
             buttons: "finish"
         }
         ]

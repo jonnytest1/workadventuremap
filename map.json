@@ -640,6 +640,11 @@
                  "opacity":1,
                  "properties":[
                         {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/scripts\/popup-example-code.png"
+                        }, 
+                        {
                          "name":"zone",
                          "type":"string",
                          "value":"convtest"
