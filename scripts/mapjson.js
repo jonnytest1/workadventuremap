@@ -87,4 +87,93 @@ const requirePromises = Promise.all([
         }
         ]
     })
+
+
+
+    if(data.gameModeEnabled) {
+        const amount = 4
+        /**
+        * @type {import('./conversation').ConversationButton}
+        */
+        const rootMessageEl = {
+            message: `guess the correct option part 1/${amount}`,
+            resumeMainIndex: true,
+            buttons: []
+        }
+        let messageEl = rootMessageEl
+        for(let i = 0; i < amount; i++) {
+            const index = Math.floor(Math.random() * 5)
+            // console.warn(index)
+            /**
+             * @type {import('./conversation').ConversationButton}
+             */
+            let nextMessageEl
+            for(let choiceI = 0; choiceI < 5; choiceI++) {
+                if(typeof messageEl.buttons !== "string") {
+
+                    /**
+                       * @type {import('./conversation').ButtonElement}
+                       */
+                    const buttonElement = {
+                        buttonText: `${choiceI}`
+                    };
+                    if(choiceI == index) {
+                        nextMessageEl = {
+                            message: `guess the correct option part ${i + 2}/${amount}`,
+                            resumeMainIndex: true,
+                            buttons: []
+                        };
+
+                        buttonElement.continuation = nextMessageEl
+
+                        if(i == amount - 1) {
+                            nextMessageEl.resumeMainIndex = false
+                            buttonElement.continuation = {
+                                message: "nicely done here you go",
+                                buttons: "🥳"
+                            }
+
+                            buttonElement.onclick = () => {
+                                message({
+                                    "type": "addItem",
+                                    data: {
+                                        count: 7
+                                    }
+                                })
+                            }
+                        }
+                    }
+
+                    messageEl.buttons.push(buttonElement)
+
+                }
+
+            }
+            messageEl = nextMessageEl
+
+        }
+
+
+        multiStrandedPopupConversation({
+            zone: "random-popup-item", onfinish: (opts) => {
+                opts._conversationIndex = [0]
+            },
+            data: [
+                {
+                    message: "do you want some items ?",
+                    buttons: "um sure"
+                }, {
+                    message: "alright if you guess all the options correctly ill give you some",
+                    buttons: "ok"
+                },
+                rootMessageEl,
+                {
+                    message: "seems like you failed :3",
+                    buttons: ":("
+                }
+            ]
+        })
+
+    }
+
 })();

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "haus/haus.tmx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
         "space/tiles",
         "haus/tilesetfiles",
@@ -13,6 +13,7 @@
         "burg",
         "tilesets/tilesetfiles",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "fire",
         "test",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
         "aussicht",
@@ -815,11 +816,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 38,
+            "scale": 1.5,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 1173,
-                "y": 232
+                "x": 1206,
+                "y": 485.3333333333333
             }
         },
         "ocean/ocean.json": {
@@ -921,6 +922,10 @@
                 "y": 943.5
             }
         },
+        "tilesets/Female 25-1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
         "tilesets/tilesetfiles/Male 07-3.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -940,7 +945,7 @@
     },
     "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps/aussicht",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps/space/tiles",
+    "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps/tilesets",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 30,
@@ -959,23 +964,28 @@
         "space/space.tmx",
         "space/tiles/paledot.tsx",
         "aussicht/turm.tmx",
-        "fire/fire.tmx"
+        "fire/fire.tmx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "haus/tilesetfiles/silveira_neto_gpl_pixelart_tileset_version_4.tsx",
+        "Male 01-2.tsx",
+        "tilesets/Female 25-1.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
-        "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx",
         "test/test.tmx",
         "32x32_map_tile v3.1.tsx",
+        "haus/haus.tmx",
+        "burg/burg.tmx",
+        "tilesets/Female 25-1.tsx",
+        "Male 01-2.tsx",
+        "haus/tilesetfiles/silveira_neto_gpl_pixelart_tileset_version_4.tsx",
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "fire/fire.tmx",
         "aussicht/turm.tmx",
-        "space/tiles/paledot.tsx",
-        "space/space.tmx",
-        "map.tmx",
-        "burg/burg.tmx",
-        "haus/haus.tmx",
-        "space/space.json",
-        "church/church.tmx"
+        "space/tiles/paledot.tsx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
