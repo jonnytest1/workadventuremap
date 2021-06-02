@@ -15,11 +15,19 @@ Object.defineProperty(module, 'exports', {
 const currentScript = document.currentScript;
 // @ts-ignore
 const scriptURL = new URL(currentScript.src);
+/**
+ * 
+ * @param {string} scriptLoadUrl 
+ * @returns 
+ */
 //@ts-ignore
 window.importScript = async (scriptLoadUrl) => {
     const scriptToUse = document.currentScript || currentScript;
     if(!scriptLoadUrl.endsWith('.js')) {
         scriptLoadUrl += '.js';
+    }
+    if(scriptLoadUrl.startsWith("@jonnygithub/")) {
+        scriptLoadUrl = scriptLoadUrl.replace("@jonnygithub", scriptURL.href.replace("/index.js", ""))
     }
     let newSrc;
     if('src' in scriptToUse) {

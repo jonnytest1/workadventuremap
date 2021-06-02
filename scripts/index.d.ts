@@ -45,11 +45,11 @@ declare global {
     interface Popup {
         close()
     }
-    interface PopupOptions {
-        label: string,
-        className?: "normal" | "primary" | "success" | "warning" | "error" | "disabled",
-        callback?: (popup: Popup) => unknown
-    }
+    /* interface PopupOptions {
+         label: string,
+         className?: "normal" | "primary" | "success" | "warning" | "error" | "disabled",
+         callback?: (popup: Popup) => unknown
+     }*/
     interface Window {
         importScript: () => any
 
