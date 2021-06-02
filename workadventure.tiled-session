@@ -3,23 +3,24 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.tmx",
+    "activeFile": "haus/haus.tmx",
     "expandedProjectPaths": [
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "space",
         "space/tiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
-        "test",
-        "aussicht",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "ocean/tilesets",
         "haus/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "space",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
         "burg",
-        ".",
+        "tilesets/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "test",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "tilesets/tilesetfiles"
+        "aussicht",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        ".",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "ocean/tilesets",
+        "haus"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -656,8 +657,8 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 1948,
-                "y": 976
+                "x": 514,
+                "y": 512
             }
         },
         "base_out_atlas.tsx": {
@@ -668,8 +669,8 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 1230,
-                "y": 742
+                "x": 513,
+                "y": 512
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -700,8 +701,8 @@
             "scale": 1,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 1159,
-                "y": 915
+                "x": 799.5,
+                "y": 800
             }
         },
         "haus/haus.json": {
@@ -713,11 +714,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 1,
+            "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 800,
-                "y": 799.5
+                "x": 1419.3333333333333,
+                "y": 1464
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -814,11 +815,11 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1.5,
+            "scale": 0.25,
             "selectedLayer": 17,
             "viewCenter": {
-                "x": 2792.6666666666665,
-                "y": 1723.3333333333333
+                "x": 1734,
+                "y": 1592
             }
         },
         "ocean/ocean.json": {
@@ -880,8 +881,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 240,
-                "y": 240.66666666666666
+                "x": 240.66666666666669,
+                "y": 240
             }
         },
         "space/tiles/paledot.tsx": {
@@ -916,8 +917,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 1328,
-                "y": 943.75
+                "x": 1327.75,
+                "y": 943.5
             }
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {
@@ -963,18 +964,18 @@
     "project": "workadventure.tiled-project",
     "property.type": "string",
     "recentFiles": [
+        "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx",
         "test/test.tmx",
         "32x32_map_tile v3.1.tsx",
-        "haus/haus.tmx",
-        "burg/burg.tmx",
         "fire/fire.tmx",
         "aussicht/turm.tmx",
         "space/tiles/paledot.tsx",
         "space/space.tmx",
         "map.tmx",
+        "burg/burg.tmx",
+        "haus/haus.tmx",
         "space/space.json",
-        "church/church.tmx",
-        "tilesets/tilesetfiles/Phssthpok_32x32.tsx"
+        "church/church.tmx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",

@@ -66,17 +66,22 @@ module.exports = {
                         ...option,
                         className: option.className || 'normal',
                         callback: () => {
-                            if(options.blocking) {
-                                WA.restorePlayerControl();
+                            try {
+                                if(options.blocking) {
+                                    WA.restorePlayerControl();
+                                }
+                                if(options.withCircle) {
+                                    WA.removeBubble();
+                                }
+                                if(callback) {
+                                    callback(popup);
+                                }
+                                popup.close();
+                                popup = undefined;
+                            } catch(e) {
+                                console.error(e)
+
                             }
-                            if(options.withCircle) {
-                                WA.removeBubble();
-                            }
-                            if(callback) {
-                                callback(popup);
-                            }
-                            popup.close();
-                            popup = undefined;
                         }
                     };
 

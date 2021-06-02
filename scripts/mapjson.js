@@ -2,14 +2,15 @@ const requirePromises = Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./game/user-data'),
+    require("./conversation"),
     require('./user-update'),
     require('./minato-event'),
     require('./game-mode'),
-    require('./communication')
+    require('./communication'),
 ]);
 (async () => {
 
-    const [{ message, ws }, { popupInZone }, { getUserData }] = await requirePromises;
+    const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await requirePromises;
 
     console.log('script run');
     const data = await getUserData();
@@ -54,4 +55,37 @@ const requirePromises = Promise.all([
              }
          ]
      });*/
+
+    multiStrandedPopupConversation({
+        zone: "convtest",
+        onfinish: (opts) => {
+            opts._conversationIndex = [0]
+        },
+        data: [{
+            message: "test2.2",
+            buttons: ["abc", "bef"]
+        }, {
+            message: "test2.5",
+            buttons: [{
+                buttonText: "b1",
+                continuation: {
+                    message: "b1message",
+                    resumeMainIndex: true,
+                    buttons: [{
+                        buttonText: "b1response",
+                        continuation: {
+                            message: "b1respmess",
+                            exhaustOptionsBeforeContinue: true,
+                            resumeMainIndex: true,
+                            buttons: ["exhaust1", "exhaust2"]
+                        }
+                    }, "b1responsee2"]
+                }
+            }, "b2a"]
+        }, {
+            message: "test3",
+            buttons: "finish"
+        }
+        ]
+    })
 })();
