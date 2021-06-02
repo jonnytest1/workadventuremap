@@ -31,7 +31,7 @@ window.importScript = async (scriptLoadUrl) => {
         scriptLoadUrl += '.js';
     }
     if(scriptLoadUrl.startsWith("@jonnygithub/")) {
-        scriptLoadUrl = new URL(scriptLoadUrl.replace("@jonnygithub/", './'), scriptURL.href.replace("/index.js", "")).href
+        scriptLoadUrl = new URL(scriptLoadUrl.replace("@jonnygithub/", './'), currentScriptUrl.href.replace("index.js", "")).href
     }
     let newSrc;
     if('src' in scriptToUse) {
