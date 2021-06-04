@@ -1,9 +1,29 @@
 /// <reference path="./index.d.ts" />
+
+/**
+ * @template T
+ * @param {T} imports
+ * @param {(imports:Promise<T>)=>Promise<void>} callback
+ */
+var scriptNesting = async function(imports, callback) {
+    return callback(Promise.resolve(imports))
+}
+
+/**
+ * @template T
+ * @template U
+ * @param {T} imports
+ * @param {(imports:Promise<T>)=>U} callback
+ */
+var exportNesting = async function(imports, callback) {
+    return callback(Promise.resolve(imports))
+}
+
 /**
  * @type {{[key:string]:Promise<any>}}
  */
 let loadingSCriptsMap = {};
-var module = {};
+var module = { exports: null };
 Object.defineProperty(module, 'exports', {
     get: () => {
         return document.currentScript['exports'] || {};
@@ -24,8 +44,7 @@ currentScriptUrl.search = ""
  * @param {string} scriptLoadUrl 
  * @returns 
  */
-//@ts-ignore
-window.importScript = async (scriptLoadUrl) => {
+async function scriptImporting(scriptLoadUrl) {
     const scriptToUse = document.currentScript || currentScript;
     if(!scriptLoadUrl.endsWith('.js')) {
         scriptLoadUrl += '.js';
@@ -74,18 +93,21 @@ window.importScript = async (scriptLoadUrl) => {
     return loadingSCriptsMap[newSrc.href];
 };
 
+//@ts-ignore
+window.importScript = scriptImporting
+
 // @ts-ignore
 window.require = importScript;
 
-const url = scriptURL.searchParams.get('url');
+const scriptLoadUrl = scriptURL.searchParams.get('url');
 if(!document.body) {
     window.addEventListener('load', () => {
-        for(let requireUrl of url.split(',')) {
-            require(requireUrl);
+        for(let requireUrl of scriptLoadUrl.split(',')) {
+            scriptImporting(requireUrl);
         }
     });
 } else {
-    for(let requireUrl of url.split(',')) {
-        require(requireUrl);
+    for(let requireUrl of scriptLoadUrl.split(',')) {
+        scriptImporting(requireUrl);
     }
 }

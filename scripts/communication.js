@@ -1,10 +1,10 @@
-var requirePromises = Promise.all([
+
+
+scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./game/user-data'),
-]);
-
-(async () => {
-    const [{ message, ws }, { getUserData }] = await requirePromises;
+]), async imps => {
+    const [{ message, ws }, { getUserData }] = await imps;
 
     ws.addEventListener((event) => {
         if(event.type === 'receivemessage') {
@@ -51,4 +51,5 @@ var requirePromises = Promise.all([
 
         }
     });
-})();
+})
+

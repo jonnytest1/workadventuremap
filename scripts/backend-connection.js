@@ -49,17 +49,17 @@ const callbacks = [];
 let eventQueue = [];
 
 let cookieCheckPromise = new Promise((res, thr) => {
-    const img = document.createElement('iframe');
+    const iframe = document.createElement('iframe');
     window.addEventListener('message', messageEvent => {
         let eventData = messageEvent.data;
         if(eventData.type === 'iframeresponse') {
             console.debug('resolve cookie promise');
             res();
-            img.remove();
+            iframe.remove();
         }
     });
-    img.src = `${backendDomain}/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
-    document.body.appendChild(img);
+    iframe.src = `${backendDomain}/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
+    document.body.appendChild(iframe);
 });
 
 let isReady = false;

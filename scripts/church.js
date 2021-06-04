@@ -1,12 +1,11 @@
 /// <reference path="index.d.ts" />
-const imports = Promise.all([
+
+scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./user-update')
-]);
-
-(async () => {
-    const [{ message, ws }, { popupInZone }] = await imports;
+]), async imps => {
+    const [{ message, ws }, { popupInZone }] = await imps;
     popupInZone({
         zone: 'friendship-explanation-zone',
         popupText: 'stand in there together to become friends 😊',
@@ -73,4 +72,6 @@ const imports = Promise.all([
             message({ type: 'friendstatus' });
         }
     });
-})();
+})
+
+

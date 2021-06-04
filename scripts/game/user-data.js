@@ -1,41 +1,42 @@
 ///<reference path="../index.d.ts" />
-/**
- * @type { msgCpy["getUserData"]["response"]}
- */
-let userData;
 
-const backendConnectionPRomise = Promise.resolve(require('../backend-connection'));
 
-module.exports = {
+module.exports = exportNesting(require('../backend-connection'), imports => {
     /**
-     *
-     * @returns { msgCpy["getUserData"]["response"]}
+     * @type { msgCpy["getUserData"]["response"]}
      */
-    getUserData: async () => {
-        if(!userData) {
-            userData = new Promise(async (res, thrower) => {
-                try {
-                    const { message, ws } = await backendConnectionPRomise;
+    let userData;
+    return {
+        /**
+        *
+        * @returns { msgCpy["getUserData"]["response"]}
+        */
+        getUserData: async () => {
+            if(!userData) {
+                userData = new Promise(async (res, thrower) => {
+                    try {
+                        const { message, ws } = await imports;
 
-                    /*ws.addEventListener(event => {
-                        if(event.type === 'userDataUpdate') {
-                            userData = event.data;
-                        }
-                    });*/
-                    console.log('getUserData msg');
-                    const userDataResult = await message({
-                        type: 'getUserData'
-                    });
-                    console.log('get userdata returned');
-                    res(userDataResult);
-                } catch(e) {
-                    debugger;
-                    console.error(e);
-                    thrower(e);
-                }
-            });
+                        /*ws.addEventListener(event => {
+                            if(event.type === 'userDataUpdate') {
+                                userData = event.data;
+                            }
+                        });*/
+                        console.log('getUserData msg');
+                        const userDataResult = await message({
+                            type: 'getUserData'
+                        });
+                        console.log('get userdata returned');
+                        res(userDataResult);
+                    } catch(e) {
+                        debugger;
+                        console.error(e);
+                        thrower(e);
+                    }
+                });
 
+            }
+            return userData;
         }
-        return userData;
     }
-};
+});

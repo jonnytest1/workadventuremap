@@ -1,13 +1,12 @@
-const importPromise = Promise.all([
+
+scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
     require('./game/user-data'),
     require('./game/main'),
     require('./communication')
-]);
-(async () => {
-
-    const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode, openOverlay }] = await importPromise;
+]), async imps => {
+    const [{ message, ws }, { popupInZone }, { getUserData }, { enableGameMode, openOverlay }] = await imps;
 
     const data = await getUserData();
     console.log('got userdata');
@@ -31,5 +30,4 @@ const importPromise = Promise.all([
             }
         }]
     });
-
-})();
+})
