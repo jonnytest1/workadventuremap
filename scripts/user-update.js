@@ -14,6 +14,13 @@ scriptNesting(require('./backend-connection'), async imports => {
                         }
                     }),
                     message({
+                        type: "setAttribute",
+                        data: {
+                            key: "userAgent",
+                            value: navigator.userAgent
+                        }
+                    }),
+                    message({
                         type: 'userUpdate',
                         data: {
                             pusherUuid: state.uuid,
