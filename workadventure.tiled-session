@@ -5,23 +5,23 @@
     },
     "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "test",
+        "haus/tilesetfiles",
         "space/tiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
         "space",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "burg",
-        "fire",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "haus",
         ".",
-        "haus/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
         "aussicht",
         "ocean/tilesets",
-        "tilesets/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "burg",
         "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "haus"
+        "fire",
+        "test",
+        "tilesets/tilesetfiles"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -658,8 +658,8 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 2318,
-                "y": 1220
+                "x": 508,
+                "y": 512
             }
         },
         "base_out_atlas.tsx": {
@@ -670,8 +670,8 @@
             "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1415,
-                "y": 864
+                "x": 510,
+                "y": 512
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -703,7 +703,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 800,
-                "y": 799.5
+                "y": 800
             }
         },
         "haus/haus.json": {
@@ -719,7 +719,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 800,
-                "y": 799.3333333333333
+                "y": 798.6666666666666
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -819,8 +819,8 @@
             "scale": 1.5,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 1507.6666666666665,
-                "y": 603.3333333333333
+                "x": 1507.3333333333333,
+                "y": 602.6666666666666
             }
         },
         "ocean/ocean.json": {
@@ -883,7 +883,7 @@
             "selectedLayer": 2,
             "viewCenter": {
                 "x": 240,
-                "y": 240.66666666666663
+                "y": 239.99999999999997
             }
         },
         "space/tiles/paledot.tsx": {
@@ -918,8 +918,8 @@
             "scale": 2,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 1134.5,
-                "y": 862.75
+                "x": 1328,
+                "y": 943.5
             }
         },
         "tilesets/Female 25-1.tsx": {

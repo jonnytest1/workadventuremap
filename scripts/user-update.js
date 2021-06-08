@@ -14,8 +14,6 @@ scriptNesting(require('./backend-connection'), async imports => {
                         }
                     })
                 ]);
-
-
             });
         Promise.all([
             message({

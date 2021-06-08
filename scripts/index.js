@@ -15,7 +15,7 @@ var scriptNesting = async function(imports, callback) {
  * @param {T} imports
  * @param {(imports:Promise<T>)=>U} callback
  */
-var exportNesting = async function(imports, callback) {
+var exportNesting = function(imports, callback) {
     return callback(Promise.resolve(imports))
 }
 
