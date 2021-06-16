@@ -5,23 +5,23 @@
     },
     "activeFile": "map.tmx",
     "expandedProjectPaths": [
-        "haus/tilesetfiles",
-        "space/tiles",
-        "space",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "haus",
         ".",
         "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "aussicht",
-        "ocean/tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "burg",
         "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "fire",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "aussicht",
+        "burg",
+        "tilesets/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "ocean/tilesets",
         "test",
-        "tilesets/tilesetfiles"
+        "space/tiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "space",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "haus",
+        "haus/tilesetfiles",
+        "fire"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -658,7 +658,7 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 508,
+                "x": 512,
                 "y": 512
             }
         },
@@ -670,7 +670,7 @@
             "scale": 0.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 510,
+                "x": 512,
                 "y": 512
             }
         },
@@ -718,8 +718,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 800,
-                "y": 798.6666666666666
+                "x": 799.9999999999999,
+                "y": 798.6666666666665
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -819,8 +819,8 @@
             "scale": 1.5,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 1507.3333333333333,
-                "y": 602.6666666666666
+                "x": 2176,
+                "y": 1600
             }
         },
         "ocean/ocean.json": {
@@ -883,7 +883,7 @@
             "selectedLayer": 2,
             "viewCenter": {
                 "x": 240,
-                "y": 239.99999999999997
+                "y": 240
             }
         },
         "space/tiles/paledot.tsx": {
