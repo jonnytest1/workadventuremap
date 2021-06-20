@@ -48,7 +48,7 @@ const callbacks = [];
  */
 let eventQueue = [];
 
-let cookieCheckPromise = new Promise((res, thr) => {
+let cookieCheckPromise = new Promise(async (res, thr) => {
     const iframe = document.createElement('iframe');
     window.addEventListener('message', messageEvent => {
         let eventData = messageEvent.data;
@@ -58,7 +58,14 @@ let cookieCheckPromise = new Promise((res, thr) => {
             iframe.remove();
         }
     });
-    iframe.src = `${backendDomain}/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html`;
+    let pusherUuid = undefined
+    if(WA.getGameState) {
+        const state = await WA.getGameState()
+        pusherUuid = state.uuid
+    }
+
+
+    iframe.src = `${backendDomain}/mapserver/rest/message/${btoa(JSON.stringify({ type: 'cookie' }))}/message.html?pusheruuid=${pusherUuid || ''}`;
     document.body.appendChild(iframe);
 });
 
