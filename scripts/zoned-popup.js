@@ -56,11 +56,11 @@ module.exports = {
                     WA.disablePlayerControls();
                 }
                 if(options.withCircle) {
-                    WA.displayBubble();
+                    WA.ui.displayBubble();
                 }
                 lastOpened = Date.now();
 
-                popup = WA.openPopup(options.objectLayerName, options.popupText, options.popupOptions.map(option => {
+                popup = WA.ui.openPopup(options.objectLayerName, options.popupText, options.popupOptions.map(option => {
                     const callback = option.callback;
                     const popupOptions = {
                         ...option,
@@ -71,7 +71,7 @@ module.exports = {
                                     WA.restorePlayerControls();
                                 }
                                 if(options.withCircle) {
-                                    WA.removeBubble();
+                                    WA.ui.removeBubble();
                                 }
                                 if(callback) {
                                     callback(popup);
@@ -98,7 +98,7 @@ module.exports = {
                     popup = undefined;
                 }
                 if(options.withCircle) {
-                    WA.removeBubble()
+                    WA.ui.removeBubble()
                 }
             });
 

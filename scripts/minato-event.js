@@ -8,12 +8,12 @@ let hasSentNoReplyMessage = false;
 scriptNesting(require('./zoned-popup'), async imps => {
     const { popupInZone } = await imps;
     WA.room.onEnterZone('minato-event', () => {
-        WA.displayBubble();
+        WA.ui.displayBubble();
         if(!hasSendMessage) {
-            WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
+            WA.chat.sendChatMessage('brauchst du hilfe ?', 'Minato');
             hasSendMessage = true;
         }
-        /* WA.openPopup('minato-event', 'continue ?', [
+        /* WA.ui.openPopup('minato-event', 'continue ?', [
              {
                  label: 'yes',
                  className: 'success',
@@ -26,9 +26,9 @@ scriptNesting(require('./zoned-popup'), async imps => {
         chatbotenabled = true;
     });
     WA.room.onLeaveZone('minato-event', () => {
-        WA.removeBubble();
+        WA.ui.removeBubble();
         if(!hasReplied && !hasSentNoReplyMessage) {
-            WA.sendChatMessage('dann halt nicht 🤷‍♂️', 'Minato');
+            WA.chat.sendChatMessage('dann halt nicht 🤷‍♂️', 'Minato');
             hasSentNoReplyMessage = true;
         }
     });
@@ -37,7 +37,7 @@ scriptNesting(require('./zoned-popup'), async imps => {
         if(chatbotenabled) {
             chatmessage = chatmessage.toLowerCase();
             if(chatmessage.endsWith('?') || chatmessage.includes('wie') || chatmessage.includes('wo') || chatmessage.includes('wer') || chatmessage.includes('wann') || chatmessage.includes('was')) {
-                WA.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
+                WA.chat.sendChatMessage('ich hab doch auch keine ahnung 😭', 'Minato');
             }
 
             hasReplied = true;

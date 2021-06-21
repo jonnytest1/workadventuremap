@@ -30,13 +30,13 @@ scriptNesting(Promise.all([
             type: 'readyfriendship'
         });
         readyFriends.new.forEach(id => {
-            WA.sendChatMessage(`you have become friends with ${id}`, 'amor');
+            WA.chat.sendChatMessage(`you have become friends with ${id}`, 'amor');
 
         });
         if(readyFriends.new.length === readyFriends.friends.length && readyFriends.friends.length > 0) {
-            WA.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
-            WA.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
-            WA.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
+            WA.chat.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
+            WA.chat.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
+            WA.chat.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
         }
         friends = readyFriends.friends;
 
@@ -49,12 +49,12 @@ scriptNesting(Promise.all([
             });
             newFriends.filter(newFriend => !friends.includes(newFriend))
                 .forEach(friend => {
-                    WA.sendChatMessage(`you have become friends with ${friend}`, 'amor');
+                    WA.chat.sendChatMessage(`you have become friends with ${friend}`, 'amor');
                 });
             if(friends.length === 0 && newFriends.length) {
-                WA.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
-                WA.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
-                WA.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
+                WA.chat.sendChatMessage(`you can list your friends with !friends in chat`, 'amor');
+                WA.chat.sendChatMessage(`you can direct message a friend with !message (index) message`, 'amor');
+                WA.chat.sendChatMessage(`you can tp to a friend with !visit (index)`, 'amor');
             }
             friends = newFriends;
         }, 1000);

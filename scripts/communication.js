@@ -8,7 +8,7 @@ scriptNesting(Promise.all([
 
     ws.addEventListener((event) => {
         if(event.type === 'receivemessage') {
-            WA.sendChatMessage(event.message, event.author);
+            WA.chat.sendChatMessage(event.message, event.author);
         }
     });
 
@@ -20,7 +20,7 @@ scriptNesting(Promise.all([
             for(let friend in friendInfo) {
                 const friendStatus = friendInfo[friend];
                 if(friendStatus.status === 'offline') {
-                    WA.sendChatMessage(`${friend}(${friendStatus.index}) is offline`, '');
+                    WA.chat.sendChatMessage(`${friend}(${friendStatus.index}) is offline`, '');
                 } else {
                     const roomParts = friendStatus.room.split('/');
                     const currentMap = roomParts.pop();
@@ -29,7 +29,7 @@ scriptNesting(Promise.all([
                     if(friendStatus.jitsiRoom !== 'invalidmapref') {
                         statusMessage += ` in ${friendStatus.jitsiRoom}`;
                     }
-                    WA.sendChatMessage(statusMessage, '');
+                    WA.chat.sendChatMessage(statusMessage, '');
                 }
             }
         } else if(chatmessage.startsWith('!message')) {

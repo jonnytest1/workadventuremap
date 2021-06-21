@@ -8,8 +8,8 @@ scriptNesting(Promise.all([
     require('./game-mode'),
     require('./communication'),
 ]), async imports => {
-    // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
-    // WA.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
+    // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
+    // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
 
     const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await imports;
 
@@ -27,7 +27,7 @@ scriptNesting(Promise.all([
             WA.nav.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
         });
         WA.registerMenuCommand('open chat', () => {
-            WA.sendChatMessage('', '');
+            WA.chat.sendChatMessage('', '');
         });
     }
 

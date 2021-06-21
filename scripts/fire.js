@@ -11,7 +11,7 @@ WA.room.onEnterZone('death', async () => {
                 type: 'incrementDeath'
             })]);
         WA.nav.goToRoom(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
-        WA.sendChatMessage('you died ...', '');
+        WA.chat.sendChatMessage('you died ...', '');
     } catch(e) {
         console.error(e);
     }
@@ -23,14 +23,14 @@ WA.room.onEnterZone('item-pickup', async () => {
         type: 'getUserData'
     });
     if(!playerState.gameModeEnabled) {
-        WA.openPopup('no-player', 'sorry you need to complete the game-mode quest first', [{
+        WA.ui.openPopup('no-player', 'sorry you need to complete the game-mode quest first', [{
             label: 'ok',
             callback: popup => {
                 popup.close();
             }
         }]);
     } else {
-        WA.sendChatMessage('you just got 3 items 🤩', 'engine');
+        WA.chat.sendChatMessage('you just got 3 items 🤩', 'engine');
         message({
             type: 'addItem',
             data: {
