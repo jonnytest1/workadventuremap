@@ -26,7 +26,7 @@ export class SpeechRecognitionService {
         this.recognition.onresult = function (event) {
             if (event.results.length > 0) {
                 if (event.results[0][0].transcript.toLocaleLowerCase() == "Brandad Systems".toLocaleLowerCase()) {
-                    apiService.WAApi("exitSceneTo", "/_/global/brandad-systems.github.io/workadventure-maps/openbas.json")
+                    apiService.WAApi("goToRoom", "/_/global/brandad-systems.github.io/workadventure-maps/openbas.json")
                 }
                 var utterance = new SpeechSynthesisUtterance(event.results[0][0].transcript);
                 utterance.lang = 'de'; //Sprache auf Deutsch festlegen

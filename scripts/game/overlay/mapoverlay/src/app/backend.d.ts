@@ -1,7 +1,7 @@
 import type { messaging } from '../../../../../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication';
-import type { WorkAdventureApi } from '../../../../../index';
+import type { WorkAdventureApi, WAMAp } from '../../../../../index';
 export type { RoomMap } from '../../../../../../../workadventure-mapserver/public/users';
-export type { WorkAdventureApi };
+export type { WorkAdventureApi, WAMAp };
 
 
 export type FeMessage = messaging;

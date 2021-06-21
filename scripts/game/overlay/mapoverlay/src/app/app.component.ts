@@ -142,7 +142,7 @@ export class AppComponent {
 
   async goBackToPreviousMap() {
     const userData = await this.userData$.pipe(take(1)).toPromise()
-    this.apiService.WAApi("exitSceneTo", `/${userData.attributes.previousMap}`)
+    this.apiService.WAApi("goToRoom", `/${userData.attributes.previousMap}`)
   }
 
   async gotoPrivateMap() {
@@ -158,7 +158,7 @@ export class AppComponent {
           value: gameState.roomId
         }
       })
-      this.apiService.WAApi("exitSceneTo", `/_/global/${environment.mapServerOrigin}/mapserver/rest/mapserver/usermap/${referenceUuid}.json`)
+      this.apiService.WAApi("goToRoom", `/_/global/${environment.mapServerOrigin}/mapserver/rest/mapserver/usermap/${referenceUuid}.json`)
     } catch (e) {
       console.error(e)
     }

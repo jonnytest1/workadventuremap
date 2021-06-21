@@ -73,7 +73,7 @@ export class FriendsComponent implements OnInit {
       });
       for (let friendName in friendInfo) {
         if (friendInfo[friendName].index === friend.index) {
-          this.apiService.WAApi("exitSceneTo", `/${friendInfo[friendName].room}`)
+          this.apiService.WAApi("goToRoom", `/${friendInfo[friendName].room}`)
           return;
         }
       }

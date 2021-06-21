@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import type { FeMessage, RoomMap, UnPromise, WorkAdventureApi } from './backend';
+import type { FeMessage, RoomMap, UnPromise, WAMAp } from './backend';
 import type { HasMovedEvent } from './waapi';
 
 
@@ -62,9 +62,9 @@ export class ApiService {
             }, '*');
         });
     }
-    async WAApi<T extends keyof WorkAdventureApi>(
-        eventMethod: T, ...args: Parameters<WorkAdventureApi[T]>): Promise<UnPromise<ReturnType<WorkAdventureApi[T]>>> {
-        return new Promise<UnPromise<ReturnType<WorkAdventureApi[T]>>>((res, thr) => {
+    async WAApi<T extends keyof WAMAp>(
+        eventMethod: T, ...args: Parameters<WAMAp[T]>): Promise<UnPromise<ReturnType<WAMAp[T]>>> {
+        return new Promise<UnPromise<ReturnType<WAMAp[T]>>>((res, thr) => {
             const uuid = uuidv4();
             this.apiResponseMethod[uuid] = res;
 

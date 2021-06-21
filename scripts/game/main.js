@@ -1,3 +1,4 @@
+/// <reference path="../index.js" />
 
 module.exports = exportNesting(Promise.all([
     require('./user-data'),
@@ -41,12 +42,22 @@ module.exports = exportNesting(Promise.all([
                         }, '*');
                     });
             } else if(messageEvent.data.type === 'apicall') {
-                const response = await WA[messageEvent.data.method](...messageEvent.data.arguments);
-                window.parent.postMessage({
-                    type: 'apicallresponse',
-                    uuid: messageEvent.data.uuid,
-                    data: response
-                }, '*');
+                /**
+                 * @type {any}
+                 */
+                let obj = WA;
+                const parts = messageEvent.data.method.split(".")
+                for(let part of parts) {
+                    obj = obj[part];
+                }
+                if(typeof obj == "function") {
+                    const response = await obj(...messageEvent.data.arguments);
+                    window.parent.postMessage({
+                        type: 'apicallresponse',
+                        uuid: messageEvent.data.uuid,
+                        data: response
+                    }, '*');
+                }
             }
         });
         WA.onMoveEvent(e => {
