@@ -10,7 +10,7 @@ WA.onEnterZone('death', async () => {
             message({
                 type: 'incrementDeath'
             })]);
-        WA.exitSceneTo(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
+       WA.nav.goToRoom(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
         WA.sendChatMessage('you died ...', '');
     } catch(e) {
         console.error(e);

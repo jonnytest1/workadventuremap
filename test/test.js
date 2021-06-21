@@ -6,7 +6,7 @@ const beCon = require('../scripts/backend-connection');
 
 setTimeout(() => {
 
-    WA.sendChatMessage("test", "abd")
+    //WA.sendChatMessage("test", "abd")
 }, 2000)
 
 

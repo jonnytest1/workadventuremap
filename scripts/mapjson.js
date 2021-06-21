@@ -14,7 +14,8 @@ scriptNesting(Promise.all([
     const [{ message, ws }, { popupInZone }, { getUserData }, { multiStrandedPopupConversation }] = await imports;
 
     WA.onEnterZone("lake-house", () => {
-        WA.openTab("https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDYyMWVhNDItNjVlNy00ZmU3LTg0M2EtNjIxODIyNzI0Yjhj%40thread.v2/0?context=%7b%22Tid%22%3a%22392ca72f-e005-4aaa-905e-86adf06f8fe5%22%2c%22Oid%22%3a%2290a359e4-ca71-4ee7-b4de-f122c6cf9ee6%22%7d")
+        WA.nav.openCoWebSite("https://bluejeans.com/352050839/9018")
+        //WA.openTab("https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDYyMWVhNDItNjVlNy00ZmU3LTg0M2EtNjIxODIyNzI0Yjhj%40thread.v2/0?context=%7b%22Tid%22%3a%22392ca72f-e005-4aaa-905e-86adf06f8fe5%22%2c%22Oid%22%3a%2290a359e4-ca71-4ee7-b4de-f122c6cf9ee6%22%7d")
     })
 
     console.log('script run');
@@ -23,7 +24,7 @@ scriptNesting(Promise.all([
 
     if(!data.gameModeEnabled) {
         WA.registerMenuCommand('miro', () => {
-            WA.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
+            WA.nav.openCoWebSite('https://jonnytest1.github.io/workadventuremap/scripts/pages/miro.html');
         });
         WA.registerMenuCommand('open chat', () => {
             WA.sendChatMessage('', '');

@@ -41,7 +41,7 @@
             }
             link.onclick = e => {
                 openPage(entry.link);
-                WA.closeCoWebSite();
+                WA.nav.closeCoWebSite();
                 e.preventDefault();
                 e.stopPropagation();
             };
@@ -52,7 +52,7 @@
         });
 
     function openPage(page) {
-        WA.exitSceneTo(page);
+        WA.nav.goToRoom(page);
         /*window.parent.postMessage({
             'type': 'loadPage',
             'data': {

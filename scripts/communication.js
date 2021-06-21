@@ -44,7 +44,7 @@ scriptNesting(Promise.all([
             for(let friend in friendInfo) {
                 if(friendInfo[friend].index === +chatmessage.replace('!visit', '')
                     .trim()) {
-                    WA.exitSceneTo(`/${friendInfo[friend].room}`);
+                   WA.nav.goToRoom(`/${friendInfo[friend].room}`);
                     return;
                 }
             }

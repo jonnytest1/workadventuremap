@@ -4,7 +4,7 @@ module.exports = exportNesting(Promise.all([
     require('../backend-connection')]
 ), imports => {
     async function openOverlay() {
-        WA.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true, passInputEvents: true, allow: 'microphone' });
+        WA.nav.openCoWebSite('./game/overlay/mapoverlay/dist/mapoverlay/index.html', { asOverlay: true, passInputEvents: true, allow: 'microphone' });
     }
 
     async function enableGameMode() {
