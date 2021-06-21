@@ -25,7 +25,7 @@ scriptNesting(Promise.all([
      */
     let friends = null;
 
-    WA.onEnterZone('friendship', async () => {
+    WA.room.onEnterZone('friendship', async () => {
         let readyFriends = await message({
             type: 'readyfriendship'
         });
@@ -60,7 +60,7 @@ scriptNesting(Promise.all([
         }, 1000);
     });
 
-    WA.onLeaveZone('friendship', () => {
+    WA.room.onLeaveZone('friendship', () => {
         message({
             type: 'unreadyfriendship'
         });

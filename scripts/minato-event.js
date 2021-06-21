@@ -7,7 +7,7 @@ let hasSentNoReplyMessage = false;
 
 scriptNesting(require('./zoned-popup'), async imps => {
     const { popupInZone } = await imps;
-    WA.onEnterZone('minato-event', () => {
+    WA.room.onEnterZone('minato-event', () => {
         WA.displayBubble();
         if(!hasSendMessage) {
             WA.sendChatMessage('brauchst du hilfe ?', 'Minato');
@@ -25,7 +25,7 @@ scriptNesting(require('./zoned-popup'), async imps => {
 
         chatbotenabled = true;
     });
-    WA.onLeaveZone('minato-event', () => {
+    WA.room.onLeaveZone('minato-event', () => {
         WA.removeBubble();
         if(!hasReplied && !hasSentNoReplyMessage) {
             WA.sendChatMessage('dann halt nicht 🤷‍♂️', 'Minato');

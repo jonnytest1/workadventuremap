@@ -3,21 +3,21 @@
 const ws = require('./backend-connection');
 const zonedpp = require('./zoned-popup');
 const statePr = WA.getGameState();
-WA.onEnterZone('death', async () => {
+WA.room.onEnterZone('death', async () => {
     try {
         const { message } = await ws;
         const [state] = await Promise.all([statePr,
             message({
                 type: 'incrementDeath'
             })]);
-       WA.nav.goToRoom(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
+        WA.nav.goToRoom(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
         WA.sendChatMessage('you died ...', '');
     } catch(e) {
         console.error(e);
     }
 });
 
-WA.onEnterZone('item-pickup', async () => {
+WA.room.onEnterZone('item-pickup', async () => {
     const { message } = await ws;
     const playerState = await message({
         type: 'getUserData'

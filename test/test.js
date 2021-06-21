@@ -14,7 +14,7 @@ setTimeout(() => {
     console.log(event)
 })*/
 /*
-WA.onEnterZone('event', async () => {
+WA.room.onEnterZone ('event', async () => {
     console.log('zoneenter');
     entercount++;
 

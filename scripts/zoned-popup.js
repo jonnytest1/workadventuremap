@@ -91,8 +91,8 @@ module.exports = {
 
 
 
-            WA.onEnterZone(options.zone, zoneEnter);
-            WA.onLeaveZone(options.zone, () => {
+            WA.room.onEnterZone(options.zone, zoneEnter);
+            WA.room.onLeaveZone(options.zone, () => {
                 if(popup) {
                     popup.close();
                     popup = undefined;
