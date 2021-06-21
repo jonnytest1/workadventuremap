@@ -1,5 +1,5 @@
+/// <reference path ="../../workadventure/front/src/iframe_api.ts" />
 import type { messaging } from "../../workadventure-mapserver/resources/mapserver/message-communication/message-communication";
-import "../../workadventure/front/src/iframe_api";
 
 
 type baseWorkadventureApi = typeof WA

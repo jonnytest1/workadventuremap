@@ -1,7 +1,9 @@
+
 import type { messaging } from '../../../../../../../workadventure-mapserver/resources/mapserver/message-communication/message-communication';
-import type { WorkAdventureApi, WAMAp } from '../../../../../index';
+import { WAMAp } from './waapi';
+
 export type { RoomMap } from '../../../../../../../workadventure-mapserver/public/users';
-export type { WorkAdventureApi, WAMAp };
+
 
 
 export type FeMessage = messaging;
@@ -9,7 +11,7 @@ export type FeMessage = messaging;
 export type UnPromise<P> = P extends Promise<infer T> ? UnPromise<T> : P
 
 
-export type GameState = UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>
+export type GameState = UnPromise<ReturnType<WAMAp["getGameState"]>>
 
 export type UserData = UnPromise<FeMessage['getUserData']['response']>
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import type { FeMessage, RoomMap, UnPromise, WAMAp } from './backend';
-import type { HasMovedEvent } from './waapi';
+import type { FeMessage, RoomMap, UnPromise } from './backend';
+import type { HasMovedEvent, WAMAp } from './waapi';
 
 
 

@@ -2,12 +2,14 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { combineLatest, Observable } from 'rxjs';
 import { distinctUntilChanged, filter, groupBy, map, mergeAll, take } from 'rxjs/internal/operators';
+
 import { environment } from '../environments/environment';
 import { Vector } from '../vector';
 import { ApiService } from './api-service';
-import { GameState, UnPromise, UserData, WorkAdventureApi } from './backend';
+import { GameState, UnPromise, UserData } from './backend';
 import { SharedService } from './shared-service';
 import { SpeechRecognitionService } from './speech-recognition-service';
+import { WAMAp } from './waapi';
 
 @Component({
   selector: 'app-root',
@@ -163,7 +165,7 @@ export class AppComponent {
       console.error(e)
     }
   }
-  getVectorForPlayer(gameState: UnPromise<ReturnType<WorkAdventureApi["getGameState"]>>, playerName: string) {
+  getVectorForPlayer(gameState: UnPromise<ReturnType<WAMAp["getGameState"]>>, playerName: string) {
     const playerPos = gameState.players[playerName].position;
     return new Vector(playerPos.x, playerPos.y)
   }
