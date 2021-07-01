@@ -1058,7 +1058,7 @@
         {
          "name":"coordinateScale",
          "type":"float",
-         "value":100000
+         "value":150000
         }, 
         {
          "name":"script",
