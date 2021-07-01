@@ -4,7 +4,7 @@
   <export target="map.json" format="json"/>
  </editorsettings>
  <properties>
-  <property name="coordinateScale" type="float" value="92000"/>
+  <property name="coordinateScale" type="float" value="100000"/>
   <property name="script" value="scripts/index.js?url=./mapjson.js"/>
  </properties>
  <tileset firstgid="1" source="terrain_atlas.tsx"/>
