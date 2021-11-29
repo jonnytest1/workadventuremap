@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.6.0" orientation="isometric" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="../Male 01-2.tsx"/>
+ <tileset firstgid="13" source="../base_out_atlas.tsx"/>
+ <layer id="1" name="Kachelebene 1" width="10" height="10">
+  <data encoding="csv">
+323,323,323,323,0,0,0,323,323,323,
+323,323,323,323,0,323,323,323,323,323,
+323,323,323,323,323,323,323,323,323,323,
+323,323,323,323,323,323,323,323,323,323,
+323,323,323,323,323,323,323,323,323,323,
+323,323,323,323,323,323,323,323,323,323,
+323,323,323,323,323,323,323,323,323,0,
+323,0,323,323,323,323,323,323,0,323,
+323,323,0,323,323,0,0,323,323,323,
+323,323,323,323,323,323,323,323,323,323
+</data>
+ </layer>
+</map>

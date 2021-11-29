@@ -8,8 +8,11 @@ onload = () => {
     setTimeout(() => {
 
         setTimeout(() => {
-            WA.triggerMessage("press 'space' to jump down", () => {
-               WA.nav.goToRoom("/_/global/pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/mapserver/site.json")
+            WA.ui.displayActionMessage({
+                message: "press 'space' to jump down",
+                callback: () => {
+                    WA.nav.goToRoom("https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/mapserver/site.json")
+                }
             })
         }, 1000)
 

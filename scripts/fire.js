@@ -2,15 +2,13 @@
 
 const ws = require('./backend-connection');
 const zonedpp = require('./zoned-popup');
-const statePr = WA.getGameState();
 WA.room.onEnterZone('death', async () => {
     try {
         const { message } = await ws;
-        const [state] = await Promise.all([statePr,
-            message({
-                type: 'incrementDeath'
-            })]);
-        WA.nav.goToRoom(`/${state.roomId}${state.startLayerName ? '#' + state.startLayerName : ''}`);
+        await message({
+            type: 'incrementDeath'
+        });
+        WA.nav.goToRoom(WA.room.mapURL);
         WA.chat.sendChatMessage('you died ...', '');
     } catch(e) {
         console.error(e);

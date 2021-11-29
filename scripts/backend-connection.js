@@ -59,9 +59,8 @@ let cookieCheckPromise = new Promise(async (res, thr) => {
         }
     });
     let pusherUuid = undefined
-    if(WA.getGameState) {
-        const state = await WA.getGameState()
-        pusherUuid = state.uuid
+    if(WA.player.id) {
+        pusherUuid = WA.player.id
     }
 
 

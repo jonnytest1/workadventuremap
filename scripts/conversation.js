@@ -1,4 +1,4 @@
-
+/// <reference path="index.js" />
 
 /**
  * @typedef {{

@@ -120,7 +120,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"\/_\/global\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/minesweeper.json"
+                 "value":"https:\/\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/minesweeper.json"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -162,7 +162,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"\/_\/global\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/site.json"
+                 "value":"https:\/\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/site.json"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -1013,6 +1013,15 @@
          "tilecount":391,
          "tileheight":32,
          "tiles":[
+                {
+                 "id":4,
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"string",
+                         "value":"teststart"
+                        }]
+                }, 
                 {
                  "id":5,
                  "properties":[

