@@ -8,7 +8,7 @@ WA.room.onEnterZone('death', async () => {
         await message({
             type: 'incrementDeath'
         });
-        WA.nav.goToRoom(new URL(WA.room.mapURL).pathname);
+        WA.nav.goToRoom("/_" + new URL(WA.room.mapURL).pathname);
         WA.chat.sendChatMessage('you died ...', '');
     } catch(e) {
         console.error(e);
