@@ -12,16 +12,16 @@ scriptNesting(Promise.all([
 
 
     setTimeout(() => {
-
-        WA.player.addSprite({
-            spiteSourceUrl: "http://localhost/terrain_atlas.png",
-            spriteAnimationWidth: 120,
-            spriteAnimationHeight: 120,
-            relativePositionOffset: {
-                x: 32, y: 0
-            }
-
-        })
+        if(WA.player["addSprite"]) {
+            WA.player["addSprite"]({
+                spiteSourceUrl: "http://localhost/terrain_atlas.png",
+                spriteAnimationWidth: 120,
+                spriteAnimationHeight: 120,
+                relativePositionOffset: {
+                    x: 32, y: 0
+                }
+            })
+        }
 
         WA.ui.displayActionMessage({
             message: "test",
