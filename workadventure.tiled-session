@@ -3,21 +3,27 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "church/church.tmx",
+    "activeFile": "ndf_festivalmap/map.json",
     "expandedProjectPaths": [
-        ".",
-        "space",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "tilesets/tilesetfiles",
+        "haus",
+        "ndf_festivalmap",
         "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "ocean",
+        ".",
+        "fire",
         "church",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "ocean/tilesets",
-        "space/tiles",
+        "space",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "ocean/tilesets",
         "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "fire"
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "space/tiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "haus/tilesetfiles",
+        "tilesets/tilesetfiles",
+        "aussicht",
+        "burg",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -654,7 +660,7 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 514,
+                "x": 516,
                 "y": 512
             }
         },
@@ -666,7 +672,7 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 511,
+                "x": 512,
                 "y": 512
             }
         },
@@ -678,7 +684,7 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 479.66666666666663,
+                "x": 479.3333333333333,
                 "y": 480
             }
         },
@@ -695,8 +701,8 @@
             "scale": 3,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 485.99999999999994,
-                "y": 490.33333333333326
+                "x": 485.66666666666663,
+                "y": 490
             }
         },
         "customtileset.tsx": {
@@ -707,7 +713,7 @@
             "scale": 0.25,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 802,
+                "x": 804,
                 "y": 800
             }
         },
@@ -723,8 +729,8 @@
             "scale": 0.125,
             "selectedLayer": 9,
             "viewCenter": {
-                "x": 804,
-                "y": 800
+                "x": 800,
+                "y": 792
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -783,8 +789,8 @@
             "scale": 1,
             "selectedLayer": 22,
             "viewCenter": {
-                "x": 2175,
-                "y": 1600
+                "x": 2193,
+                "y": 1632
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -830,9 +836,170 @@
             "scale": 3,
             "selectedLayer": 15,
             "viewCenter": {
-                "x": 1821,
-                "y": 979
+                "x": 2175.833333333333,
+                "y": 1600
             }
+        },
+        "ndf_festivalmap/map.json": {
+            "scale": 0.10001388888888889,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 3569.504235522844,
+                "y": 2569.643105124288
+            }
+        },
+        "ndf_festivalmap/map.json#12_Kitchen_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#14_Basement_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#17_Visibile_Upstairs_System_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#19_Hospital_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#2D Top Down 180 Vehicles ( size x2 )": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#3_Bathroom_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#6_Music_and_sport_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#7_Art_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#8_Gym_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#9_Fishing_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#ADAC_Truck": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#BRANDAD_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#BRANDAD_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Beach_Tileset 02": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#CONSORSBANK_AUTOKINO": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Codecamp_Truck": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#DATEV_Biergarten": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#DürerHaus_StadtNürnberg": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Foodtrucks": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#HWK_Backshop": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#IHK_Café": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Leitlinen": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Mediendesign_Truck": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#N-ERGIE_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#N-ERGIE_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#NN_Zeitungskiosk": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#NUE_stuff": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Netlogix_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Netlogix_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Nexum_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#NorisNetwork_Nudelbar_v2": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#NürnbergerVersicherung_Skybar": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Office_interiors_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Pflanzen_Bäume_Tileset 01": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Room_Builder_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Room_Builder_Floors_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Sellwerk_Truck": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Serene_Village_32x32": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Staudacher_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Staudacher_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#TISCHDECKEN_Haupt+Goldsponsoren": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Teambank_Tikibar": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Teambank_brand": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Websale_Schirm": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#Websale_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#ZUG_START": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#brandad_tileset": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#floortileset": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#n1_booth": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#nexum_Schirm+Stuhl": {
+            "scaleInDock": 1
+        },
+        "ndf_festivalmap/map.json#tiere_auswahl": {
+            "scaleInDock": 1
         },
         "ocean/ocean.json": {
             "scale": 1,
@@ -867,7 +1034,7 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 2815.75,
+                "x": 2815.5,
                 "y": 2816
             }
         },
@@ -893,8 +1060,8 @@
             "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 240.66666666666663,
-                "y": 239.99999999999994
+                "x": 241.33333333333331,
+                "y": 240
             }
         },
         "space/tiles/paledot.tsx": {
@@ -929,7 +1096,7 @@
             "scale": 1.7931249999999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 159.77692575810389,
+                "x": 160.3346113628442,
                 "y": 160.05576856047404
             }
         },
@@ -1015,12 +1182,13 @@
         "aussicht/turm.tmx",
         "ocean/ocean.tmx",
         "church/church.json",
-        "church/church.tmx"
+        "church/church.tmx",
+        "test/floortileset.tsx",
+        "ndf_festivalmap/map.json"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "map.json",
         "test/test.tmx",
         "32x32_map_tile v3.1.tsx",
         "haus/haus.tmx",
@@ -1031,7 +1199,8 @@
         "fire/fire.tmx",
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "Male 01-2.tsx"
+        "Male 01-2.tsx",
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",

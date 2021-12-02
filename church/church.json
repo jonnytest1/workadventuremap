@@ -1160,6 +1160,10 @@
                  "probability":60
                 }, 
                 {
+                 "id":72,
+                 "type":"WallBlock"
+                }, 
+                {
                  "id":83,
                  "probability":0.05
                 }, 
