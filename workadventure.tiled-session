@@ -3,20 +3,21 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.json",
+    "activeFile": "church/church.tmx",
     "expandedProjectPaths": [
-        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
-        "fire",
-        "ocean/tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "space/tiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "haus/tilesetfiles",
-        "tilesets/tilesetfiles",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        ".",
+        "space",
         "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "."
+        "tilesets/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
+        "church",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "ocean/tilesets",
+        "space/tiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
+        "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
+        "fire"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -653,7 +654,7 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
+                "x": 514,
                 "y": 512
             }
         },
@@ -665,7 +666,7 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
+                "x": 511,
                 "y": 512
             }
         },
@@ -677,15 +678,24 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 271,
+                "x": 270.66666666666663,
                 "y": 210
             }
         },
+        "church/church.json#32x32_map_tilev31": {
+            "scaleInDock": 1
+        },
+        "church/church.json#Phssthpok_32x32": {
+            "scaleInDock": 1
+        },
+        "church/church.json#terrain_atlas": {
+            "scaleInDock": 1
+        },
         "church/church.tmx": {
             "scale": 3,
-            "selectedLayer": 5,
+            "selectedLayer": 8,
             "viewCenter": {
-                "x": 480,
+                "x": 479.99999999999994,
                 "y": 479.66666666666663
             }
         },
@@ -695,9 +705,9 @@
         },
         "fire/fire.tmx": {
             "scale": 0.25,
-            "selectedLayer": 6,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 802,
+                "x": 804,
                 "y": 800
             }
         },
@@ -711,7 +721,7 @@
         },
         "haus/haus.tmx": {
             "scale": 0.125,
-            "selectedLayer": 6,
+            "selectedLayer": 9,
             "viewCenter": {
                 "x": 672,
                 "y": 448
@@ -771,10 +781,10 @@
         },
         "map.json": {
             "scale": 1,
-            "selectedLayer": 24,
+            "selectedLayer": 22,
             "viewCenter": {
-                "x": 1724,
-                "y": 1147
+                "x": 2175,
+                "y": 1600
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -818,9 +828,9 @@
         },
         "map.tmx": {
             "scale": 0.125,
-            "selectedLayer": 64,
+            "selectedLayer": 15,
             "viewCenter": {
-                "x": 2180,
+                "x": 2176,
                 "y": 1600
             }
         },
@@ -857,8 +867,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 4098,
-                "y": 5300
+                "x": 2815.75,
+                "y": 2816
             }
         },
         "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx": {
@@ -883,8 +893,8 @@
             "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 240.66666666666669,
-                "y": 239.99999999999994
+                "x": 264,
+                "y": 281.33333333333326
             }
         },
         "space/tiles/paledot.tsx": {
@@ -899,7 +909,7 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 751,
+                "x": 749,
                 "y": 750
             }
         },
@@ -919,7 +929,7 @@
             "scale": 1.7931249999999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 160.3346113628442,
+                "x": 159.77692575810389,
                 "y": 160.05576856047404
             }
         },
@@ -1000,7 +1010,12 @@
         "test/6eck.tmx",
         "test/5050.tmx",
         "test/isometric.tmx",
-        "map.json"
+        "map.json",
+        "aussicht/aussicht.tsx",
+        "aussicht/turm.tmx",
+        "ocean/ocean.tmx",
+        "church/church.json",
+        "church/church.tmx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "float",

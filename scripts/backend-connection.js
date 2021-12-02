@@ -48,6 +48,9 @@ const callbacks = [];
  */
 let eventQueue = [];
 
+
+
+
 let cookieCheckPromise = new Promise(async (res, thr) => {
     const iframe = document.createElement('iframe');
     window.addEventListener('message', messageEvent => {
@@ -60,6 +63,7 @@ let cookieCheckPromise = new Promise(async (res, thr) => {
     });
     let pusherUuid = undefined
     if(WA.player.id) {
+        await WA.onInit()
         pusherUuid = WA.player.id
     }
 

@@ -6,7 +6,9 @@
  * @param {(imports:Promise<T>)=>Promise<void>} callback
  */
 var scriptNesting = async function(imports, callback) {
-    return callback(Promise.resolve(imports))
+    return WA.onInit().then(() => {
+        return callback(Promise.resolve(imports))
+    })
 }
 
 /**

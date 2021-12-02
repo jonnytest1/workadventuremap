@@ -12,7 +12,7 @@ module.exports = exportNesting(Promise.all([
         const [{ getUserData }, { message, ws }] = await imports;
         const userData = await getUserData();
 
-        WA.registerMenuCommand('open game overlay', () => {
+        WA.ui.registerMenuCommand('open game overlay', () => {
             openOverlay();
         });
         if(userData.autoOpenGameOverlay && !window.blockAutoOpenOverlay) {

@@ -3,18 +3,15 @@
 scriptNesting(require('./backend-connection'), async imports => {
     const { message } = await imports;
     setTimeout(() => {
-        WA.getGameState()
-            .then(async state => {
-                await Promise.all([
-                    message({
-                        type: 'userUpdate',
-                        data: {
-                            pusherUuid: state.uuid,
-                            nickName: state.nickName
-                        }
-                    })
-                ]);
-            });
+        Promise.all([
+            message({
+                type: 'userUpdate',
+                data: {
+                    pusherUuid: WA.player.id,
+                    nickName: WA.player.name
+                }
+            })
+        ]);
         Promise.all([
             message({
                 type: "setAttribute",

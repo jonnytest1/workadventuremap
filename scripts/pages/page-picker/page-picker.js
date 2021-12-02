@@ -1,6 +1,5 @@
 /// <reference path="../../index.d.ts" />
-(async () => {
-    const state = await WA.getGameState();
+WA.onInit().then(async () => {
     const links = [
         {
             text: 'Demo Map',
@@ -29,7 +28,7 @@
         }
     ];
     links.
-        filter(entry => !('/' + state.roomId).includes(entry.link))
+        filter(entry => !('/' + WA.room.id).includes(entry.link))
         .forEach(entry => {
             const li = document.createElement('li');
             const link = document.createElement('a');
@@ -60,7 +59,7 @@
             }
         }, '*');*/
     }
-})();
+});
 
 window.onbeforeunload = () => {
     // debugger;
