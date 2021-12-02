@@ -62,8 +62,8 @@ let cookieCheckPromise = new Promise(async (res, thr) => {
         }
     });
     let pusherUuid = undefined
+    await WA.onInit()
     if(WA.player.id) {
-        await WA.onInit()
         pusherUuid = WA.player.id
     }
 
