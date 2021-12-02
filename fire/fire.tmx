@@ -235,8 +235,8 @@
  </layer>
  <layer id="8" name="teleporter-zone" width="50" height="50">
   <properties>
+   <property name="allowApi" type="bool" value="true"/>
    <property name="openWebsite" value="../scripts/pages/page-picker/page-picker.html"/>
-   <property name="openWebsiteAllowApi" type="bool" value="true"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

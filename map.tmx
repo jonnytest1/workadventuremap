@@ -2490,8 +2490,8 @@
  </layer>
  <layer id="49" name="teleporter-zone" width="136" height="100">
   <properties>
+   <property name="allowApi" type="bool" value="true"/>
    <property name="openWebsite" value="./scripts/pages/page-picker/page-picker.html"/>
-   <property name="openWebsiteAllowApi" type="bool" value="true"/>
    <property name="openWebsiteAsOverlay" type="bool" value="false"/>
   </properties>
   <data encoding="csv">
