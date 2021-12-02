@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.5" tiledversion="1.6.0" name="Room_Builder_free_32x32" tilewidth="32" tileheight="32" tilecount="391" columns="17">
  <image source="../../tilesets/Modern_Interiors_Free_v2.2/Modern tiles_Free/Interiors_free/32x32/Room_Builder_free_32x32.png" trans="000000" width="544" height="736"/>
- <tile id="4">
-  <properties>
-   <property name="start" value="teststart"/>
-  </properties>
- </tile>
  <tile id="5">
   <properties>
    <property name="collides" type="bool" value="true"/>
