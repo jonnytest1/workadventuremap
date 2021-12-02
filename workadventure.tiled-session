@@ -787,10 +787,10 @@
         },
         "map.json": {
             "scale": 1,
-            "selectedLayer": 22,
+            "selectedLayer": 33,
             "viewCenter": {
-                "x": 2176,
-                "y": 1599.5
+                "x": 2433,
+                "y": 1599
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -836,8 +836,8 @@
             "scale": 1,
             "selectedLayer": 27,
             "viewCenter": {
-                "x": -258.5,
-                "y": 1385
+                "x": -174,
+                "y": 1384
             }
         },
         "ndf_festivalmap/map.json": {

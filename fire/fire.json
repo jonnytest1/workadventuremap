@@ -84,14 +84,14 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"allowApi",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
                  "name":"openWebsite",
                  "type":"string",
                  "value":"..\/scripts\/pages\/page-picker\/page-picker.html"
+                }, 
+                {
+                 "name":"openWebsiteAllowApi",
+                 "type":"bool",
+                 "value":true
                 }],
          "type":"tilelayer",
          "visible":true,
