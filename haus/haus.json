@@ -120,7 +120,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"https:\/\/pi4.e6azumuvyiabvs9s.myfritz.net\/nodetype\/rest\/mapserver\/minesweeper.json"
+                 "value":"https:\/\/pi4.e6azumuvyiabvs9s.myfritz.net\/mapserver\/rest\/mapserver\/minesweeper.json"
                 }],
          "type":"tilelayer",
          "visible":true,

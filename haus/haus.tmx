@@ -353,7 +353,7 @@
  </layer>
  <layer id="14" name="exit-minesweeper" width="50" height="50">
   <properties>
-   <property name="exitSceneUrl" value="https://pi4.e6azumuvyiabvs9s.myfritz.net/nodetype/rest/mapserver/minesweeper.json"/>
+   <property name="exitSceneUrl" value="https://pi4.e6azumuvyiabvs9s.myfritz.net/mapserver/rest/mapserver/minesweeper.json"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
