@@ -1,6 +1,14 @@
 /// <reference path="./index.d.ts" />
 
 /**
+ * this function is used to not litter up the global scopes with variables
+ * @example
+ * scriptNesting(Promise.all([
+ *   require('./<somescript.js>'),
+ * ]),async imports=>{
+ *    const [someImport] = await imports
+ *    ...
+ * })
  * @template T
  * @param {T} imports
  * @param {(imports:Promise<T>)=>Promise<void>} callback
@@ -12,6 +20,17 @@ var scriptNesting = async function(imports, callback) {
 }
 
 /**
+ * this function is used to not litter up the global scopes with variables while still passing through the exports
+ * usage: 
+ * @example
+ * module.exports= exportNesting([require("./<someimport.js>")],imports=>{
+ *     return {
+ *         someExport:async()=>{
+ *               const [someImport]=await imports
+ *               ...
+ *         } 
+ *     }
+ * })
  * @template T
  * @template U
  * @param {T} imports
@@ -42,7 +61,7 @@ const currentScriptUrl = new URL(scriptURL.href);
 currentScriptUrl.search = ""
 
 /**
- * 
+ * this function loads the script specified by the importUrl (currently @jonnygithub can be used a placeholder for the current repositoryurl)
  * @param {string} scriptLoadUrl 
  * @returns 
  */
@@ -98,6 +117,9 @@ async function scriptImporting(scriptLoadUrl) {
 //@ts-ignore
 window.importScript = scriptImporting
 
+/**
+ * assign window.require this way the typing of module imports gets preserved (though it still needs to be awaited sicne the import works asynchronously)
+ */
 // @ts-ignore
 window.require = importScript;
 
