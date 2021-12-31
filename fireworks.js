@@ -47,8 +47,9 @@ class FireWork {
 
         if(this.shootUpOffset >= 5) {
             setTimeout(() => {
+                this.unset()
                 this.explode();
-            })
+            }, 50)
             return
         }
 
