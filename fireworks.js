@@ -116,7 +116,7 @@ Promise.all([WA.room.getTiledMap(), WA.onInit()]).then(([map]) => {
     setInterval(() => {
 
         const now = new Date()
-        const isEvening = Math.abs(24 - now.getHours()) < 4 || true
+        const isEvening = Math.abs(24 - now.getHours()) < 4
         if(isEvening && currentPosition) {
             for(let i = 0; i < 5; i++) {
                 const chunk = 24
