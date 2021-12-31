@@ -1,5 +1,5 @@
 /// <reference path="./index.d.ts" />
-
+const currentScript = document.currentScript;
 /**
  * this function is used to not litter up the global scopes with variables
  * @example
@@ -53,9 +53,9 @@ Object.defineProperty(module, 'exports', {
         document.currentScript['exports'] = obj;
     }
 });
-const currentScript = document.currentScript;
+
 // @ts-ignore
-const scriptURL = new URL(currentScript.src);
+const scriptURL = new URL(currentScript?.src || import.meta.url);
 
 const currentScriptUrl = new URL(scriptURL.href);
 currentScriptUrl.search = ""
@@ -66,7 +66,7 @@ currentScriptUrl.search = ""
  * @returns 
  */
 async function scriptImporting(scriptLoadUrl) {
-    const scriptToUse = document.currentScript || currentScript;
+    const scriptToUse = document.currentScript || currentScript || { src: currentScriptUrl.href };
     if(!scriptLoadUrl.endsWith('.js')) {
         scriptLoadUrl += '.js';
     }
@@ -74,7 +74,7 @@ async function scriptImporting(scriptLoadUrl) {
         scriptLoadUrl = new URL(scriptLoadUrl.replace("@jonnygithub/", './'), currentScriptUrl.href.replace("index.js", "")).href
     }
     let newSrc;
-    if('src' in scriptToUse) {
+    if(scriptToUse && 'src' in scriptToUse) {
         const baseURL = new URL(scriptToUse.src);
         baseURL.search = '';
         newSrc = new URL(scriptLoadUrl, baseURL.href);
