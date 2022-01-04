@@ -18,7 +18,7 @@ var scriptNesting = async function(imports, callback) {
         return callback(Promise.resolve(imports))
     })
 }
-
+window.scriptNesting = scriptNesting
 /**
  * this function is used to not litter up the global scopes with variables while still passing through the exports
  * usage: 
@@ -39,7 +39,7 @@ var scriptNesting = async function(imports, callback) {
 var exportNesting = function(imports, callback) {
     return callback(Promise.resolve(imports))
 }
-
+window.exportNesting = exportNesting
 /**
  * @type {{[key:string]:Promise<any>}}
  */
@@ -55,7 +55,7 @@ Object.defineProperty(module, 'exports', {
 });
 
 // @ts-ignore
-const scriptURL = new URL(currentScript?.src || import.meta.url);
+const scriptURL = new URL(currentScript?.src || (import.meta.url));
 
 const currentScriptUrl = new URL(scriptURL.href);
 currentScriptUrl.search = ""

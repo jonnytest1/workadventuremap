@@ -1,6 +1,6 @@
+/// <reference path="./index.d.ts"/>
 
-
-scriptNesting(Promise.all([
+window.scriptNesting(Promise.all([
     require('./backend-connection'),
     require('./game/user-data'),
 ]), async imps => {
@@ -44,7 +44,7 @@ scriptNesting(Promise.all([
             for(let friend in friendInfo) {
                 if(friendInfo[friend].index === +chatmessage.replace('!visit', '')
                     .trim()) {
-                   WA.nav.goToRoom(`/${friendInfo[friend].room}`);
+                    WA.nav.goToRoom(`/${friendInfo[friend].room}`);
                     return;
                 }
             }

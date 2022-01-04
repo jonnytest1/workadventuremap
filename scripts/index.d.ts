@@ -102,6 +102,9 @@ declare global {
         importScript: () => any
 
         blockAutoOpenOverlay?: boolean
+
+        scriptNesting<T>(imp: T, callback: (imports: Promise<T>) => Promise<void>): void
+        exportNesting<T, U>(imp: T, callback: (imports: Promise<T>) => U): U
     }
 
     //var WA: WorkAdventureApi
