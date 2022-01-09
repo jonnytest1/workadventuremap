@@ -1,5 +1,6 @@
 /// <reference path="./index.d.ts" />
 const currentScript = document.currentScript;
+
 /**
  * this function is used to not litter up the global scopes with variables
  * @example
