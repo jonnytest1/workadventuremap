@@ -2278,7 +2278,7 @@
   </layer>
   <layer id="73" name="exit-bas" width="136" height="100">
    <properties>
-    <property name="exitSceneUrl" value="/_/global/brandad-systems.github.io/workadventure-maps/openbas.json#start-hidden"/>
+    <property name="exitSceneUrl" value="https://brandad-systems.github.io/workadventure-maps/openbas.json#start-hidden"/>
    </properties>
    <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

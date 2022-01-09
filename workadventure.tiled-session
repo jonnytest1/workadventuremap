@@ -3,27 +3,19 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "fire/fire.tmx",
+    "activeFile": "map.json",
     "expandedProjectPaths": [
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage1",
-        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
-        "aussicht",
-        "ocean",
-        "haus/tilesetfiles",
-        "fire",
-        "haus",
-        "ndf_festivalmap",
-        "tilesets/tilesetfiles",
-        "space",
+        "tilesets",
         "space/tiles",
-        ".",
-        "ocean/tilesets",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "tilesets/tilesetfiles",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage3",
         "D:/Jonathan/Projects/bas/workadventure-maps/Pipoya RPG Tileset 32x32/SampleMap",
         "D:/Jonathan/Projects/bas/workadventure-maps/Tuto",
-        "burg",
-        "church",
-        "D:/Jonathan/Projects/bas/workadventure-maps/etage3"
+        ".",
+        "D:/Jonathan/Projects/bas/workadventure-maps/amphitheater",
+        "ocean/tilesets",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage2",
+        "D:/Jonathan/Projects/bas/workadventure-maps/etage1"
     ],
     "file.lastUsedOpenFilter": "Alle Dateien (*)",
     "fileStates": {
@@ -660,8 +652,8 @@
             "scale": 0.25,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
-                "y": 510
+                "x": 514,
+                "y": 512
             }
         },
         "base_out_atlas.tsx": {
@@ -672,8 +664,8 @@
             "scale": 0.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 512,
-                "y": 513
+                "x": 511,
+                "y": 512
             }
         },
         "burg/tilesets/K0429475_Burg_Nuernberg_Luftaufnahme.tsx": {
@@ -684,8 +676,8 @@
             "scale": 1.5,
             "selectedLayer": 3,
             "viewCenter": {
-                "x": 480,
-                "y": 479.66666666666663
+                "x": 479.66666666666663,
+                "y": 480
             }
         },
         "church/church.json#32x32_map_tilev31": {
@@ -701,8 +693,8 @@
             "scale": 3,
             "selectedLayer": 8,
             "viewCenter": {
-                "x": 480,
-                "y": 479.83333333333326
+                "x": 479.83333333333326,
+                "y": 480
             }
         },
         "customtileset.tsx": {
@@ -713,8 +705,8 @@
             "scale": 0.25,
             "selectedLayer": 4,
             "viewCenter": {
-                "x": 2724,
-                "y": 820
+                "x": 802,
+                "y": 800
             }
         },
         "haus/haus.json": {
@@ -726,11 +718,11 @@
             }
         },
         "haus/haus.tmx": {
-            "scale": 0.125,
-            "selectedLayer": 9,
+            "scale": 0.5,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 800,
-                "y": 796
+                "x": 799,
+                "y": 798
             }
         },
         "haus/tilesetfiles/Game Boy Advance - Pokémon Emerald - Interior Tilesets.tsx": {
@@ -786,11 +778,11 @@
             "scaleInEditor": 1.5
         },
         "map.json": {
-            "scale": 1,
-            "selectedLayer": 33,
+            "scale": 0.75,
+            "selectedLayer": 22,
             "viewCenter": {
-                "x": 2433,
-                "y": 1599
+                "x": 2258,
+                "y": 444
             }
         },
         "map.json#32x32_map_tilev31": {
@@ -826,6 +818,9 @@
         "map.json#dldhdmcov_scaled": {
             "scaleInDock": 1
         },
+        "map.json#fireworks": {
+            "scaleInDock": 1
+        },
         "map.json#terrain_atlas": {
             "scaleInDock": 1
         },
@@ -833,19 +828,22 @@
             "scaleInDock": 1
         },
         "map.tmx": {
-            "scale": 1,
-            "selectedLayer": 27,
+            "scale": 0.33,
+            "selectedLayer": 24,
             "viewCenter": {
-                "x": -174,
-                "y": 1384
+                "x": 2522.7272727272725,
+                "y": 1609.090909090909
             }
         },
+        "map.tmx#fireworks": {
+            "scaleInDock": 1
+        },
         "ndf_festivalmap/map.json": {
-            "scale": 0.10001388888888889,
-            "selectedLayer": 0,
+            "scale": 0.33,
+            "selectedLayer": 45,
             "viewCenter": {
-                "x": 3559.5056242188584,
-                "y": 2564.643799472295
+                "x": 4581.818181818182,
+                "y": 1796.969696969697
             }
         },
         "ndf_festivalmap/map.json#12_Kitchen_32x32": {
@@ -989,6 +987,9 @@
         "ndf_festivalmap/map.json#brandad_tileset": {
             "scaleInDock": 1
         },
+        "ndf_festivalmap/map.json#fireworks": {
+            "scaleInDock": 1
+        },
         "ndf_festivalmap/map.json#floortileset": {
             "scaleInDock": 1
         },
@@ -1034,8 +1035,8 @@
             "scale": 2,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 2816,
-                "y": 2815.75
+                "x": 2815.75,
+                "y": 2816
             }
         },
         "ocean/tilesets/LPC-objects-plants-fish-submissions-outside.tsx": {
@@ -1060,8 +1061,8 @@
             "scale": 0.75,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 240,
-                "y": 240.66666666666669
+                "x": 240.66666666666669,
+                "y": 240
             }
         },
         "space/tiles/paledot.tsx": {
@@ -1076,16 +1077,16 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 750,
-                "y": 749
+                "x": 749,
+                "y": 750
             }
         },
         "test/6eck.tmx": {
             "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 488,
-                "y": 363.75
+                "x": 487.75,
+                "y": 363.5
             }
         },
         "test/floortileset.tsx": {
@@ -1096,8 +1097,8 @@
             "scale": 1.7931249999999999,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 159.4980829557337,
-                "y": 160.33461136284424
+                "x": 159.77692575810386,
+                "y": 160.05576856047406
             }
         },
         "test/test.json": {
@@ -1124,13 +1125,17 @@
             "scale": 0.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1326,
-                "y": 943
+                "x": 1327,
+                "y": 942
             }
         },
         "tilesets/Female 25-1.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 4
+        },
+        "tilesets/fireworks.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "tilesets/tilesetfiles/Male 07-3.tsx": {
             "scaleInDock": 1,
@@ -1149,9 +1154,9 @@
             "scaleInEditor": 1
         }
     },
-    "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps/test",
+    "last.exportedFilePath": "D:/Jonathan/Projects/bas/jonny-maps",
     "last.externalTilesetPath": "D:/Jonathan/Projects/bas/workadventure-map-starter-kit/workadventuremap/haus/tilesetfiles",
-    "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps/tilesets",
+    "last.imagePath": "D:/Jonathan/Projects/bas/jonny-maps",
     "lastUsedTilesetExportFilter": "JSON-Tileset-dateien (*.json)",
     "map.fixedSize": true,
     "map.height": 10,
@@ -1184,7 +1189,7 @@
         "church/church.json",
         "church/church.tmx",
         "test/floortileset.tsx",
-        "ndf_festivalmap/map.json"
+        "tilesets/fireworks.tsx"
     ],
     "project": "workadventure.tiled-project",
     "property.type": "float",
@@ -1197,10 +1202,10 @@
         "map.tmx",
         "space/space.tmx",
         "space/tiles/paledot.tsx",
-        "ndf_festivalmap/map.json",
-        "test/floortileset.tsx",
-        "church/church.tmx",
-        "church/church.json"
+        "fire/fire.tmx",
+        "haus/tilesetfiles/Interiors_free_32x32.tsx",
+        "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
+        "Male 01-2.tsx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",
