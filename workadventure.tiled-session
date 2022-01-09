@@ -1194,7 +1194,6 @@
     "project": "workadventure.tiled-project",
     "property.type": "float",
     "recentFiles": [
-        "map.json",
         "test/test.tmx",
         "32x32_map_tile v3.1.tsx",
         "haus/haus.tmx",
@@ -1205,7 +1204,8 @@
         "fire/fire.tmx",
         "haus/tilesetfiles/Interiors_free_32x32.tsx",
         "haus/tilesetfiles/tilesets_deviant_milkian_1.tsx",
-        "Male 01-2.tsx"
+        "Male 01-2.tsx",
+        "haus/tilesetfiles/Room_Builder_free_32x32.tsx"
     ],
     "textEdit.monospace": false,
     "tileset.lastUsedFilter": "Tiled Tileset Dateien (*.tsx *.xml)",

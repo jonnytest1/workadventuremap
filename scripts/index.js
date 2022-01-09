@@ -10,6 +10,7 @@ const currentScript = document.currentScript;
  *    const [someImport] = await imports
  *    ...
  * })
+ * 
  * @template T
  * @param {T} imports
  * @param {(imports:Promise<T>)=>Promise<void>} callback
